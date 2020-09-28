@@ -1,0 +1,127 @@
+/*提示*/
+
+.aheadApply {
+  ul {
+    margin: 3em 0em 2em 0em;
+    padding: 0;
+    > li {
+      list-style: none;
+      position: relative;
+      display: block;
+      z-index: 0;
+      background: #FFF;
+      margin-bottom: 2px;
+      a {
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: 2em;
+        display: block;
+        padding: 12px 12px 12px 64px;
+      }
+      .accordion-content {
+        padding: 0px 1em 0px 4em;
+      }
+      &:nth-child(1) a {
+        color: #dc2032;
+      }
+      &:nth-child(2) a {
+        color: #1dbdf1;
+      }
+      &:nth-child(3) a {
+        color: #85d233;
+      }
+    }
+  }
+  li {
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      z-index: -1;
+    }
+    &:before {
+      width: 46px;
+      left: 0px;
+      bottom: 0;
+      top: 0;
+      background-size: 80% !important;
+      background-repeat: no-repeat !important;
+      background-position: 5px 5px !important;
+    }
+    &:after {
+      top: 15px;
+      left: 42px;
+      width: 0;
+      height: 0;
+      border: solid transparent;
+      border-width: 10px;
+      border-left-color: white;
+    }
+    &:nth-child(1) {
+      &:before {
+        background: #dc2032 url("../images/icon/icon_VR.png");
+      }
+      &:after {
+        border-left-color: #dc2032;
+      }
+    }
+    &:nth-child(2) {
+      &:before {
+        background: #1dbdf1 url("../images/icon/icon_EA.png");
+      }
+      &:after {
+        border-left-color: #1dbdf1;
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        background: #85d233 url("../images/icon/icon_MR.png");
+      }
+      &:after {
+        border-left-color: #85d233;
+      }
+    }
+    ul {
+      margin: 0;
+      padding-bottom: 1em;
+    }
+    li {
+      margin-left: 0;
+      margin-bottom: 4px;
+      font-size: 0.8em;
+      font-weight: normal;
+      padding: 0;
+      &:before, &:after {
+        display: none !important;
+      }
+      a {
+        color: #333 !important;
+        padding: 5px 10px 5px 23px;
+        border-radius: 3px;
+        background: #e0e0e0;
+        position: relative;
+        list-style: none;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 15px;
+          width: 8px;
+          height: 8px;
+          line-height: 1.25em;
+          border: 1px solid gray;
+          border-top: none;
+          border-left: none;
+          -webkit-transform-origin: center center;
+          transform-origin: center center;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          transition: all 0.3s;
+        }
+        &:hover {
+          background: #cccccc;
+        }
+      }
+    }
+  }
+}

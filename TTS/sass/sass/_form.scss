@@ -1,0 +1,1435 @@
+/*參照雅瓊範例*/
+@mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:4px) {
+    color: $f_color;
+    font-size: 1em;
+    border: 0;
+    padding: .5em;
+    background: #fff;
+    vertical-align: middle;
+    margin-bottom: .3em;
+    @include box-sizing();
+    @include border-radius($f_radius);
+    @include transition(border, .2s, ease-out);
+    @include transition(box-shadow, .2s, ease-out);
+    box-shadow: 0 0px 0px 1px $color-gray inset;
+}
+select::-ms-expand { display: none; }
+
+.short{
+    box-shadow: 0 0px 0px 1px #ccc inset !important;
+    width: auto;
+    margin-left: 15px;
+    margin-right: 8px;  
+}
+
+.form_grid {
+    margin: 0em;
+    .form_grp { padding: .2em; }
+    .form_title {
+        // @include make-xs-column(12);
+        // @include make-sm-column(3);
+        // @include make-md-column(3);
+        // @include make-lg-column(3);
+        // @include gutter();
+        // padding-top: 5px;
+    }
+    .form_content {
+        // @include make-xs-column(12);
+        // @include make-sm-column(9);
+        // @include make-md-column(9);
+        // @include make-lg-column(9);
+        // @include gutter();
+    }
+}
+.form_grp {
+    a{
+        color: $aHover;
+        &:hover,
+        &:focus{ text-decoration: underline; }
+    }
+    .form_title{}
+    // label.form_title {
+    //     font-weight: bold;
+    //     margin-bottom: 0px;
+    // }
+    .form_content {
+        .container{ @include gutter(0); }
+        label {
+            font-weight: normal;
+            color:lighten($color-word,10);
+            // background: aqua;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .form_grp{
+            label.form_title{
+                // background: blue;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+        }
+    }
+}
+
+.one-pair{
+    @include clearfix;
+    margin-bottom: 10px;
+}
+
+form input.calendar{
+    box-shadow: 0 0px 0px 1px #ccc inset !important;
+    width: auto !important;
+    margin-left: 15px;
+}
+
+form {
+    .form_grp,
+    .check_grp,
+    .radio_grp,
+    .btn_grp,
+    .upload_grp {
+        margin-bottom: .2em;
+    }
+    .btn_grp{
+        vertical-align: middle;
+        button[type="button"],button[type="submit"]{
+            position: relative;
+            .icon-search{
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                width: 20px;
+            }
+        }
+    }
+    .check_grp,
+    .radio_grp {
+        label {
+            display: block;
+        }
+        /* radio與check個別行內設定*/
+        &.form_inline {
+            label {
+                display: inline-block;
+                margin: .2em .5em 0 0;
+            }
+        }
+
+        img.calendar{
+            display: inline-block;
+            // margin: 0 10px;
+            cursor: pointer;
+            padding: 6px;
+            margin-left: 14px;
+            vertical-align: top;
+        }
+        button.check_file{
+            margin: 0 16px;
+        }
+
+    }
+    .form_grp,
+    .upload_grp {
+        /* 文字表單個別行內設定*/
+        &.form_inline {
+            label {
+                display: inline-block;
+                margin-right: .5em;
+            }
+            input,
+            textarea,
+            select { width: auto; }
+        }
+    }
+    /* form 全域行內設定*/
+    &.form_inline {
+        label {
+            display: inline-block;
+            vertical-align: middle;
+            /* margin-right: .5em;*/
+            &~input,
+            &~textarea {
+                display: inline-block;
+                width: auto;
+                vertical-align: middle;
+            }
+        }
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            width: auto;
+            display: inline-block;
+        }
+
+        .form_grp,
+        .check_grp,
+        .radio_grp,
+        .upload_grp {
+            display: inline-block;
+            margin-right: 0em;
+        }
+        .check_grp,
+        .radio_grp{}
+
+        .btn_grp {
+            .btn,
+            input[type="submit"],
+            input[type="reset"],
+            input[type="button"],
+            input[type="search"],
+            button[type="submit"],
+            button[type="reset"],
+            button[type="button"],
+            button[type="search"]  {
+                padding: .45em 1.2em;
+            }
+            input[type="submit"],
+            button[type="submit"]{
+               box-shadow: 0 0px 0px 1px $primaryColor inset;
+           }
+       }
+       select,
+       textarea {
+        width: auto;
+    } 
+}
+
+@include screen('mobile') {
+    .col-6,.col-12{
+        .container{
+            @include gutter(0);
+            .col{
+                @include gutter(0);
+            }
+        }
+    }
+}
+
+// 奇怪的客制上傳按鈕 2019-0604
+.upload_customize{
+    // height: 36px;
+    // border: 1px solid #cccccc;
+    .inner{
+        width: 100%;
+        margin-top: 5px;
+        // background-color: #F5F5F5;
+        // padding: 8px 80px 8px 8px;
+        // box-sizing: border-box;
+        // position: relative;
+        .file_name{
+            // background-color: #F5F5F5;
+            padding: 8px 80px 8px 8px;
+            margin-bottom: 5px;  
+            box-sizing: border-box;
+            border-bottom: solid 1px #ddd;
+            span{
+                margin-right: 10px;
+                color: #000;
+            }
+            .delete{
+                display: block;
+                float: right;
+                // margin-top: -22px;
+                margin-right: -72px;
+
+                a{
+                    // background: #4a4a4a;
+                    color: #fff;
+                    // padding: 5px 16px;
+                    // border-radius: 4px;
+                    background: url('../images/icon/icon_close2.png') 50% 50% no-repeat;
+                    background-size: contain;
+                    font-size: 0;
+                    display: block;
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+        // .delete{
+        //     display: block;
+        //     float: right;
+        //     margin-top: -22px;
+        //     margin-right: -72px;
+
+        //     a{
+        //         background: #4a4a4a;
+        //         color: #fff;
+        //         padding: 5px 16px;
+        //         border-radius: 4px;
+        //     }
+        // }
+        .progress_bar{
+            float: right;
+            display: none;
+            margin-top: 7px;
+            margin-right: 10px;
+            width: 150px;
+            height: 8px;
+            border: 1px solid rgb(153, 153, 153);
+            text-align: left;
+            background-color: rgb(255, 255, 255);
+            padding: 1px;
+            .bar{
+               width: 100%;
+               height: 100%;
+               background-color: rgb(105, 137, 224); 
+            }
+        }
+        .status{
+            float:right;
+            margin-right:10px;
+            color: #ff0000;
+            display:none;
+        }
+    }
+}
+// .upload_customize+textarea{
+//     margin-top: 10px;
+// }
+
+/*---------------------------------------------下拉選單--------//*/
+label,
+legend {
+    // white-space: nowrap;
+    // display: inline-block;
+    margin: .5em 0;
+    @include screen('xs_mobile') {
+        // display: block;
+    }
+
+    &.inline {
+        input,
+        select,
+        textarea {
+            width: auto;
+        }
+    }
+}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*---------------------------------------------預設設定--------//*/
+input,
+textarea,
+select,
+button {
+    @include formStyle($color-word, $primaryColor, 4px);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    -webkit-appearance: none; /*清除 safari 的預設樣式*/
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/*---------------------------------------------文字輸入表單--------//*/
+
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+input[type="button"] {
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: $color-gray;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $color-gray;
+    }
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: $color-gray;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: $color-gray;
+    }
+}
+
+button,
+input[type="button"],
+button[type="button"]{
+    @extend %btn;
+    @include box-shadow(none);
+    @include btn_setting($form-focus, #FFF);
+}
+
+input[type="button"]:hover,
+button[type="button"]:hover{
+    background: darken($primaryColor,10);
+    border: 1px solid darken($primaryColor,10);
+    // border: 1px solid transparent;
+}
+
+input[type="button"]:focus,
+button[type="button"]:focus{
+    background: darken($primaryColor,0);
+    border: 1px solid darken($primaryColor,0);
+    // border: 1px solid transparent;
+}
+
+textarea {
+    @include formStyle();
+    height: 5em;
+    overflow-y: scroll;
+    @include screen('xs_mobile') {
+        width: 100%;
+    }
+}
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+input[type="text"]:focus,
+input[type="reset"]:focus,
+input[type="file"]:focus,
+input[type="button"]:focus,
+input[type="password"]:focus,
+button[type="text"]:focus,
+button[type="reset"]:focus,
+button[type="file"]:focus,
+button[type="password"]:focus,
+textarea:focus,
+select:focus {
+    // @include box-shadow(0px 0px 0px 2px lighten($form-focus, 20) inset);
+    box-shadow: 0px 0px 0px 1px #ccc inset;
+    outline: none;
+}
+
+/**/
+
+/*---------------------------------------------下拉選單--------//*/
+select {
+    line-height: 2.4em;
+    height: 2.4em;
+    padding: 0 24px 0 .5em;
+    background: #fff url(../images/basic/icon_select_arrow.png) no-repeat right center;
+    background-size: 18px;
+    option {
+        outline: none;
+        border: none;
+    }
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+    }
+}
+
+/*---------------------------------------------reset--------//*/
+input[type="reset"],button[type="reset"] {
+    @extend %btn;
+    @include btn_setting(darken($color-gray, 20), #FFF);
+    border: 1px solid darken($color-gray, 20);
+    text-shadow: none;
+}
+
+/*---------------------------------------------checkbox & radio--------//*/
+input[type="checkbox"],
+input[type="radio"] {
+    font-size: 1em;
+    margin: -2px 5px 2px 1px;
+    width: 20px;
+    height: 20px;
+    background-color: #f7f6ee;
+    border: none;
+    background-position: center center;
+    background-size: 40%;
+    @include transition(all 0.3s);
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    border-color: $form-focus;
+    background-color: $form-focus;
+    outline: none;
+}
+
+input[type="checkbox"]:checked {
+    background-image: url(../images/basic/icon_check.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+    box-shadow: $form-focus 0 0 0 1px;
+    @include border-radius(2px);
+}
+
+input[type="radio"]:checked {
+    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
+}
+
+/*---------------------------------------------readonly disable -------//*/
+input[readonly],
+input[disable] {
+    background: lighten($color-gray, 15);
+    color: darken($color-gray, 10);
+    border-color: darken($color-gray, 10);
+    &~label {
+        color: darken($color-gray, 10);
+    }
+    &:hover,
+    &:focus {
+        border-color: darken($color-gray, 10);
+        /*box-shadow: none;  cursor: not-allowed;*/
+    }
+}
+}
+/* 檔案上傳*/
+
+
+/* https://codepen.io/shubhamc_007/pen/oZyodd*/
+
+.upload_grp,
+.search_grp {
+    position: relative;
+    input[readonly],
+    input[disable] {
+        background: transparent;
+        color: #666;
+    }
+    .upload_btn,
+    .search_btn {
+        position: absolute;
+        overflow: hidden;
+        top: 0px;
+        right: 0px;
+        min-width: auto;
+        height: 38px;
+        line-height: 28px;
+        box-sizing: border-box;
+        @extend %btn;
+        @include btn_setting($form-focus, #FFF);
+        padding: 5px 1em !important;
+        @include border-radius(4px);
+        &:hover,
+        &:focus {
+            cursor: pointer !important;
+            span{
+                padding-right: 0 !important;
+            }
+        }
+    }
+
+    .search_btn{
+        padding: 0 0 !important;
+        border: 0 !important;
+    }
+}
+
+input[type="file"],
+input[type="button"]
+input.search_check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom:0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+
+
+/*---------------------------------------------form setting--------//*/
+
+form {
+    .form_grp,
+    .check_grp,
+    .radio_grp,
+    .btn_grp,
+    .upload_grp,
+    .search_grp {
+        margin-bottom: .2em;
+    }
+    .btn_grp{
+        clear:both;
+    }
+    .form_grp{
+        margin-bottom: 2em;
+    }
+    .upload_grp{
+        .upload_btn{
+            @include border-radius(0px 4px 4px 0);
+        }
+    }
+    .search_grp{
+        .search_file{}
+        .search_btn{
+            .check_btn{}
+        }
+    }
+
+    .check_grp,
+    .radio_grp {
+        label {
+            white-space: nowrap;
+            display: block;
+        }
+        /* radio與check個別行內設定*/
+        &.form_inline {
+            label {
+                display: inline-block;
+                @include gutter();
+            }
+        }
+        &.form_vertical {
+            label {
+                display: block;
+                @include gutter();
+            }
+        }
+    }
+    .form_grp,
+    .upload_grp {
+        /* 文字表單個別行內設定*/
+        &.form_inline {
+            label {
+                display: inline-block;
+                margin-right: .5em;
+            }
+            input,
+            textarea,
+            select {
+                width: auto;
+            }
+        }
+    }
+    // 檔案上傳、ie input高度控制
+    .upload_grp {
+        input{ height: 38px; }
+    }
+
+    &.form_inline,
+    &.form_vertical{
+        fieldset{
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            &:before{
+                text-align: center;
+                font-weight: bold;
+                position: absolute;
+                content:'';
+                width: 100%;
+                height: 1px;
+                z-index: -1;
+                top:20px; left: 0;
+                margin:0 auto;
+                background: $color-gray;
+            }
+            legend{
+                padding:10px 1em;
+                background: #FFF;
+                border: 1px solid $color-gray;
+            }
+        }
+
+        .col-6,
+        .col-12{
+            .calendar{
+                .col{
+                    padding-left: 0;
+                    padding-right: 0;
+                    @include make-sm-column(6);
+                    @include gutter(0);
+                    img{
+                       display: inline-block;
+                       vertical-align: middle;
+                    }
+                    &:last-child{
+                       text-align: right;
+                       @include screen('mobile') {
+                         text-align: left;
+                    }
+                }
+            }
+            &.time{
+                p.date{
+                    margin:0 0 5px;
+                    color: lighten($color-word,20);
+                }
+                .col{
+                    text-align: center;
+                    @include gutter(30px);
+                    select{ width: 30% !important;}
+                    &:nth-child(2){
+                        &:after{
+                            display: block;
+                            position: absolute;
+                            content:'~';
+                            top: 6px;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .col{
+            margin-bottom: .5em;
+            &.clearfix {
+                clear: both;
+                zoom: 1;
+                &:before,
+                &:after {
+                    content: "";
+                    display: table;
+                }
+                &:after {
+                    clear: both;
+                }
+            }
+            .col-12{
+                .col{
+                    width: 100% !important;
+                    input {
+                        width: 90%;
+                        display: inline-block;
+                        @include screen('mobile') { width: 90%; }
+                        @include screen('xs_mobile') { width: 87%; }
+                    }
+                }
+            }
+            .col-6{
+                .col{
+                    // input {
+                    //     width: 75%;
+                    //     display: inline-block;
+                    //     @include screen('tablet') { width: 72%; }
+                    //     @include screen('mobile') { width: 90%; }
+                    //     @include screen('xs_mobile') { width: 87%; }
+                    // }
+                    // &:nth-child(1){
+                    //     &:after{
+                    //        position: absolute;
+                    //        content:'~';
+                    //        top: 6px;
+                    //        right: 0;
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+}
+
+&.form_inline {
+    label {
+        display: inline-block;
+        vertical-align: middle;
+            /* margin-right: .5em;*/
+            &~input,
+            &~textarea {
+                display: inline-block;
+                width: auto;
+                vertical-align: middle;
+            }
+        }
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            width: auto;
+            display: inline-block;
+        }
+    }
+    >.col-12 {
+        >.col {
+            >.form_grp {
+                >.form_title {
+                    @include make-md-column(3);
+                    @include gutter();
+                    padding-right: 0;
+                    @include screen('tablet') {
+                        width: 30%;
+                    }
+                    @include screen('mobile') {
+                        width: 100%;
+                        @include gutter(0);
+                    }
+                }
+                >.form_content {
+                    @include make-md-column(7);
+                    @include gutter(0);
+
+                    @include screen('tablet') { width: 68%; }
+                    @include screen('mobile') {
+                       width: 100%;
+                       @include gutter(0);
+                   }
+                }
+            }
+        }
+    } 
+    .form_vertical{
+        .col-12{
+            .form_grp .form_title{  padding-left: 0; }
+        }
+    }
+}
+
+.inline{
+    display: inline-block;
+    .form_title,
+    .form_content{
+        display: inline-block;
+        float: left !important; 
+        width: inherit !important; 
+    }
+}
+
+.form_grid {
+    margin:0 auto 1em auto;
+    clear: both;
+    h3 {
+        margin: 0em 0 5px 0;
+        text-align: left;
+        font-size: 1.25em;
+        font-weight: bold;
+        color: #222;
+    }
+
+    .form_grp {
+        clear: both;
+        /* padding: 5px; */
+        @include box-sizing();
+    }
+    .form_title {
+        // @include make-xs-column(12);
+        // @include make-sm-column(3);
+        // @include make-md-column(3);
+        // @include make-lg-column(3);
+        @include gutter(0);
+        font-weight: bold;
+        text-align: right;
+        @include screen('mobile') { text-align: left; }
+    }
+    .form_content {
+        // @include make-xs-column(12);
+        // @include make-sm-column(9);
+        // @include make-md-column(9);
+        // @include make-lg-column(9);
+        @include gutter(0);
+        @include screen('mobile') {
+            @include gutter(0);
+        }
+    }
+    /* 特殊版型:標題文字置左,*/
+    &.variable{
+        .form_grp{
+            width: 100% !important;
+            .form_title {
+                text-align: left;
+                white-space: nowrap;
+                width: 8% ;
+                @include screen('tablet') { width: 10%; }
+                @include screen('mobile') { width: 100%; }
+            } 
+            .form_content {
+                width: 92%;
+                @include screen('tablet') { width: 90%; }
+                @include screen('mobile') { width: 100%; }
+                .row-space{
+                    margin-bottom: 5px;
+                    label{ display: inline-block;}
+                    .col-10-2.block{
+                        .col{
+                            &:nth-child(1){
+                            padding-left: 0;
+                            width: 90%;
+                            @include gutter(0);
+                            @include screen('notebook') { width: 88% ; }
+                            @include screen('tablet') { width: 85% ; }
+                            @include screen('mobile') {
+                                width: 100% ;
+                                margin-bottom:0;
+                            }
+                        }
+                        &:nth-child(2){
+                            width: auto;
+                            padding-right: 0;
+                            margin:0;
+                            @include gutter(4px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+.form_content {
+    .col-3.check_grp,
+    .col-3.radio_grp{
+        .col{
+            &:nth-child(5n){
+                @include box-sizing();
+                @include clearfix;
+                clear:both;
+            }
+        }
+    }
+
+    .col-4.check_grp,
+    .col-4.radio_grp{
+        .col{
+            &:nth-child(4n){
+                @include box-sizing();
+                @include clearfix;
+                clear:both;
+            }
+        }
+    }
+
+    .col-6.check_grp,
+    .col-6.radio_grp{
+        .col{
+            &:nth-child(3n){
+                @include box-sizing();
+                @include clearfix;
+                clear:both;
+            }
+        }
+    }
+
+    .chosen-container-single{
+        font-size: 1em;
+        text-align: left;
+        width: 100% !important;
+        .chosen-single {
+            div{ display: none;}
+            abbr{top:12px;}
+            position: relative;
+            border-radius: 5px;
+            width: 100%;
+            line-height: 2.4em;
+            height: 2.4em;
+            padding: 0 24px 0 .5em;
+            border: 1px solid #CCC;
+            background: #fff url(../../images/basic/icon_select_arrow.png) no-repeat right center !important;
+            background-size: 20px !important;
+            background-image: none;
+            box-shadow: none;
+        }
+        &.chosen-container-active.chosen-with-drop{
+            .chosen-single{
+                border:2px solid $primaryColor;
+                @include box-shadow(none) ;
+            }
+        }
+    }
+}
+
+.form_vertical {
+    h3 {
+        margin: 1em 0 6px 0em;
+        text-align: left;
+        font-size: 1.25em;
+        font-weight: bold;
+        color: #222;
+        clear: both;
+    }
+    .form_grp {
+        display: block;
+        margin:1em 2em;
+        @include box-sizing();
+        @include clearfix;
+        .form_title,.form_content {
+            // padding:2px 2px 2px 2px;
+            float: none !important;
+            width: 100% !important;
+            text-align: left;
+            @include box-sizing();
+            @include clearfix;
+            @include screen('mobile') {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.form_inline{
+    .col{
+        text-align: left;
+        min-height: 1px;
+        font-size: 1em;
+        padding: 2px 0;
+        .form_grp{
+            display: block; 
+            .form_title{
+                float: left;
+                font-weight: bold;
+                padding-top: 5px;
+                line-height: 1;
+                text-align: right;
+                display: inline-block;
+                @include screen('mobile') {
+                    text-align: left !important;
+                    float: none !important;
+                    width: 100% !important;
+                    display: block !important;
+                }
+            }
+            .form_content{
+                @include screen('xs_mobile') {
+                    width: 100% !important;
+                    display: block !important;
+                }
+                input[type="text"],
+                input[type="password"],
+                select,
+                textarea {
+                    width: 100%;
+                    display:block;
+                }
+            }
+        }
+    }
+}
+
+// 查詢結果
+.result{
+    padding: 0 0 1.5em;
+    // border-radius: 5px; 
+    margin-bottom: 1.5em;
+    border-bottom: solid 1px #adadad;
+
+    .btn_grp{
+        margin-bottom: 0 !important;
+        button, button[type="button"]{
+            padding: .25em .5em !important;
+            background: #777777;
+            border: 1px solid lighten(#777777,10);
+            &:hover{
+              color: #fff;
+              background: darken(#484848,10);
+              border: 1px solid darken(#484848,10);
+            }
+        }
+    }
+
+    .radio_grp{
+        .col-3{
+            padding: 0 0 1em;
+        }
+    }
+}
+.Checked_Item{
+    padding: 1em 0;
+    // border-bottom: dotted 1px #555;
+    h4{
+        margin-top: .5em !important;
+       margin-bottom: 0 !important;
+       font-weight: bold !important;
+       // font-size: 1.125em !important;
+    }
+    .Items{
+        background: #f5f5f5;
+        padding: 1em 1em;
+        margin: .5em 0 1em;
+        &.form-control-danger{
+            box-shadow: 0 0px 0px 1px #dc3545 inset;
+            h3{ color: #dc3545; }
+        }
+
+        h3{
+            margin: 0 !important;
+            font-weight: normal;
+            text-align: center;
+        }
+        input.btn{
+            // background: url('../images/icon/icon_search2.png') right 50% no-repeat, #4460ba !important;
+            background: url('../images/icon/icon_close.png') right 50% no-repeat, #4460ba !important;
+            border: 1px solid #4460ba !important;
+            background-size: contain !important;
+            padding: .5em 2.5em .5em 1.2em !important;
+            margin: 2px;
+        }
+    }
+}
+// 新增產品代碼
+.add_new{
+    text-align: center;
+    // position: relative;
+    h4{
+        margin-bottom: .5em !important;
+        font-weight: bold !important;
+        text-align: left;
+    }
+    p{ margin-bottom: 0 !important; }
+
+    .btn_grp{
+        // position: absolute;
+        // right: 0;
+        // top: 0;
+        margin-bottom: 0 !important;
+        button, button[type="button"]{
+            padding: .25em .5em !important;
+            background: #777777;
+            border: 1px solid lighten(#777777,10);
+            &:hover{
+              color: #fff;
+              // background: red;
+              background: darken(#484848,10);
+              border: 1px solid darken(#484848,10);
+            }
+        }
+    }
+}
+
+// .has-danger .form-control-danger label,
+.has-danger .form-check-label, 
+.has-danger .form-control-feedback, 
+.has-danger .form_title,
+.has-danger .form_content,
+.has-danger .check_grp.form-control-danger input,
+.has-danger h4{
+    color: $importantColor !important;
+    font-family: Arial;
+    // text-align: right;
+}
+.has-danger .form-control-danger label{
+    margin-bottom: 0 !important;
+}
+
+
+// .has-danger .form_inline.form-control-danger
+// .has-danger .radio_grp.form-control-danger
+.has-danger .form-control-danger input,
+.has-danger .form-control-danger textarea,
+.has-danger .form-control-danger select,
+.has-danger .form-control-danger .phoneCol input,
+.has-danger .form-control-danger .search_btn button,
+.has-danger .form-control-danger .upload_btn,
+.has-danger .radio_grp.form-control-danger,
+.has-danger .check_grp.form-control-danger,
+.has-danger .my-upload{
+    border: none;
+    outline: none;
+    @include box-shadow(0 0 0 1px $importantColor inset);
+    // color: #000;
+}
+
+// upload 樣式二
+.my-upload{
+    border-radius: 4px;
+    padding: .6em 15px !important;
+}
+
+.has-danger .form-control-danger textarea{
+    box-shadow: none;
+    border: solid 1px $importantColor;
+    border-right: solid .1em $importantColor;
+}
+// question 欄位
+.form_content label+textarea,
+.form_content .upload_grp+textarea,
+.form_content input.upload_grp,
+.form_content .inner-wrap+textarea,
+.has-danger .form-control-danger label+textarea,
+.has-danger .form-control-danger .upload_grp+textarea,
+.has-danger .form-control-danger.my-upload textarea,
+.has-danger .form-control-danger>.inner-wrap+textarea{
+    margin: 0 1em .75em;
+    width: calc(100% - 30px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.form_content textarea,
+.upload_customize+textarea{
+    margin-top: .5em !important;
+}
+
+
+.has-danger .form-control-danger.my-upload textarea{
+    margin: 0 0 .75em;
+    width: 100%;
+}
+
+.form_content .upload_grp,
+.has-danger .form-control-danger .upload_grp{
+    margin: 0 1em .5em;
+    width: calc(100% - 30px);
+    box-shadow: none !important;
+    outline: none; 
+}
+
+.has-danger .form-control-danger .upload_btn,
+.has-danger .form-control-danger .upload_grp .upload_file{
+    @include box-shadow(0 0 0 1px rgba(0, 0, 0, 0.15) inset);
+}
+
+.has-danger .radio_grp.form-control-danger,
+.has-danger .check_grp.form-control-danger{ padding: .45em 0; }
+// @include screen('mobile') {
+//     .has-danger .radio_grp.form-control-danger,
+//     .has-danger .check_grp.form-control-danger{ padding: .45em; }
+// }
+
+.has-danger .form-control-danger label input{
+    @include box-shadow(0 0px 0px 1px #ccc inset);
+}
+
+.has-danger .form-control-danger label input[type="radio"]:checked{
+    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
+}
+.has-danger .form-control-danger label input[type="checkbox"]:checked{
+    box-shadow: $form-focus 0 0 0 1px inset, $form-focus 0 0 0 1px;
+}
+
+.has-danger .form-control-danger input:focus,
+.has-danger .form-control-danger select:focus,
+.has-danger .form-control-danger .upload_btn:focus,
+.has-danger .radio_grp.form-control-danger:focus,
+.has-danger .check_grp.form-control-danger:focus,
+.has-danger .form_inline.form-control-danger:focus{
+    border: none;
+    outline: none;
+    // @include box-shadow(0 0px 0px 2px $importantColor inset);
+    // box-shadow: 0px 0px 0px 1px #ccc inset;
+    @include box-shadow(0px 0px 0px 1px $importantColor inset);
+}
+
+.modalBox form input:hover,.modalBox form input:focus{
+    @include box-shadow(0 0px 0px 1px $form-focus inset);
+}
+.modalBox .has-danger .form-control-danger input,
+.modalBox .has-danger .form-control-danger input:hover,
+.modalBox .has-danger .form-control-danger input:focus{
+    box-shadow: 0px 0px 0px 1px #ccc inset;
+    // @include box-shadow(0 0px 0px 2px #f52600 inset);
+}
+
+.has-danger .form_inline.form-control-danger,
+.has-danger .radio_grp.form-control-danger,
+.has-danger .check_grp.form-control-danger{
+    @include border-radius(.25rem);
+}
+.form-control-danger, .form-control-success,
+.form-control-warning {
+    padding-right: 2.25rem;
+    background-repeat: no-repeat;
+    background-position: center right .5625rem;
+    background-size: 1.125rem 1.125rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .3rem .5rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #464a4c;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.input-group {
+    display: inline-table;
+    vertical-align: middle;
+
+    .input-group-addon,
+    .input-group-btn,
+    .form-control { width: auto; }
+
+}
+
+/* Input groups need that 100% width though*/
+.input-group > .form-control { width: 100%; }
+
+.has-feedback { position: relative }
+
+.has-feedback .form-control { padding-right: 42.5px }
+
+.has-feedback .form-control-feedback {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center
+}
+
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline { color: #3c763d }
+
+.has-success .form-control {
+    border-color: #3c763d;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+}
+
+.has-success .form-control:focus {
+    border-color: #2b542c;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168
+}
+
+.has-success .input-group-addon {
+    color: #3c763d;
+    border-color: #3c763d;
+    background-color: #dff0d8
+}
+
+.has-success .form-control-feedback {
+    color: #3c763d
+}
+
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline {
+    color: #8a6d3b
+}
+
+.has-warning .form-control {
+    border-color: #8a6d3b;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+}
+
+.has-warning .form-control:focus {
+    border-color: #66512c;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #c0a16b
+}
+
+.has-warning .input-group-addon {
+    color: #8a6d3b;
+    border-color: #8a6d3b;
+    background-color: #fcf8e3
+}
+
+.has-warning .form-control-feedback {
+    color: #8a6d3b
+}
+
+.has-danger .help-block,
+.has-danger .control-label,
+.has-danger .radio,
+.has-danger .checkbox,
+.has-danger .radio-inline,
+.has-danger .checkbox-inline {
+    color: $importantColor;
+}
+
+/* .has-danger .form-control {
+    border-color: $importantColor;;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+}
+
+.has-danger .form-control:focus {
+    border-color: #843534;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483
+} */
+
+.has-danger .input-group-addon {
+    color: $importantColor;;
+    border-color: $importantColor;;
+    background-color: #f2dede
+}
+
+
+
+.form-control-static {
+    margin-bottom: 0
+}
+.help-danger{
+    color:$importantColor;
+}
+.help-block {
+    display: block;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: #888;
+    label{display: inline-block;}
+}
+.help-inline{
+ margin-bottom: 10px;
+ color: #888;
+}
+
+@media (min-width:768px) {
+    .form-inline .form-group {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle
+    }
+    .form-inline .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle
+    }
+    .form-inline .input-group>.form-control {
+        width: 100%
+    }
+    .form-inline .control-label {
+        margin-bottom: 0;
+        vertical-align: middle
+    }
+    .form-inline .radio,
+    .form-inline .checkbox {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        vertical-align: middle
+    }
+    .form-inline .radio input[type=radio],
+    .form-inline .checkbox input[type=checkbox] {
+        float: none;
+        margin-left: 0
+    }
+    .form-inline .has-feedback .form-control-feedback {
+        top: 0
+    }
+}
+
+/*---------------------------------------------captcha--------//*/
+
+img.captcha {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 2.4em;
+    margin-bottom: .5em;
+    &+input {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+    ~img {
+        display: inline-block;
+        vertical-align: middle;
+        max-height: 2.4em;
+        margin-bottom: .5em;
+    }
+}
+/*---------------------------------------------必填欄位說明--------//*/
+abbr[title] {
+   border-bottom: none;text-decoration: none;
+}
+
+

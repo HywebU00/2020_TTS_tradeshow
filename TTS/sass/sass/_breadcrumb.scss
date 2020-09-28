@@ -1,0 +1,41 @@
+.breadcrumb {
+    padding: 10px 5px;
+    font-size: .938em;
+    margin: 0px;
+    position: relative;
+    z-index: 1;
+    color:white;
+    background: url('../images/breadcrumb-bg.jpg') no-repeat 0 0px;
+    ul {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 1200px;
+        text-align: left;
+        li {    
+            display: inline-block;
+            margin:0px .1em .1em 0px;
+            &:before {
+                @extend %slash;
+            }
+            &:first-child:before {
+                content: "";
+                display: inline-block;
+                color:#666;
+                margin-left: 0;
+                padding: 0;
+            }
+        }
+    }
+    a {
+        @include aSetting();
+        color:white;
+        &:hover, &:focus{
+            color: #ffda3b;
+        }
+    }
+    @include screen('xs_mobile') {
+        line-height: 1;
+        padding: 8px 16px;
+        background: #671488;
+    }
+}

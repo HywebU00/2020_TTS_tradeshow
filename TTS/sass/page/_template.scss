@@ -1,0 +1,567 @@
+body,html {
+    &.noscroll {
+        position: static !important;
+        width: 100%;
+        height: 100%;
+        overflow: hidden !important;
+        overflow-y: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+}
+html{
+    overflow-y: scroll;
+}
+
+
+/* 最外圍預設為100%*/
+.wrapper {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    @include screen('mobile') {
+        background: #FFF;
+    }
+    &:after{
+        // width: 100%;
+        // height:100%;
+        // position: absolute;
+        // content: "";
+        // z-index: -1;
+        // top: 0;bottom: 0;
+        // left: 0;right: 0;
+        // display: block;
+        // @include animation(color-change-2x 3s linear infinite alternate both);
+
+        // @include filter-gradient(#690e86, #05b3db);
+        // $experimental-support-for-svg: true;
+        // @include background-image(linear-gradient(top, #690e86 0%, #05b3db 120%));
+        // background-size: 150% 150%; 
+        
+    }
+    &.MP{
+        .main{
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+         background-color: rgba(169,37,118,1) !important ;
+         $experimental-support-for-svg: true;
+         @include filter-gradient(#a92576, #07d8df, vertical);
+         @include background(
+          linear-gradient(top, rgba(169,37,118,1) 0%, rgba(93,5,125,1) 33%, rgba(83,102,164,1) 70%, rgba(7,216,223,1) 100%));
+         background-position: 0 600px;
+         background-repeat: no-repeat;
+         .section{
+            position: relative;
+            z-index: 1;
+        }
+        &:before{
+            position: absolute;
+            content: "";
+            display: block;
+            width: 100%;height: 100%;
+            top:665px;
+            background: url('../images/decBg.png') repeat-y 0 center;
+            background-size: 42%;
+            -webkit-filter: brightness(10);
+            filter: brightness(10);
+        }
+        >.container{
+            max-width: 100%;
+                /* width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background-color: rgba(169,37,118,1) !important ;
+                $experimental-support-for-svg: true;
+                @include filter-gradient(#a92576, #07d8df, vertical);
+                @include background(
+                  linear-gradient(top, rgba(169,37,118,1) 0%, rgba(93,5,125,1) 33%, rgba(83,102,164,1) 70%, rgba(7,216,223,1) 100%));
+                background-position: 0 600px;
+                background-repeat: no-repeat;
+                .section{
+                    position: relative;
+                    z-index: 1;
+                }
+                &:before{
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 100%;height: 100%;
+                    top:665px;
+                    background: url('../images/decBg.png') repeat-y 0 center;
+                    background-size: 42%;
+                    -webkit-filter: brightness(10);
+                    filter: brightness(10);
+                } */
+                /* &:after{
+                    position: absolute;
+                    content: "";
+                    top: 600px;left: 0;right: 0;
+                    display: block;
+                    width: 100%;
+                    height: 400px;
+                    @include opacity(0.3);
+                    background: url('../images/selecionBg.png') no-repeat 0 top;
+                    background-size: cover;
+                } */
+            }
+            @include screen('tablet') {
+                >.container{
+                    background-position: 0 440px;
+                    h2{
+                        font-size: 2em;
+                    }
+                }
+            }
+            @include screen('mobile') {
+                padding-top: 55px;
+                >.container{
+                    &:before{
+                        background-size: contain;
+                        @include filter(opacity(0.8));
+                    }
+                    h2{
+                        font-size: 2em;
+                        width: 100%;
+                        overflow: visible;
+                        // margin: 1em auto !important;
+                        position: relative;
+                        &:after{
+                            position: absolute;
+                            content: "";
+                            bottom: -5px;
+                            left: 0;
+                            right: 0;
+                            width: 40%;
+                            margin: auto;
+                        }
+                        a{;
+                          &:hover,&:focus{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        
+
+    }
+}
+}
+/**
+ * ----------------------------------------
+ * animation color-change-2x
+ * ----------------------------------------
+ */
+ @-webkit-keyframes color-change-2x {
+  0% {
+    background: #07d8df;
+}
+100% {
+    background: #a92576;
+}
+}
+@keyframes color-change-2x {
+  0% {
+    background: #07d8df;
+}
+100% {
+    background: #a92576;
+}
+}
+
+
+/* @-webkit-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+} */
+
+/* 整體共用container樣式，請注意首頁切版頁面的整齊*/
+.container {
+    margin: 0 auto;
+    max-width: $container-max; /*請看_variable.scss*/
+}
+
+
+
+.main {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    background: #FFF;
+    .container {
+        @include gutter(0);
+    }
+    &.innerpage{
+       .container {
+        background: #FFF;
+    }
+}
+
+@include screen('mobile') {
+    padding-top: 0em;
+    &.innerpage{
+     .container {
+        max-width: 100% !important;
+    }
+}
+
+    } /* 內頁標題設定*/
+    h2 {
+        line-height: 1.25em;
+    }
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////*/
+/* 為了與首頁區隔，請在內頁加上innerpage ClassName*/
+.innerpage {
+    position: relative;
+    z-index: 1;
+    h2{
+        color:$color-darkblue;
+        font-size: 1.8em;
+    }
+
+    >.container {
+        min-height: 300px !important;
+        @include gutter(6em);
+        padding-top: 2em;
+        padding-bottom: 2em;
+        position: relative;
+        z-index: 0;
+        overflow: inherit;
+        background: #FFF;
+        @include screen('tablet') {
+            padding: 1em 1em;
+            // padding-left: 15px;
+            // padding-right: 15px;
+        }
+        @include screen('mobile') {
+            margin-top: 0em;
+            padding: 1em 1.25em;
+            // @include gutter();
+            // padding-top: 1em;
+            // padding-bottom: 1em;
+        }
+        @include screen('xs_mobile') {}
+    }
+    @include screen('tablet') {
+       &:after{
+           display: none;
+       }
+   }
+}
+
+/* Go from zero to full opacity */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+/* 滿版*/
+.col-12 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(12);
+        @include make-lg-column(12);
+        border: none; /* @include gutter(); //gutter 代表左右要留白*/
+    }
+}
+
+/* 五欄*/
+.col-2 {
+    .container {
+       @include gutter(0); 
+   }
+   .col {
+    @include make-xs-column(6);
+    @include make-sm-column(3); 
+    @include make-md-column(2); 
+    @include make-lg-column(2);
+        @include gutter(); /*gutter 代表左右要留白*/
+    }
+}
+
+
+/* 三欄*/
+.col-4 {
+    .container {
+        /* @include gutter(); gutter 代表左右要留白*/
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(6); 
+        @include make-md-column(4); 
+        @include make-lg-column(4);
+        @include gutter(); /*gutter 代表左右要留白*/
+    }
+}
+/* 四欄*/
+.col-3 {
+    .container {
+        /* @include gutter(); gutter 代表左右要留白*/
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(6); 
+        @include make-md-column(3); 
+        @include make-lg-column(3);
+        @include gutter(); /*gutter 代表左右要留白*/
+    }
+}
+
+
+/* 雙欄*/
+.col-6 {
+    .container {
+        @include gutter(); /*gutter 代表左右要留白*/
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(6); /*768px  width:50%*/
+        @include make-md-column(6); /*992px  width:50%*/
+        @include make-lg-column(6); /*1400px width:50%*/
+        @include gutter();
+    }
+}
+
+/* 雙欄 5-2-5*/
+.col-6-2-4 {
+    .container{@include gutter(0);}
+    .col {
+
+        h3{
+            margin-top: 5px;
+            color: darken($primaryColor, 10);
+            font-size: 1em; margin: 0;
+            text-align: left;
+        }
+        &:nth-child(1) {
+            @include make-xs-column(7);
+            margin-bottom: 1.5em;
+        }
+        &:nth-child(2) {
+            @include gutter(0);
+            margin: 0 auto;
+            vertical-align: middle;
+            text-align: center !important;
+            @include make-xs-column(1);
+        }
+        &:nth-child(3) {
+            @include make-xs-column(4);
+            ul{
+                margin: 0;padding: 0;
+                list-style: none;
+            }
+        }
+
+        .half {
+            margin:0; padding: 0;
+            li {padding: 0;
+                width: 47%;
+                float: left;
+                margin-right: 10px;
+                display: inline-block;
+            }
+        }
+    }
+}
+/* 雙欄 3-9*/
+.col-3-9 {
+    .col {
+        &:nth-child(1){
+            @include make-xs-column(12);
+            @include make-sm-column(3); 
+            @include make-md-column(3); 
+            @include make-lg-column(3);
+            @include gutter(); /*gutter 代表左右要留白*/
+            @include screen('mobile') {
+                @include gutter(0);
+            }
+        }
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(9);
+            @include make-md-column(9); /*992px  width:66.6%*/
+            @include make-lg-column(9); /*1400px width:66.6%*/
+            @include gutter(); /*gutter 代表左右要留白*/
+            @include screen('mobile') {
+                margin-bottom: 1.5em;
+                @include gutter(0);
+            }
+        }
+
+    }
+}
+
+/* 雙欄 4-8*/
+.col-4-8 {
+    .col {
+        &:nth-child(1){
+            @include make-xs-column(12);
+            @include make-sm-column(12); 
+            @include make-md-column(4); 
+            @include make-lg-column(4);
+            @include gutter(); /*gutter 代表左右要留白*/
+        }
+        &:nth-child(2){
+            @include make-xs-column(12);
+            @include make-sm-column(12);
+            @include make-md-column(8); /*992px  width:66.6%*/
+            @include make-lg-column(8); /*1400px width:66.6%*/
+            @include gutter(); /*gutter 代表左右要留白*/
+
+        }
+    }
+}
+
+/* 雙欄 8-4*/
+.col-8-4 {
+    >.col {
+        &:nth-child(1){
+            @include make-xs-column(12);
+            @include make-sm-column(8); 
+            @include make-md-column(8); 
+            @include make-lg-column(8);
+            @include gutter(); /*gutter 代表左右要留白*/
+        }
+        &:nth-child(2){
+            @include make-xs-column(12);
+            @include make-sm-column(4);
+            @include make-md-column(4); /*992px  width:66.6%*/
+            @include make-lg-column(4); /*1400px width:66.6%*/
+            @include gutter(); /*gutter 代表左右要留白*/
+
+        }
+    }
+}
+
+/* 雙欄 9-3*/
+.col-9-3 {
+    .col {
+        &:nth-child(1){
+            @include make-xs-column(12);
+            @include make-sm-column(9);
+            @include make-md-column(9); /*992px  width:66.6%*/
+            @include make-lg-column(9); /*1400px width:66.6%*/
+            @include gutter(); /*gutter 代表左右要留白*/
+            @include screen('mobile') {
+                margin-bottom: 1.5em;
+                @include gutter(0);
+            }
+        }
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(3); 
+            @include make-md-column(3); 
+            @include make-lg-column(3);
+            @include gutter(); /*gutter 代表左右要留白*/
+            @include screen('mobile') {
+                @include gutter(0);
+            }
+        }
+
+    }
+}
+/* 雙欄 10-2*/
+.col-10-2 {
+    .col {
+        &:nth-child(1){
+            @include make-xs-column(12);
+            @include make-sm-column(10);
+            @include make-md-column(10); /*992px  width:66.6%*/
+            @include make-lg-column(10); /*1400px width:66.6%*/
+            @include gutter(); /*gutter 代表左右要留白*/
+            @include screen('mobile') {
+                margin-bottom: 1.5em;
+                @include gutter(0);
+            }
+        }
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(2); 
+            @include make-md-column(2); 
+            @include make-lg-column(2);
+            @include gutter(); /*gutter 代表左右要留白*/
+            @include screen('mobile') {
+                @include gutter(0);
+            }
+        }
+
+    }
+}
+.col-2-10 {
+    .col {
+        &:nth-child(1){
+            @include make-xs-column(12);
+            @include make-sm-column(2);
+            @include make-md-column(2); /*992px  width:66.6%*/
+            @include make-lg-column(2); /*1400px width:66.6%*/
+            @include gutter(); /*gutter 代表左右要留白*/
+            @include screen('mobile') {
+                margin-bottom: 1.5em;
+                @include gutter(0);
+            }
+        }
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(10); 
+            @include make-md-column(10); 
+            @include make-lg-column(10);
+            @include gutter(); /*gutter 代表左右要留白*/
+            @include screen('mobile') {
+                @include gutter(0);
+            }
+        }
+
+    }
+}
+
+
+/* 雙欄 8-4*/
+.col-8-4 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(8); 
+        @include make-md-column(8); 
+        @include make-lg-column(8);
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(4);
+            @include make-md-column(4);
+            @include make-lg-column(4);
+        }
+    }
+    .news{
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(8); /*992px  width:66.6%*/
+        @include make-lg-column(8); /*1400px width:66.6%*/
+        @include gutter(); /*gutter 代表左右要留白*/
+    }
+    .video {
+        @include make-xs-column(12);
+        @include make-sm-column(4); 
+        @include make-md-column(4); 
+        @include make-lg-column(4);
+    }
+}
+
+
+

@@ -1,0 +1,41 @@
+@mixin fontSetting($FONT-SIZE:$font-size, $WEIGHT:normal) {
+    font-size: $FONT-SIZE;
+    font-weight: $WEIGHT;
+    color: $color-word;
+}
+
+@mixin h3font($H3FONT-SIZE:1.25em, $WEIGHT:bold) {
+    font-size: $H3FONT-SIZE;
+    font-weight: $WEIGHT;
+    color: $color-word;
+    margin:0 0 10px 0;
+}
+
+@mixin aSetting($COLOR:$aColor, $NOLINE:none) {
+    color: $COLOR;
+    -webkit-text-decoration: $NOLINE;
+    text-decoration: $NOLINE;
+    &:hover,
+    &:focus {
+        color: $aHover;
+        cursor: pointer;
+    }
+}
+body {
+    @include fontSetting(1em);
+    line-height: 1.45em;
+    font-family:$font-family;
+    -webkit-text-size-adjust: none;
+    color: #333;
+    @media print {
+        font-size: .75em;
+    }
+}
+a {
+    @include aSetting();
+}
+.keyword{
+    color: $keyword;
+}
+
+

@@ -1,0 +1,163 @@
+.list {
+    ul,
+    ol {
+        list-style-type: none;
+        padding: 0;
+        border-top: 2px solid $primaryColor;
+        li {
+            padding: 1em 0;
+            overflow: hidden;
+            border-bottom: 1px solid #DDD;
+                position: relative; /* outline: 1px solid blue;*/
+                a {
+                    position: relative;
+                    .num {
+                        width: 1.5em;
+                        text-align: right;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        &:after {
+                            content: ".";
+                            display: inline-block;
+                        }
+                    }
+                }
+                span.dept {
+                    display: inline-block;
+                    font-size: .938em;
+                    @include screen("mobile") {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .list-img{
+        overflow: hidden;
+        margin: 0 auto 2em auto;
+        @include border-radius(4px);
+        @include transition(all .3s);
+        border:1px solid lighten($color-gray,8);
+        @include box-shadow(0 2px 8px 0 rgba(194, 194, 194, 0.5));
+        &:hover,&:hover{
+            @include box-shadow(none);
+            border:1px solid rgba($primaryColor,0.4);
+            @include box-shadow(0 2px 8px 0 rgba($primaryColor,0.5));
+        }
+        .container{
+            @include gutter(0);
+        }
+        a{
+            padding: 1em; display: block;
+            h3{
+                color: $color-darkblue;
+                display: block;
+            }
+            &:hover,&:focus{
+             h3{
+                 color: $aHover;
+             }
+             img{ @include transform(scale(1.1)); }
+             .btn-more{
+                 @include btn_setting( $aHover, white);
+                 border:1px solid $aHover;
+                 &:after{ 
+                    right: 16px;
+                    @include transition(all .3s);
+                }
+            }
+        }
+    }
+    time {
+        display: block;
+        font-size: 1em;
+        margin-bottom: 3px;
+        font-weight: 500;
+        color: $primaryColor;
+    }
+
+    h3{
+        @include h3font(1.25em,bold);
+        color: $color-darkblue;
+        line-height: 1.45;
+    }
+    p{
+        font-size: 1em;
+        color: lighten($color-word,20);
+        margin-bottom: 1em;
+    }
+    .btn-more{ float: right; }
+    .img-container{
+        overflow: hidden;
+        @include aspect-ratio(4, 3);
+        img{
+            @include transition(all .3s);
+            background: transparent;
+        }
+    }
+    @include screen('mobile') {
+        .container .col{
+         padding-left: 0 !important;
+         padding-right: 0 !important;
+         .img-container{
+             margin-bottom: 1em;
+         }
+     }
+ }
+}
+.col-4-8.list-img{
+    .container .col:nth-child(1){
+        @include gutter(0px);
+    }
+}
+.col-12.list-img{
+    .container .col{
+        @include gutter(30px);
+    }
+}
+.lp {
+    table {
+        td {
+            text-align: left;
+            &.date {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+            &.num {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+.album {
+    margin: 1em auto;
+    overflow: hidden;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            @include make-xs-column(12);
+            @include make-sm-column(4);
+            @include make-md-column(4);
+            @include make-lg-column(4);
+            @include gutter();
+            a {
+                display: block;
+                text-align: center;
+            }
+            .imgOuter {
+                width: 100%;
+                @include aspect-ratio(4, 3);
+            }
+        }
+    }
+}

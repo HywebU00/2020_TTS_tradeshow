@@ -1,0 +1,241 @@
+
+/* card caption的共用設定*/
+
+/* caption設定*/
+$caption-font-color:white;
+$caption-padding:.5em 1.5em;
+$caption-radius:4px;
+
+
+
+@mixin card_caption($caption-font-color:$caption-font-color) {
+    text-align: left;
+    color: #fff;
+    border-top: none;
+    z-index: 1;
+    cursor: pointer;
+    font-weight: normal;
+    margin:0;
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    @include transition(.3s all);
+    @include animation(gridBoxMask 0.2s ease);
+    &:before,
+    &:after{
+        position: absolute;
+        content: "";
+        left: 0;right: 0;
+        bottom: 0;
+        @include transition(.3s all);
+    }
+    &:before{
+        display: none;
+        bottom: 0; height: 40px;
+        background-color: rgba(black,0.5);
+    }
+    &:after{
+        width: 106%;height: 106%;
+        display: block; overflow: hidden;
+        @include filter-gradient(rgba(0,0,0,0), rgba(0,0,0,1), vertical);
+        $experimental-support-for-svg: true;
+        @include background-image(linear-gradient(top, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%));
+    }
+    /* .object_fit_block .pic {
+      position: relative;
+      margin: 1%;
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+      background: #DEDEDE;
+    }
+
+    .object_fit_block .pic:before {
+      display: block;
+      content: "";
+      padding-top: 75%;
+    }
+    .object_fit_block .pic img {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+     */
+
+    .cardText{
+        color:white;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        @include transform(scaleY(1));
+        @include transition(all .3s) ;
+        text-shadow: 0 1px 2px $color-word;
+
+        time{
+            color: rgba(255, 255, 255, 1);
+            display: block;
+            font-size: 0.8em;
+        }
+        h3{
+            @include h3font();
+            color: #fff;
+            font-weight: 500;
+            font-size: 1em;
+            line-height: 1.2;
+            margin:0;
+            margin-bottom: 0;
+            border-top: none;
+        }
+        p{
+            @include opacity(0);
+            font-size: .8em;
+            overflow: hidden;
+            color: #fff;
+            display: none;
+            font-weight: 400;
+            padding: 6px 0;
+            // padding-bottom: 10px;
+            line-height: 1.3;
+            // word-wrap:break-word;
+            // word-break:break-all;
+        }
+        @include screen('tablet') {
+            p{
+                height: 60px;
+                overflow: hidden;
+            }
+        }
+    }
+    .favorite,
+    .readmore{
+        font-size: 0.9em;
+        display: none;
+        z-index: 1;
+        font-weight: normal;
+        width: auto;height: auto;
+        position: absolute;
+        top:auto;
+        bottom: 8px;
+        @include transition(all .3s) ;
+        &:hover,
+        &:focus{ color:white !important; }
+    }
+
+    .favorite{
+        left: 16px;
+        color:#fff ;
+        i{ color:white; }
+        &:hover,
+        &:focus{ text-decoration: none; }
+        &.active{
+            i{ color:#fff100; }
+        }
+    }
+
+    .readmore{
+        right: 3px;
+        &:after{display: none;}
+    }
+
+    &:hover,
+    &:focus{
+        @include transition(all .3s) ;
+        &:before,
+        &:after { display: block; }
+        /* &:before{
+            background: rgba(0,0,0,0.7);
+            @include opacity(1);
+            @include transform(scaleY(1));
+            @include transition(all .3s cubic-bezier(.08, .35, .13, 1.02) opacity .3s) ;
+        } */
+        &:before{ display: block; }
+        &:after{
+            @include background-image(linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 10%, rgba(0,0,0,1) 100%));
+        }
+        .cardText {
+            display: block;
+            height: auto;
+            margin-bottom: 35px;
+            @include opacity(1);
+            &:before{ display: none; }
+
+            time{
+                // margin-bottom: 8px;
+                // text-shadow: none;
+                span{
+                    padding: 5px 10px;
+                    background: #a12177;
+                    border-radius: 3px;
+                }
+            }
+            h3{
+                // margin-bottom: 5px;
+                // height: inherit;
+                // overflow: hidden;
+                padding: 8px 0;
+            }
+            p{
+                // @include opacity(1);
+                // display: block;
+                // margin:0;
+            }
+
+        }
+        .favorite,
+        .readmore{
+            display: block !important;
+        }
+    }
+
+    @include screen('notebook') {
+        .favorite,
+        .readmore{ font-size: 0.8em; }
+    }
+    @include screen('mobile') {
+        margin: 0em 0 0 0;
+        float: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+        &:hover,
+        &:focus{
+            .cardText{
+                h3,p{
+                    max-height: inherit;
+                    overflow: visible;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* gridBoxMask*/
+@-webkit-keyframes gridBoxMask {
+  0%{ background-position:50% 0%; }
+  100%{ background-position:100% 0%; }
+}
+@keyframes gridBoxMask { 
+  0%{ background-position:50% 0%; }
+  100%{ background-position:100% 0%; }
+}

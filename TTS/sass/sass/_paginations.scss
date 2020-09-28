@@ -1,0 +1,241 @@
+/*pagination*/
+
+.pagination {
+    margin: 0 auto 1em auto;
+    padding: 0px;
+    display: block;
+    text-align: center;
+    clear: both;
+    position: relative;
+    font-size: 1.1em;
+    @include clearfix(); /* outline: 1px solid red;*/
+    span{
+        color:$secondaryColor;
+        margin:0px 4px;
+    }
+    input, select, textarea{ width: auto !important;}
+    .total {
+       display: inline-block;
+       color: lighten($color-word,20);
+   }
+   .page {
+    display: inline-block;
+    margin: auto; padding-left:0;
+    li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 2px;
+        &.first,
+        &.prev,
+        &.next,
+        &.last{
+            a{
+                font-size: 1.2em;
+                position: relative;
+                color: $color-word;
+                display: block;
+                background: transparent;
+                color:transparent;
+                border: none;
+                &:before{
+                    color:$color-word;
+                }
+                &:hover,
+                &:focus {
+                 background: transparent;
+                 @include box-shadow(none !important);
+                 &:before{
+                    color:$secondaryColor;
+                }
+            }
+        }   
+
+    }
+    a{
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        white-space: nowrap;
+        color: $color-word;
+        background-color: #fff;
+        @include box-sizing(border-box);
+        border-radius: 3px;
+        border: none;
+        @include box-shadow(none !important);
+        &:hover,
+        &:focus {
+            background: $secondaryColor;
+            color: #fff!important;
+        }
+        &:before{
+            font-family: 'fontello';
+        }   
+    }
+
+    &.active {
+        a{ 
+            color: #fff!important;
+            background: $secondaryColor;
+        }
+
+    }
+
+    &.disabled a{
+        &:before{
+            color: darken($color-gray,10) !important;
+            outline:0;
+            font-weight: normal;
+            box-shadow: none;
+            cursor: no-drop;
+        }
+    }
+    /* &.first a,
+    &.prev a,
+    &.next a,
+    &.last a{
+      &:hover,
+      &:focus {
+         text-indent: -9999px;
+     }
+ } */
+ &.first a{
+    &:before{
+        content: '\E883';
+    }
+
+}
+&.prev a{
+    &:before{
+        content: '\E87B';
+    }
+}
+&.next a{
+    &:before{
+        content: '\E87C';
+    }
+}
+&.last a{
+    &:before{
+        content: '\E884';
+    }
+}
+}
+
+}
+.viewStatus {
+    margin: 0px 0;
+    padding: 0; 
+    line-height: 0.8;
+    float: right;
+    list-style: none;
+    li {
+        display: inline-block;
+        list-style: none;
+        &.viewList,
+        &.viewMap{
+            a{
+                font-size: 1.2em;
+                line-height: 1.5;
+                position: relative;
+                color: $color-word;
+                display: block;
+                background: transparent;
+                color:transparent;
+                border: 1px solid $color-gray; ;
+                &:before{
+                    color:$color-word;
+                }
+                &:hover,
+                &:focus {
+                 background: transparent;
+                 border: 1px solid $primaryColor ;
+                 &:before{
+                    color:$primaryColor;
+                }
+            }
+        }
+
+    }
+    a{
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        white-space: nowrap;
+        color: $color-word;
+        background-color: #fff; 
+        border: 1px solid #ccc;
+        @include box-sizing(border-box);
+        border-radius: 5px;
+        &:hover,
+        &:focus {
+            background: $primaryColor;
+            color: #fff!important;
+            border: 1px solid $primaryColor ;
+        }
+        &:before{
+            font-family: 'fontello';
+        }   
+    }
+
+    &.active {
+        a{ 
+         &:hover,
+         &:focus {
+             &:before{  color:$primaryColor;}
+         }
+         &:before{
+            color: #fff;
+        }
+        background: $primaryColor;
+        border: $primaryColor solid 1px;
+    }
+
+}
+&.viewList a{
+    &:before{
+        content: '\E8BA';
+    }
+}
+&.viewMap a{
+    &:before{
+        content: '\EAE2';
+    }
+}
+
+}
+}
+
+}
+
+@include screen('mobile') {
+    .pagination{
+        .page{
+          position: static;
+          clear: both;
+          margin-bottom: 5px;
+          li{
+              margin: 0;
+              a{
+                width: 32px;
+                height: 32px;
+                line-height: 30px;
+            }
+        }
+    }
+    .total{
+        clear: both;
+        float: none;
+        overflow: hidden;
+        vertical-align: -4px;
+        select.form-control {
+            margin: 0px 0px;
+            padding: 0;
+            text-align: center;
+        }
+    }
+}
+
+
+}

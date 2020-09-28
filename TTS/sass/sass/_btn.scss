@@ -1,0 +1,630 @@
+/* 按鈕設定*/
+$btn-font-color: $color-word;
+$btn-border: lighten($primaryColor, 0);
+$btn-padding: 0.5em 1.5em;
+$btn-radius: 3px;
+/* 按鈕外框*/
+/* .btn_grp {*/
+/*     text-align: center;*/
+/*     padding: 15px 0;*/
+/*     clear: both;*/
+/* }*/
+
+/* 按鈕的共用設定*/
+@mixin btn_setting($btn-bg: $primaryColor, $btn-font-color: $btn-font-color) {
+  background: $btn-bg;
+  border: 1px solid $btn-border;
+  color: $btn-font-color;
+  @include border-radius($btn-radius);
+  &:hover,
+  &:focus {
+    background: darken($btn-bg, 10);
+    border: 1px solid darken($btn-bg, 10);
+    cursor: pointer;
+    color: #fff;
+    content: "";
+    outline: none;
+    span {
+      padding-right: 25px;
+      &:after {
+        opacity: 1;
+        right: 0;
+      }
+      &.sr-only {
+        margin: 0;
+        overflow: inherit;
+      }
+    }
+  }
+  &.active {
+    background: darken($btn-bg, 10);
+    border: 1px solid darken($btn-bg, 10);
+    // @include box-shadow(0px 0px 0px 1px darken($btn-bg,10));
+    cursor: pointer;
+  }
+}
+.readmore,
+a.readmore {
+  position: absolute !important;
+  right: 0;
+  // bottom: 0;
+  color: white !important;
+  width: auto !important;
+  height: auto !important;
+  display: inline-block;
+  padding-right: 20px;
+  margin: 0 !important;
+  text-align: right;
+  font-weight: normal;
+  /* text-transform: uppercase; */
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+  &:after {
+    position: absolute;
+    content: "→";
+    top: 0px;
+    right: 0;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+/* 按鈕預設陰影*/
+%btn {
+  /* @include text-shadow(RGBA(0, 0, 0, .3) 1px 1px 1px);*/
+  background-image: none; /*修正firefox*/
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: normal;
+  min-width: 80px;
+  width: auto;
+  @include border-radius(4px);
+  @include transition(0.3s all);
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.btn {
+  @extend %btn;
+  padding: 0.5em 2em;
+  font-size: $font-size;
+  touch-action: manipulation;
+  @include box-sizing(border-box);
+  @include btn_setting();
+  &:hover,
+  &:focus {
+    color: $btn-font-color;
+    background: rgb(247, 247, 247); /* Old browsers*/
+    @include filter-gradient(#f7f7f7, #eaeaea, vertical); /* IE6-9*/
+    @include background-image(linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(234, 234, 234, 1) 100%));
+  }
+
+  .btn-block {
+    @extend %btn;
+    display: block;
+    min-width: auto;
+    width: 100% !important;
+  }
+}
+
+.member {
+    .btn {
+        padding: .25em .5em;
+    }
+
+    .act{
+        color: #fff;
+        &:hover{
+            background: darken($primaryColor,10);
+        }
+        &:active, &:focus{
+            background: darken($primaryColor,15);
+        }
+    }
+
+    .copy{
+        background: url(../images/icon/icon-copy.png) 50% 50% no-repeat;
+        background-size: contain;
+        font-size: 0;
+        height: 30px;
+        border: 0;;
+        &:hover, &:active, &:focus{
+            // filter: hue-rotate(40deg);
+            filter: brightness(.5);
+        }
+    }
+}
+
+@mixin btn_outline_setting($btn-bg: white, $btn-font-color: $primaryColor) {
+  padding: 0.3em 1.5em;
+  background: $btn-bg;
+  border: 1px solid $btn-border;
+  color: $btn-font-color;
+  @include border-radius($btn-radius);
+  @include box-shadow(
+    0 2px 2px 0 rgba(66, 165, 245, 0.14),
+    0 3px 1px -2px rgba(66, 165, 245, 0.2),
+    0 1px 5px 0 rgba(66, 165, 245, 0.12)
+  );
+  @include transition(0.2s ease-in);
+  @include filter-gradient(#fff, #fff, vertical); /* IE6-8*/
+  @include background-image(linear-gradient(top, #fff 0%, #fff 100%));
+  &:hover,
+  &:focus {
+    background: $primaryColor;
+    color: white;
+    @include box-shadow(
+      0 2px 2px 0 rgba(66, 165, 245, 0.14),
+      0 3px 1px -2px rgba(66, 165, 245, 0.2),
+      0 1px 5px 0 rgba(66, 165, 245, 0.12)
+    );
+  }
+}
+.btn-switch {
+  font-size: 1.2em;
+  @include btn_setting($color-word, #fff);
+  border: 0;
+  @include box-shadow(0px);
+  background: rgba($primaryColor, 0.2);
+  @include transition(0.2s ease-in);
+  @include filter-gradient(rgba(105, 14, 134, 0.7), rgba(50, 87, 175, 0.7), vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top, rgba(105, 14, 134, 0.7) 0%, rgba(50, 87, 175, 0.7) 150%));
+
+  &.active,
+  &:hover,
+  &:focus {
+    border: 0;
+    @include box-shadow(0px);
+    @include filter-gradient(#690e86, #3257af, vertical);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top, #690e86 0%, #3257af 150%));
+  }
+  /*  &.active{
+       @include box-shadow(0px 0px 0px 1px #3257af) ;
+   } */
+}
+
+.btnfilter {
+  .btn_grp {
+    display: block;
+  }
+  .RWDselect {
+    display: none;
+  }
+  @include screen("mobile") {
+    margin-bottom: 1em;
+    .btn_grp {
+      display: none;
+    }
+    .RWDselect {
+      display: block;
+    }
+  }
+}
+
+.icon-addDate {
+  color: $linkColor;
+  img {
+    height: 26px;
+    margin: 0 3px 0 10px;
+    vertical-align: middle;
+  }
+}
+span.favorite {
+  cursor: pointer;
+  position: absolute;
+  top: 23px;
+  right: 10px;
+  font-size: 1.5em;
+  &.active {
+    color: white;
+    i {
+      color: #fff100;
+    }
+  }
+}
+.btn_grp {
+  margin: 0.2em 0 2em !important;
+  text-align: center;
+  @include box-sizing();
+  @include clearfix;
+  button,
+  input[type="button"],
+  button[type="button"],
+  button[type="submit"],
+  input[type="reset"],
+  input[type="submit"],
+  button[type="submit"],
+  button[type="reset"] {
+    padding: 0.5em 4em !important;
+    min-width: 100px;
+    margin-left: 3px;
+    margin-right: 3px;
+    @include screen("mobile") {
+      padding: 8px;
+      min-width: 70px;
+      padding: 0.5em 2em !important;
+      &:before {
+        width: 130%;
+        top: -15px;
+      }
+    }
+  }
+}
+.btn-more {
+  @include btn_setting($color-darkblue, white);
+  border: 1px solid $color-darkblue;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+  }
+  &:after {
+    top: 15px;
+    right: 18px;
+    width: 8px;
+    height: 8px;
+    line-height: 1.25em;
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    @include transform(rotate(-45deg));
+  }
+  &:hover,
+  &:focus {
+    @include btn_setting($aHover, white);
+    border: 1px solid $aHover;
+  }
+}
+.btn-left {
+  float: left;
+}
+.btn-right {
+  float: right;
+}
+.btn-func {
+  margin: 2px 0;
+  form {
+    select,
+    input {
+      width: auto;
+      min-width: 100px;
+    }
+  }
+
+  .col-right {
+    text-align: right;
+  }
+
+  .searchBox {
+    display: inline-block;
+    width: auto;
+    overflow: inherit;
+  }
+  .btn-outline {
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+  .btn-outline {
+    @extend %btn;
+    @include btn_outline_setting();
+  }
+  /* 按鈕icon*/
+  .icon-add,
+  .icon-del {
+    background-size: 24% !important;
+    background-position: 10px center !important;
+    background-repeat: no-repeat !important;
+    &:before {
+      content: "";
+    }
+  }
+  .icon-add {
+    background: url("../images/icon-add.png");
+    &:hover,
+    &:hover {
+      background-color: $primaryColor;
+      background-image: url("../images/icon-add-hover.png") !important;
+    }
+  }
+  .icon-del {
+    background: url("../images/icon-del.png");
+    &:hover,
+    &:hover {
+      background-color: $primaryColor;
+      background-image: url("../images/icon-del-hover.png") !important;
+    }
+  }
+}
+
+/* 驗證碼置中*/
+#g-recaptcha > div {
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+/*按鈕顏色*/
+/*@include btn_setting(按鈕顏色,字的顏色);*/
+.btn-gray {
+  @extend %btn;
+  @include btn_setting(lighten($color-word, 20), #fff);
+  border: 1px solid lighten($color-word, 20);
+  &:hover,
+  &:focus {
+    @include btn_setting($primaryColor, #fff);
+  }
+}
+.btn-primary {
+  @extend %btn;
+  padding: 0.3em 1.5em;
+  @include btn_setting($primaryColor, #fff);
+  border: 1px solid $primaryColor;
+  &:hover,
+  &:focus {
+    @include btn_setting($primaryColor, #fff);
+  }
+}
+.btn-default {
+  @include btn_setting($color-word, #fff);
+}
+.btn-link {
+  @include btn_setting(#fff, $color-word);
+  &:hover,
+  &:focus {
+    color: $primaryColor !important;
+  }
+}
+
+.btn_grp button.login-button {
+  display: inline-block;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  z-index: 0;
+  margin: 0.8em 0;
+  padding: 0.7em 2em !important;
+  font-size: 1.2em !important;
+  overflow: hidden;
+  min-width: 300px !important;
+  transition: color 0.3s cubic-bezier(0, 0.25, 0.5, 1);
+  background: #3c7cd1;
+  border: 1px solid #3c7cd1;
+  @include border-radius(3px);
+  @include filter-gradient(#3c7cd1, #58389b, vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top, #3c7cd1 0%, #58389b 120%));
+  @include box-shadow(0 2px 8px 0 rgba(0, 0, 0, 0.5));
+  &.no-bg {
+    background: none;
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+  &.done {
+    background: #607d8b !important;
+    box-shadow: inset 0 0 0 2px #607d8b;
+    border: 1px solid #607d8b;
+    @include box-shadow(0 2px 8px 0 rgba(0, 0, 0, 0.5));
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+  }
+  /* &:after{
+        width: 300px;
+        height: 120px;
+        z-index: 2;
+        top: -50%;left: -50%;
+        @include transform(skew(-78deg));
+        background: rgba(white,0.05);
+    } */
+  &:before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    @include transform(skewX(-78deg) translateX(-50%));
+    @include transition(all 0.3s cubic-bezier(0, 0.25, 0.5, 1));
+    background-color: rgba(white, 0.1);
+  }
+  &:hover:before,
+  &:active:before {
+    -webkit-transform: skewX(-15deg) translateX(0) scaleX(1.35);
+    transform: skewX(-15deg) translateX(0) scaleX(1.35);
+    background-color: darken(#3c7cd1, 10);
+  }
+  &:hover,
+  &:active {
+    color: white;
+    @include box-shadow(0 1px 2px 0 rgba(194, 194, 194, 0.5));
+  }
+  @include screen("mobile") {
+    min-width: inherit !important;
+  }
+}
+
+.member {
+    .boxRight{
+        .btn_grp button.login-button{
+            min-width: 180px !important;
+        }
+    }
+}
+
+
+.signupBox,
+.modalSignup {
+  .btn_grp button.login-button {
+    @include screen("mobile") {
+      min-width: 300px !important;
+    }
+  }
+}
+
+.btn-icon {
+  @include btn_setting();
+  min-width: auto !important;
+  padding: 3px;
+  margin: 0 0 5px 0;
+  @include btn_setting(lighten($primaryColor, 10), #fff);
+  &.icon-logout {
+    color: $color-red !important;
+    border: 1px solid $color-red !important ;
+    background: lighten($color-red, 30) !important;
+    &:hover,
+    &:focus {
+      color: white !important;
+      background: $color-darkblue !important;
+    }
+  }
+  &.icon-trash-empty {
+    font-size: 1.5em;
+    color: $color-word;
+    background: transparent;
+    border: none !important;
+  }
+  i {
+    font-style: normal;
+  }
+  &.active {
+    background: darken($primaryColor, 15);
+    border: 1px solid $primaryColor;
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+  &:hover,
+  &:focus {
+    color: white !important;
+    background: darken($primaryColor, 10) !important;
+  }
+}
+.btn-extra {
+  @extend %btn;
+  @include btn_setting(lighten($color-word, 20), #fff);
+  border: 1px solid lighten($color-word, 20);
+  box-shadow: none;
+  min-width: auto;
+  width: auto;
+  font-size: 0.9em;
+  padding: 0.4em;
+  @include border-radius(4px);
+  @include screen("tablet") {
+    font-size: 0.8em;
+  }
+}
+.btn-green {
+  @extend %btn;
+  @include btn_setting($color-green, #fff);
+}
+
+.btn-blue {
+  @extend %btn;
+  @include btn_setting($color-blue, #fff);
+}
+
+.btn-yellow {
+  @extend %btn;
+  @include btn_setting($color-yellow, #fff);
+}
+
+.btn-orange {
+  @extend %btn;
+  @include btn_setting($color-orange, #fff);
+}
+
+.btn-red {
+  @extend %btn;
+  @include btn_setting($color-red, #fff);
+}
+
+.btn-purple {
+  @extend %btn;
+  @include btn_setting($color-purple, #fff);
+}
+
+/* 按鈕大小*/
+.btn-xl,
+.text-xl {
+  font-size: $font-size * 1.5; /*24px*/
+}
+
+.btn-lg,
+.text-lg {
+  font-size: $font-size * 1.25; /*20px*/
+}
+
+.btn-sm,
+.text-sm {
+  font-size: $font-size * 0.938; /*15px*/
+}
+
+.btn-xs,
+.text-xs {
+  font-size: $font-size * 0.75; /*12px*/
+}
+
+/* label style*/
+.label {
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #fff;
+  &.label-square {
+    border-radius: 0;
+  }
+  &.label-default {
+    background-color: #b0bec5;
+  }
+  &.label-primary {
+    background-color: $primaryColor;
+  }
+  &.label-secondary {
+    background-color: $secondaryColor;
+    color: #fff;
+  }
+  &.label-info {
+    background-color: $color-blue;
+  }
+  &.label-success {
+    background-color: $color-green;
+  }
+  &.label-warning {
+    background-color: $color-yellow;
+  }
+  &.label-danger {
+    background-color: $color-red;
+  }
+  &.label-reject {
+    background-color: $color-orange;
+  }
+  &.label-OK {
+    background-color: $color-lightblue;
+  }
+}

@@ -1,0 +1,143 @@
+.tabBox{
+    @include clearfix();
+    margin:1em 2em;
+    ul.tabs {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 47px;
+        width: 100%;
+        border-bottom: 1px solid $color-gray;
+        background: lighten($color-gray,15);
+
+        li {
+            float: left;
+            display: inline-block;
+            cursor: pointer;
+            padding: 1px 2em;
+            font-size: 1.25em;
+            height: 47px;
+            line-height: 47px;
+            @include border-radius(0);
+            color: lighten($color-word,30);
+            overflow: hidden;
+            position: relative;
+            &:hover,&:focus{
+                color: lighten($color-word,35);
+                &:before,&:after{
+                    position: absolute;
+                    content:"";
+                    top: 0;bottom: 0;
+                    left: 0;right: 0;
+                }
+                color: $color-word;
+            }
+
+            &.active {
+                background-color: white;
+                color: $color-word;
+                @include box-shadow($color-gray 0 0 0px 1px inset);
+                display: block;
+                position: relative;
+                overflow: inherit;
+                z-index: 0;
+                &:before,&:after{
+                    position: absolute;
+                    content:"";
+                }
+                &:before{
+                    height: 100%;
+                    width: 100%;
+                    top: 1px;
+                    left: 1px;
+                    right: 1px;
+                    z-index: -1;
+                    background:white;
+                    border-top: 5px solid $secondaryColor;
+                }
+                &:after{
+                    top:0;
+                    right: -10px;
+                    left: inherit;
+                    z-index: -3;
+                    width: 25px;
+                    height: 47px;
+                    -webkit-transform: skew(-20deg);
+                    transform: skew(-20deg);
+                    background: transparent;
+                    @include filter-gradient(transparent, gray, vertical);
+                    $experimental-support-for-svg: true;
+                    @include background-image(linear-gradient(top, transparent 5%,rgba(gray,0.6) 80%));
+                }
+            }
+        }
+
+    }
+
+
+    .tab_last {
+        border-right: 0;
+    }
+
+
+
+    .tab_container {
+        border-top: none;
+        clear:both;
+    }
+
+    .tab_content {
+        padding: 2em 0;
+        display: none;
+    }
+
+    .tab_drawer_heading {
+        display: none;
+    }
+
+    @include screen('tablet') {
+        margin: 1em 0em;
+    }
+    @include screen('mobile') {
+        margin:0 0 2em 0;
+        @include box-shadow(#e7eaf2 0 0 0px 1px inset);
+        .tab_container{
+            padding: 0 1em;
+        }
+    }
+    /* @include screen('xs_mobile') {
+        .tab_container{
+            padding: 0em;
+        }
+        .tabs {
+            display: none;
+        }
+        .tab_content{ padding: 0; }
+        .tab_drawer_heading {
+            display: block;
+            background-color:  darken($color-gray,15);
+            color: #fff;
+            border-top: none;
+            text-align: center;
+            margin: 0 auto !important ;
+            font-size: 1.5em !important;
+            padding: 5px;
+            display: block;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+        }
+
+        .d_active {
+            background-color: $secondaryColor;
+            color: #fff;
+        }
+    } */
+
+}
+
+

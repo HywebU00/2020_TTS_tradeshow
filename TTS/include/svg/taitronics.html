@@ -1,0 +1,318 @@
+<style type="text/css">
+
+#Outline_top {
+  stroke: #FFF;
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 600;
+  fill-opacity: 0;
+  stroke-width: 1px;
+  
+  -webkit-animation: draw_top 5s cubic-bezier(0.455, 0.030, 0.515, 0.955)  infinite;
+  animation: draw_top 5s cubic-bezier(0.455, 0.030, 0.515, 0.955)  infinite;
+  fill: #FFF;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+@-webkit-keyframes draw_top {
+  0% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    fill: rgba(255, 255, 255, 0.5);
+    stroke-width: 0pt;
+  }
+
+  20% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    stroke-dashoffset: 1px;
+    fill: white;
+    stroke-width: 1px;
+    fill-opacity: 0.3;
+  }
+  30% {
+    fill-opacity: 1;
+  }
+  50% {
+   -webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+   fill-opacity: 1;
+   fill: #FFF;
+   stroke-width: 0px;
+ }
+ 80% {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  fill: #FFF;
+  fill-opacity: 1;
+  stroke-width: 0pt;
+  stroke-dashoffset:1px;
+}
+}
+
+@keyframes draw_top {
+  0% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    fill: rgba(255, 255, 255, 0.5);
+    stroke-width: 0pt;
+  }
+
+  20% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    stroke-dashoffset: 1px;
+    fill: white;
+    stroke-width: 1px;
+    fill-opacity: 0.3;
+  }
+  30% {
+    fill-opacity: 1;
+  }
+  50% {
+   -webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+   fill-opacity: 1;
+   fill: #FFF;
+   stroke-width: 0px;
+ }
+ 80% {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  fill: #FFF;
+  fill-opacity: 1;
+  stroke-width: 0pt;
+  stroke-dashoffset:1px;
+}
+
+}
+
+#Outline_down {
+  stroke: #FFF;
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 600;
+  fill-opacity: 0;
+  stroke-width: 1px;
+  
+  -webkit-animation: draw_down 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+  animation: draw_down 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+  fill: #FFF;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+@-webkit-keyframes draw_down {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    fill: rgba(255, 255, 255, 0.5);
+    stroke-width: 0pt;
+  }
+
+  20% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    stroke-dashoffset: 1px;
+    fill: white;
+    stroke-width: 1px;
+    fill-opacity: 0.3;
+  }
+  30% {
+    fill-opacity: 1;
+  }
+  50% {
+   -webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+   fill-opacity: 1;
+   fill: #FFF;
+   stroke-width: 0px;
+ }
+ 80% {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  fill: #FFF;
+  fill-opacity: 1;
+  stroke-width: 0pt;
+  stroke-dashoffset:1px;
+}
+}
+
+@keyframes draw_down {
+ 0% {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  stroke-dashoffset: 0;
+  fill-opacity: 1;
+  fill: rgba(255, 255, 255, 0.5);
+  stroke-width: 0pt;
+}
+
+20% {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  stroke-dashoffset: 1px;
+  fill: white;
+  stroke-width: 1px;
+  fill-opacity: 0.3;
+}
+30% {
+  fill-opacity: 1;
+}
+50% {
+ -webkit-transform: rotateY(0deg);
+ transform: rotateY(0deg);
+ fill-opacity: 1;
+ fill: #FFF;
+ stroke-width: 0px;
+}
+80% {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  fill: #FFF;
+  fill-opacity: 1;
+  stroke-width: 0pt;
+  stroke-dashoffset:1px;
+}
+
+}
+
+#Txt_white {
+  stroke: #FFF;
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 300;
+  -webkit-animation: text_white 5s  infinite;
+  animation: text_white 5s  infinite;
+  fill-opacity: 0;
+  stroke-width: 0px;
+  fill: #FFF;
+}
+
+
+@-webkit-keyframes text_white {
+  0% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    fill: rgba(255, 255, 255, 0.5);
+    stroke-width: 0pt;
+  }
+
+  20% {
+    stroke-dashoffset: 1px;
+    fill: white;
+    stroke-width: 1px;
+    fill-opacity: 0.3;
+  }
+  30% {
+    fill-opacity: 1;
+  }
+  50% {
+    stroke-dashoffset:1px;
+    fill-opacity: 1;
+    fill: rgba(255, 255, 255, 0.4);
+    stroke-width: 0pt;
+  }
+  60% {
+    fill: #FFF;
+    fill-opacity: 1;
+  }
+  80% {
+    stroke-dashoffset:1px;
+    stroke-width: 0pt;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes text_white {
+  0% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    fill: rgba(255, 255, 255, 0.5);
+    stroke-width: 0pt;
+  }
+
+  20% {
+    stroke-dashoffset: 1px;
+    fill: white;
+    stroke-width: 1px;
+    fill-opacity: 0.3;
+  }
+  30% {
+    fill-opacity: 1;
+  }
+  50% {
+    stroke-dashoffset: 1px;
+    fill-opacity: 1;
+    fill: rgba(255, 255, 255, 0.4);
+    stroke-width: 0pt;
+  }
+  60% {
+    fill: #FFF;
+    fill-opacity: 1;
+  }
+  80% {
+    stroke-dashoffset:1px;
+    stroke-width: 0pt;
+    fill-opacity: 1;
+  }
+}
+
+
+</style>
+<!-- SVG Logo -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+width="217px" height="181.809px" viewBox="0 0 217 181.809" enable-background="new 0 0 217 181.809" xml:space="preserve">
+
+<g>
+  <path id="Outline_top" clip-path="url(#SVGID_2_)" fill="#1D2087" d="M138.711,83.161l-16.637,40.43L92.968,58.087L82.51,83.161l-40.645-0.096
+  c1.817,34.538,30.394,61.961,65.387,61.961c34.948,0,63.491-27.383,65.345-61.865H138.711z"/>
+  <path id="Outline_down" clip-path="url(#SVGID_2_)" fill="#1D2087" d="M93.058,40.877l28.817,65.204l12.17-30.115h38.553
+  c-1.863-34.472-30.396-61.871-65.345-61.871c-34.951,0-63.516,27.399-65.381,61.871h35.58L93.058,40.877z"/>
+</g>
+
+<g id="Txt_white">
+  <path d="M24.062,157.521h16.809v4.42h-5.64v13.477h-5.53v-13.477h-5.64V157.521z"/>
+  <path d="M52.679,172.463h-6.278l-0.873,2.955h-5.646l6.726-17.896h6.032l6.725,17.896h-5.791L52.679,172.463z M51.532,168.594
+  l-1.975-6.434l-1.955,6.434H51.532z"/>
+  <path d="M61.342,157.521h5.542v17.896h-5.542V157.521z"/>
+  <path d="M69.594,157.521h16.809v4.42h-5.64v13.477h-5.53v-13.477h-5.64V157.521z"/>
+  <path d="M88.979,175.418v-17.896h9.216c1.709,0,3.015,0.146,3.918,0.439s1.631,0.836,2.185,1.631c0.553,0.793,0.83,1.76,0.83,2.898
+  c0,0.992-0.212,1.85-0.635,2.57c-0.423,0.719-1.006,1.303-1.747,1.752c-0.472,0.283-1.12,0.52-1.942,0.707
+  c0.659,0.221,1.139,0.439,1.439,0.66c0.203,0.146,0.498,0.459,0.884,0.941c0.386,0.48,0.645,0.85,0.775,1.111l2.678,5.186h-6.248
+  l-2.956-5.469c-0.375-0.709-0.708-1.168-1.001-1.379c-0.399-0.277-0.851-0.416-1.355-0.416h-0.488v7.264H88.979z M94.533,164.773
+  h2.332c0.252,0,0.74-0.082,1.465-0.244c0.366-0.074,0.665-0.262,0.897-0.562c0.231-0.301,0.348-0.646,0.348-1.037
+  c0-0.578-0.183-1.021-0.549-1.33c-0.366-0.311-1.054-0.465-2.063-0.465h-2.429V164.773z"/>
+  <path d="M107.229,166.482c0-2.922,0.813-5.197,2.441-6.824c1.627-1.627,3.895-2.441,6.799-2.441c2.979,0,5.273,0.799,6.885,2.398
+  s2.418,3.84,2.418,6.721c0,2.092-0.353,3.807-1.057,5.145c-0.703,1.34-1.721,2.381-3.051,3.125
+  c-1.332,0.744-2.99,1.117-4.975,1.117c-2.02,0-3.689-0.322-5.012-0.965s-2.395-1.66-3.216-3.051
+  C107.639,170.314,107.229,168.574,107.229,166.482z M112.758,166.506c0,1.807,0.336,3.105,1.008,3.895s1.584,1.184,2.74,1.184
+  c1.188,0,2.107-0.387,2.759-1.158c0.651-0.773,0.977-2.162,0.977-4.164c0-1.684-0.34-2.914-1.019-3.691
+  c-0.68-0.777-1.602-1.166-2.766-1.166c-1.115,0-2.01,0.395-2.686,1.184S112.758,164.683,112.758,166.506z"/>
+  <path d="M128.786,157.521h5.163l6.738,9.9v-9.9h5.213v17.896h-5.213l-6.701-9.826v9.826h-5.2V157.521z"/>
+  <path d="M149.795,157.521h5.541v17.896h-5.541V157.521z"/>
+  <path d="M171.218,168.094l4.847,1.465c-0.326,1.359-0.839,2.494-1.539,3.406c-0.699,0.91-1.568,1.598-2.605,2.062
+  c-1.038,0.463-2.358,0.695-3.961,0.695c-1.945,0-3.534-0.283-4.768-0.848c-1.232-0.564-2.297-1.559-3.191-2.982
+  c-0.896-1.424-1.344-3.246-1.344-5.465c0-2.961,0.788-5.236,2.362-6.826c1.575-1.59,3.803-2.385,6.684-2.385
+  c2.254,0,4.026,0.455,5.316,1.367s2.248,2.311,2.874,4.199l-4.883,1.086c-0.17-0.545-0.35-0.943-0.537-1.195
+  c-0.309-0.424-0.688-0.75-1.135-0.977c-0.447-0.229-0.948-0.342-1.502-0.342c-1.253,0-2.213,0.504-2.881,1.512
+  c-0.504,0.748-0.756,1.922-0.756,3.523c0,1.982,0.301,3.342,0.902,4.078c0.603,0.736,1.449,1.104,2.539,1.104
+  c1.059,0,1.857-0.297,2.399-0.891C170.581,170.088,170.974,169.224,171.218,168.094z"/>
+  <path d="M177.785,169.498l5.261-0.33c0.114,0.854,0.346,1.506,0.696,1.953c0.569,0.725,1.383,1.086,2.441,1.086
+  c0.789,0,1.397-0.186,1.824-0.555c0.428-0.371,0.641-0.801,0.641-1.289c0-0.463-0.203-0.879-0.609-1.244
+  c-0.407-0.367-1.352-0.713-2.832-1.037c-2.426-0.547-4.155-1.27-5.188-2.174c-1.042-0.902-1.562-2.055-1.562-3.455
+  c0-0.92,0.267-1.787,0.8-2.605c0.532-0.818,1.334-1.461,2.404-1.93c1.07-0.467,2.537-0.701,4.4-0.701
+  c2.287,0,4.03,0.426,5.231,1.275c1.2,0.852,1.914,2.203,2.142,4.059l-5.212,0.307c-0.139-0.807-0.43-1.393-0.873-1.758
+  c-0.443-0.367-1.056-0.551-1.837-0.551c-0.643,0-1.127,0.137-1.453,0.41c-0.325,0.271-0.488,0.604-0.488,0.994
+  c0,0.285,0.135,0.541,0.403,0.77c0.261,0.236,0.879,0.455,1.855,0.658c2.417,0.521,4.148,1.049,5.194,1.582
+  c1.045,0.533,1.807,1.193,2.282,1.982c0.477,0.789,0.714,1.674,0.714,2.65c0,1.146-0.316,2.205-0.951,3.174
+  c-0.635,0.967-1.522,1.701-2.662,2.203c-1.139,0.5-2.575,0.75-4.309,0.75c-3.044,0-5.151-0.586-6.323-1.758
+  S177.939,171.304,177.785,169.498z"/>
+</g>
+
+
+</svg>

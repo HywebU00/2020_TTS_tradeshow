@@ -1,0 +1,361 @@
+/*http://lab.25sprout.com/responsive_table/*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border:2px solid lighten($color-word,45);
+  @include screen('xs_mobile') {
+      /* width:auto;*/
+      position:relative;
+    }
+    caption{
+      margin:0em 0 0 0px;
+      text-align: left;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: darken($primaryColor,15);
+    }
+    th,
+    td {
+      padding: .5em;
+      empty-cells: show;
+      // word-break:break-all;
+       // text-align:left;
+    }
+    .Num{
+      color: $color-red;
+      margin:0 2px;
+    }
+    .num{ text-align: center;}
+    td {
+      border: 1px solid lighten($color-word,70);
+      // word-break:break-all;
+      a{
+       // word-break:break-all;
+       color:$primaryColor;
+     }
+   }
+   th {
+    background-color: #F3F3F3;
+    color: #333;
+    border: 1px solid lighten($color-word,40);
+    white-space: normal;
+    &[scope="row"]{ text-align: left; width: 15%;}
+  }
+  tr{
+    &.unRead{
+      background:rgba($color-gray,0.5) !important; 
+      td{ font-weight: bold !important; }
+    }
+    &.Read td{
+      font-weight: normal !important;
+
+    }
+  }
+  &.table_hover{
+    tr:hover{
+      background:lighten($primaryColor,40);
+    }
+    tr:nth-child(even){
+      // background:#f9f9f9;
+      &:hover{background:lighten($primaryColor,40); }
+    }
+  }
+  &.table_sprite{
+    tr:nth-child(even){
+      background:#f9f9f9;
+    }
+  }
+  &.table_list {
+    border:none;
+    clear: both;margin:0 0 1.5em 0;
+    th{
+      color:white;
+      // word-break: break-word;
+      background: #5586c1;
+      border: 1px solid #89ade9;
+    }
+    td{
+      button{ margin-bottom: 0.3em;}
+      .logo-xs{
+        max-height:40px;
+      }
+      .btn-primary{
+        font-size: 0.938em;
+        padding:0.3em;
+      }
+      &[data-title="Date"]{
+        width: 95px;
+        text-align: center;
+      }
+      &[data-title="Venue"]{
+        text-align: left !important;
+      }
+      &[data-title="Ticket Amount"],
+      &[data-title="Price(NT$)"]{
+        text-align: center;
+        // width: 10%;
+      }
+    }
+    tr{
+      &.borderNone {
+        background: transparent !important;
+        &:hover,
+        &:focus{
+          background: transparent !important;
+        }
+        td {
+          white-space: nowrap;
+          border: none !important;
+          &:nth-child(4),&:nth-child(5),
+          &:nth-child(6),&:nth-child(7){
+            border-bottom: 3px solid $color-word !important;
+          }
+          &:nth-child(4){ font-weight: bold; }
+          &:nth-child(6){ color: $color-red; }
+        }
+      }
+    }
+    @include screen('xs_mobile') {
+      border:none;
+      background-color: transparent !important;
+    /*Force table to not be like tables anymore*/
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+      width: 100%;
+    }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      &:nth-child(1){ border:none; }
+    }
+    tr {
+      margin-bottom: 2em;
+      border:2px solid #ccc;
+      &:hover{
+        background: transparent;
+      }
+      &:nth-child(even){
+        &:hover{background: transparent; }
+      }
+      &.borderNone {
+        border:none;
+        margin-top: -60px;
+        td{
+          border-width:2px;
+        }
+      }
+      td{
+        &:nth-child(7){
+          border-bottom: none !important;
+        }
+      }
+    }
+    th{ @include gutter(0); padding-left: .5em; }
+    td {
+        /* Behave  like a "row"*/
+        border: none !important;
+        border-bottom: 1px solid #eee !important;
+        position: relative;
+        padding-left: 38% !important;
+        white-space: normal;
+        text-align: left !important;
+        width: auto;
+        color: lighten($color-word,20);
+        &:before {
+          content: attr(data-title);
+          position: absolute;
+          top: .5em;
+          left: .5em;
+          width: 30%;
+          padding-right: 10px;
+          white-space: nowrap;
+          text-align: left;
+          font-weight: bold;
+          color: $color-word;
+        }
+        .logo-xs{
+          height:auto;
+        }
+      }
+    }
+    &.table_include{
+      >th[scope="row"]{
+        text-align: right !important;
+        >th[scope="row"]{
+          text-align: left !important;
+        }
+      }
+    }
+
+  }
+}
+
+
+.col-6.topTB-func {
+  .container {
+    overflow: inherit; @include gutter(0);
+  }
+  .col{
+    .form_grp{ margin-bottom: 5px; }
+  }
+  .btn-func {
+    margin-top: 0 !important;
+  }
+}
+
+.table-style-1{
+  padding: 1em 0;
+  background: #f5f5f5;
+  // border: solid 1px #ddd;
+  margin-top: 1em;
+  // margin: 1em 0;
+  table{
+    border: 0;
+    th, td{
+      padding: .25em;
+      border: 0;
+    }
+    th{
+      border: 0;
+      background: none;
+      width: 120px;
+      text-align: right;
+      vertical-align: top;
+    }
+    td{
+      input{
+        padding: 2px 10px;
+        color: #fff;
+        margin-bottom: 5px;
+        &:hover{
+          color: #fff;
+          // background: red;
+          background: darken($primaryColor,10);
+          border: 1px solid darken($primaryColor,10);
+        }
+      }
+    }
+  }
+}
+
+// fix_th_table
+.fix_th_table {
+    margin: 1em 0;
+    @include screen('mobile') {
+        position: relative;
+        width: 100%;
+        overflow: hidden !important;
+        td{
+          border: 0;
+        }
+    }
+    table {
+        border: 0;
+        @include screen('mobile') {
+            display: block;
+            width: 100%;
+            // overflow:hidden;
+            overflow-x: scroll;
+            // -webkit-overflow-scrolling: touch;
+            // -webkit-transform: translate3d(0, 0, 0);
+            padding-bottom: 1em;
+            //padding-bottom 是為預留水平捲軸的位置
+        }
+    }
+    th,
+    td {
+        width: 10em;
+        padding: .8em 0;
+        text-align: center;
+        line-height: 1.2;
+
+        a,
+        span.text-muted,
+        span.status{
+          display: block;
+          padding: .25em;
+        }
+        span.text-muted{}
+        span.status{
+          width: fit-content;
+          margin: 0 auto;
+          color: #fff;
+          background: #555;
+          border-radius: 4px;
+          padding: .25em .5em;
+        }
+
+        @include screen('mobile') {
+            display: inline-block;
+            margin-right: -6px;
+            margin-left: 0;
+            margin-top: -1px;
+        }
+    }
+    th {
+        &:first-child {
+            width: 4em;
+            white-space: normal;
+            @include screen('mobile') {
+                position: absolute !important;
+                left: 0;
+                top: auto;
+                height: 100%;
+            }
+        }
+    }
+    tr {
+        border-bottom: solid 1px #ddd;
+        @include screen('mobile') {
+            display: block;
+            clear: both;
+            // white-space: nowrap;
+            width: auto;
+            padding-left: 4em;
+            &:first-child {
+                border-top: #ddd 1px solid;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.table_wrapper {
+  overflow-x: scroll ;
+  table {
+    border: 0;
+    a,
+    span.text-muted,
+    span.status{
+      display: block;
+      padding: .25em;
+    }
+    span.text-muted{}
+    span.status{
+      width: fit-content;
+      color: #fff;
+      background: #555;
+      border-radius: 4px;
+      padding: .25em .5em;
+    }
+  }
+  @include screen('mobile') {
+      width: 100%;
+      display: block;
+      @include clearfix;
+      // overflow: hidden;
+      // overflow-x: scroll !important;
+      padding-bottom: 1em;
+      -webkit-overflow-scrolling: touch;
+      -webkit-transform: translate3d(0, 0, 0);
+      table {
+          width: 100%;
+          min-width: 545px;
+      }
+  }
+}
