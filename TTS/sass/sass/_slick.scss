@@ -284,3 +284,194 @@
         display: none !important;
     }
 }
+
+// 輪播
+.mp_slider{
+    padding-bottom: 5em;
+    overflow: hidden;
+    
+    h2{
+        font-size: 2.125em;
+        letter-spacing: 3px;
+    }
+
+    .slick-prev,
+    .slick-next{
+      top: auto !important;
+      bottom: 0;
+      border: solid 2px #222;
+      z-index: 10;
+
+      opacity: .5;
+
+      &:hover, &:focus{
+        opacity: 1;
+      }
+    }
+
+    .slick-prev{
+      // left: 25px;
+      left: 15px;
+      background: url(../vendor/slick/icon_arrow_left_black.png) center center no-repeat;
+      background-size: 18px;
+    }
+    .slick-next{
+      // right:  -70%; 
+      right: auto;
+      left: 70px;
+      background: url(../vendor/slick/icon_arrow_right_black.png) center center no-repeat;
+      background-size: 18px;
+    }
+    // .slick-dots{ display: none !important; }
+    .slick-list{ overflow: visible; }
+    .slick-dots{ bottom: 26px; }
+
+    .caption{
+        padding: 0;
+        text-align: left;
+
+        .fav{
+            margin-left: -6px;
+            font-size: .813em;
+            &.saved{}
+        }
+
+        time{
+            background: #fff;
+            color: #222;
+            font-size: .9em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: .4em 1.25em;
+            display: inline-block;
+        }
+        p{
+            background: rgba(0,0,0,.75);
+            color: #fff;
+            margin: 0;
+            padding: .75em 3.5em .75em 1.25em;
+
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 48px;
+                height: 48px;
+                background: url(../images/basic/icon_arrow_right2.svg) 50% 50% no-repeat, #b02b73;
+                background-size: 36px 36px;
+                right: 0;
+                bottom: .5em;
+            }
+            b{
+                display: block;
+                margin-bottom: -12px;
+
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                &:before{
+                    content: '';
+                    width: 45px;
+                    height: 2px;
+                    margin-top: 4px;
+                    margin-bottom: 10px;
+                    background: #fff;
+                    display: block;
+                }
+            }
+            span{
+                font-size: .813em;
+                color: rgba(255,255,255,.75);
+
+                overflow: hidden;
+                text-overflow: -o-ellipsis-lastline;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            &:hover, &:focus {}
+        }
+    }
+
+    .img-container{
+        height: 300px;
+        margin: 0 15px;
+        overflow: hidden;
+        img{}
+
+        .caption{
+            position: absolute;
+            bottom: -60px;
+
+            transition: all .3s ease;
+        }
+    }
+    a{
+        cursor: pointer;
+        &:hover, &:focus{
+            .caption{
+                bottom: 0px;
+                .fav{}
+            }
+        }
+    }
+}
+// 影片
+.Video{
+    .mp_slider{
+        a{
+            transition: all .3s ease-in-out;
+            time{ opacity:1; }
+
+            &:before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                background: rgba(0,0,0,.5);
+                top: 100%;
+                transition: all .3s ease-in-out;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                background: url(../images/icon/icon_video_play.png) 50% 50% no-repeat;
+                top: calc(50% - 30px);
+                left: calc(50% - 30px);
+                opacity:0;
+                transition: all .3s ease-in-out;
+            }
+
+            &:hover, &:focus{
+                .caption{
+                    bottom: -60px;
+                    p{ background: rgba(0,0,0,0); }
+                    time{ opacity:0; }
+                }
+
+                &:before{ top: 0; }
+                &:after{ opacity: 1; }
+            }
+        }
+    }
+}
+// 照片
+.Photo{
+    .mp_slider{}
+}
+
+
+
+
+
+
+
+
+
+

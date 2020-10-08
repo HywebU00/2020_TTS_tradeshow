@@ -41,69 +41,75 @@ html{
     }
     &.MP{
         .main{
-         width: 100%;
-         height: 100%;
-         overflow: hidden;
-         background-color: rgba(169,37,118,1) !important ;
-         $experimental-support-for-svg: true;
-         @include filter-gradient(#a92576, #07d8df, vertical);
-         @include background(
-          linear-gradient(top, rgba(169,37,118,1) 0%, rgba(93,5,125,1) 33%, rgba(83,102,164,1) 70%, rgba(7,216,223,1) 100%));
-         background-position: 0 600px;
-         background-repeat: no-repeat;
-         .section{
-            position: relative;
-            z-index: 1;
-        }
-        &:before{
-            position: absolute;
-            content: "";
-            display: block;
-            width: 100%;height: 100%;
-            top:665px;
-            background: url('../images/decBg.png') repeat-y 0 center;
-            background-size: 42%;
-            -webkit-filter: brightness(10);
-            filter: brightness(10);
-        }
+            // background: #eee;
+
+            // padding-top: 7em;
+            // background: url(../images/bg-mp2020-1.jpg) 50% bottom no-repeat;
+            // background-size: cover;
+            
+        //  width: 100%;
+        //  height: 100%;
+        //  overflow: hidden;
+        //  background-color: rgba(169,37,118,1) !important ;
+        //  $experimental-support-for-svg: true;
+        //  @include filter-gradient(#a92576, #07d8df, vertical);
+        //  @include background(
+        //   linear-gradient(top, rgba(169,37,118,1) 0%, rgba(93,5,125,1) 33%, rgba(83,102,164,1) 70%, rgba(7,216,223,1) 100%));
+        //  background-position: 0 600px;
+        //  background-repeat: no-repeat;
+        //  .section{
+        //     position: relative;
+        //     z-index: 1;
+        // }
+        // &:before{
+        //     position: absolute;
+        //     content: "";
+        //     display: block;
+        //     width: 100%;height: 100%;
+        //     top:665px;
+        //     background: url('../images/decBg.png') repeat-y 0 center;
+        //     background-size: 42%;
+        //     -webkit-filter: brightness(10);
+        //     filter: brightness(10);
+        // }
         >.container{
             max-width: 100%;
-                /* width: 100%;
-                height: 100%;
-                overflow: hidden;
-                background-color: rgba(169,37,118,1) !important ;
-                $experimental-support-for-svg: true;
-                @include filter-gradient(#a92576, #07d8df, vertical);
-                @include background(
-                  linear-gradient(top, rgba(169,37,118,1) 0%, rgba(93,5,125,1) 33%, rgba(83,102,164,1) 70%, rgba(7,216,223,1) 100%));
-                background-position: 0 600px;
-                background-repeat: no-repeat;
-                .section{
-                    position: relative;
-                    z-index: 1;
-                }
-                &:before{
-                    position: absolute;
-                    content: "";
-                    display: block;
-                    width: 100%;height: 100%;
-                    top:665px;
-                    background: url('../images/decBg.png') repeat-y 0 center;
-                    background-size: 42%;
-                    -webkit-filter: brightness(10);
-                    filter: brightness(10);
-                } */
-                /* &:after{
-                    position: absolute;
-                    content: "";
-                    top: 600px;left: 0;right: 0;
-                    display: block;
-                    width: 100%;
-                    height: 400px;
-                    @include opacity(0.3);
-                    background: url('../images/selecionBg.png') no-repeat 0 top;
-                    background-size: cover;
-                } */
+            // width: 100%;
+            // height: 100%;
+            // overflow: hidden;
+            // background-color: rgba(169,37,118,1) !important ;
+            // $experimental-support-for-svg: true;
+            // @include filter-gradient(#a92576, #07d8df, vertical);
+            // @include background(
+            //   linear-gradient(top, rgba(169,37,118,1) 0%, rgba(93,5,125,1) 33%, rgba(83,102,164,1) 70%, rgba(7,216,223,1) 100%));
+            // background-position: 0 600px;
+            // background-repeat: no-repeat;
+            // .section{
+            //     position: relative;
+            //     z-index: 1;
+            // }
+            // &:before{
+            //     position: absolute;
+            //     content: "";
+            //     display: block;
+            //     width: 100%;height: 100%;
+            //     top:665px;
+            //     background: url('../images/decBg.png') repeat-y 0 center;
+            //     background-size: 42%;
+            //     -webkit-filter: brightness(10);
+            //     filter: brightness(10);
+            // } 
+            //  &:after{
+            //     position: absolute;
+            //     content: "";
+            //     top: 600px;left: 0;right: 0;
+            //     display: block;
+            //     width: 100%;
+            //     height: 400px;
+            //     @include opacity(0.3);
+            //     background: url('../images/selecionBg.png') no-repeat 0 top;
+            //     background-size: cover;
+            // } 
             }
             @include screen('tablet') {
                 >.container{
@@ -114,7 +120,7 @@ html{
                 }
             }
             @include screen('mobile') {
-                padding-top: 55px;
+                // padding-top: 55px;
                 >.container{
                     &:before{
                         background-size: contain;
@@ -227,6 +233,31 @@ html{
 .innerpage {
     position: relative;
     z-index: 1;
+
+    // 下
+    &:before{
+        content: '';
+        width: 100%;
+        display: block;
+        position: absolute;
+        height: 120px;
+        background: #fff;
+        transform: skewY(-3deg);
+        bottom: -50px;
+    }
+    // 上
+    &:after{
+        content: '';
+        width: 100%;
+        display: block;
+        position: absolute;
+        height: 120px;
+        background: #fff;
+        transform: skewY(3deg);
+        top: -50px;
+        z-index: -1;
+    }
+
     h2{
         color:$color-darkblue;
         font-size: 1.8em;
@@ -234,6 +265,7 @@ html{
 
     >.container {
         min-height: 300px !important;
+
         @include gutter(6em);
         padding-top: 2em;
         padding-bottom: 2em;
@@ -255,11 +287,9 @@ html{
         }
         @include screen('xs_mobile') {}
     }
-    @include screen('tablet') {
-       &:after{
-           display: none;
-       }
-   }
+    // @include screen('tablet') {
+    //     &:after{ display: none; }
+    // }
 }
 
 /* Go from zero to full opacity */

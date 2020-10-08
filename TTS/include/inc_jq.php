@@ -1,29 +1,30 @@
 <!-- jQuery -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="vendor/jquery.easing.min.js"></script>
+<!-- lity -->
+<script src="vendor/lity/dist/lity.js"></script>
 <!-- slick js -->
 <script src="vendor/slick/slick.min.js "></script>
 <script src="vendor/slick/slick-lightbox.js "></script>
 <script src="vendor/WOW-master/dist/wow.min.js"></script>
 <script src="vendor/colorbox/jquery.colorbox-min.js"></script>
 <script src="js/masonry.pkgd.min.js" defer></script>
+
 <!-- hyUI -->
 <script src="js/hyui.js"></script>
 <!-- 客製js -->
 <script src="js/customize.js"></script>
 
+<!-- wowload -->
 <script type="text/javascript">
-//wowload
-var wow = new WOW(
-{
-    boxClass:     'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       0,          // distance to the element when triggering the animation (default is 0)
-    mobile:       true,       // trigger animations on mobile devices (default is true)
-    live:         true        // act on asynchronously loaded content (default is true)
-}
-);
-wow.init();
+	var wow = new WOW({
+	    boxClass:     'wow',      // animated element css class (default is wow)
+	    animateClass: 'animated', // animation css class (default is animated)
+	    offset:       0,          // distance to the element when triggering the animation (default is 0)
+	    mobile:       true,       // trigger animations on mobile devices (default is true)
+	    live:         true        // act on asynchronously loaded content (default is true)
+	});
+	wow.init();
 </script>
 
 <!-- tab setting -->
@@ -31,7 +32,7 @@ wow.init();
 	$(".tab_content").hide();
 	$(".tab_content:first").show();
 
-	/* if in tab mode */
+	// if in tab mode 
 	$("ul.tabs li").click(function() {
 
 		$(".tab_content").hide();
@@ -45,7 +46,7 @@ wow.init();
 		$(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
 
 	});
-	/* if in drawer mode */
+	// if in drawer mode 
 	$(".tab_drawer_heading").click(function() {
 
 		$(".tab_content").hide();
@@ -59,44 +60,43 @@ wow.init();
 		$("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
 	});
 
-
-/* Extra class "tab_last" 
-to add border to right side
-of last tab */
-$('ul.tabs li').last().addClass("tab_last");
+	//  Extra class "tab_last" 
+	// to add border to right side
+	// of last tab 
+	$('ul.tabs li').last().addClass("tab_last");
 </script>
 
 
 <!-- colorbox setting -->
 <script>
 	$(function(){
-//Examples of how to assign the Colorbox event to elements
-$(".group1").colorbox({rel:'group1'});
-$(".group2").colorbox({rel:'group2', transition:"fade"});
-$(".group3").colorbox({rel:'group3', transition:"fade", width:"75%", height:"75%"});
-$(".group4").colorbox({rel:'group4', slideshow:true});
-$(".ajax").colorbox();
-$(".youtube").colorbox({iframe:false, innerWidth:"80%", innerHeight:390});
-$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
-$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
-$(".inline").colorbox({inline:true, width:"50%"});
-$(".callbacks").colorbox({
-	onOpen:function(){ alert('onOpen: colorbox is about to open'); },
-	onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
-	onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
-	onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
-	onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
-});
+		//Examples of how to assign the Colorbox event to elements
+		$(".group1").colorbox({rel:'group1'});
+		$(".group2").colorbox({rel:'group2', transition:"fade"});
+		$(".group3").colorbox({rel:'group3', transition:"fade", width:"75%", height:"75%"});
+		$(".group4").colorbox({rel:'group4', slideshow:true});
+		$(".ajax").colorbox();
+		$(".youtube").colorbox({iframe:false, innerWidth:"80%", innerHeight:390});
+		$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+		$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+		$(".inline").colorbox({inline:true, width:"50%"});
+		$(".callbacks").colorbox({
+			onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+			onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+			onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+			onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+			onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+		});
 
-$('.non-retina').colorbox({rel:'group5', transition:'none'})
-$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+		$('.non-retina').colorbox({rel:'group5', transition:'none'})
+		$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
 
-//Example of preserving a JavaScript event for inline calls.
-$("#click").click(function(){ 
-	$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
-	return false;
-});
-});
+		//Example of preserving a JavaScript event for inline calls.
+		$("#click").click(function(){ 
+			$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+			return false;
+		});
+	});
 </script>
 
 <!-- innerpage background animation canvas -->

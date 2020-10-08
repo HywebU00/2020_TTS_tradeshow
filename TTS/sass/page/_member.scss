@@ -369,7 +369,7 @@
                 font-weight: 400;
                 display: block;
                 color: lighten($color-word,35);
-                padding: 10px 10px 10px 36px;
+                padding: 10px 10px 10px 46px;
                 border-bottom: 1px solid lighten($color-gray,10);
             }
             ul,.accordion-content {
@@ -427,10 +427,10 @@
         }
         &:before {
             width: 46px;
-            left: 0px;
+            left: 6px;
             bottom: 0;
-            top: 5px;
-            background-size: 60% !important;
+            top: 8px;
+            background-size: 50% !important;
             background-repeat: no-repeat !important;
             background-position: 5px 5px !important;
         }

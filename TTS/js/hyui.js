@@ -108,17 +108,18 @@ $(function() {
     function mobileMenu() {
         // switch PC/MOBILE
         ww = _window.outerWidth();
-        if (ww < wwSmall) {
+        if (ww < wwMedium) {
             /*-----------------------------------*/
             /////////////// 手機版設定 /////////////
             /*-----------------------------------*/
             menu_status = false;
             _sidebar.hide();
             _overlay.hide();
+            _nav.prependTo(_mArea);
             _menu.prependTo(_mArea);
             _search.prependTo(_body);
             _search.addClass('m_search');
-            _nav.appendTo('.m_search');
+            // _nav.appendTo('.m_search');
             _mArea.css({
                 'margin-left': _mArea.width() * -1 + 'px'
             });
@@ -147,6 +148,7 @@ $(function() {
                 e.preventDefault();
             })
             _body.off('touchmove');
+
             // 行動版查詢
             var _searchCtrl = $('.searchCtrl');
             $('.m_search').hide();

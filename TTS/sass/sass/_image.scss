@@ -79,13 +79,13 @@ img {
             text-align: center; /* left:35px;*/
             bottom: 0;
             @include box-sizing;
-            @include screen('mobile') {
-                height: 5em;
-                width: 100%;
-                left: 0;
-                padding: 1em 1em;
-                text-align: center;
-            }
+            // @include screen('mobile') {
+            //     height: 5em;
+            //     width: 100%;
+            //     left: 0;
+            //     padding: 1em 1em;
+            //     text-align: center;
+            // }
             .cardText h3{
                 @include text-overflow;
             }

@@ -23,13 +23,12 @@
 			margin: 20px auto;
 		}
 
-		table caption {
+		/*table caption {
 			font-size: 18px;
 			padding: 8px;
 			color: #333;
 			margin: 0 auto;
-			text-align: center;
-		}
+		}*/
 
 		table caption span {
 			font-size: 24px;
@@ -38,14 +37,14 @@
 
 		table th {
 			color: white;
-			padding: 6px;
+			padding: 6px 20px;
 			background-color: #41398a;
 		}
 
 		table td {
 			vertical-align: top;
 			border: 1px solid #ccc;
-			padding: 6px;
+			padding: 6px 20px;
 		}
 
 		/*table tr:nth-child(even) { background-color: #ddd; }*/
@@ -84,12 +83,39 @@
 		}
 
 		a { text-decoration: none; }
+
+		.note{
+			background: #eee;
+			margin-bottom: .5em;
+		}
+		.note h3{ font-size: 1em; padding-left: 1em; color:#222 !important;}
+		.note ul{ font-size: .9em; }
+		.note a{ color: #a82476; font-weight: bold; }
+		.note b{}
+
+		.title{ color:#41398a; font-size: 1.125em; }
+		.title b{ font-size: 2em; margin-right: .5em; }
 	</style>
 </head>
 
 <body>
 	<table width="100%" border="0">
-		<caption><span style="color:#41398a">2020－TTS 主網站畫面清單</span></caption>
+		<caption class="title"><b>2020</b>TTS 主網站畫面清單</caption>
+		<caption class="note">
+			<h3>備註：</h3>
+			<ul>
+				<li>2020 / 10 首頁改版，	<a href="index2019.html" target="_blank">2019版本</a></li>
+				<li>TTS會員後台切版檔案無異動，檔案位置：&nbsp;<b>TTS-member</b>&nbsp;</li>
+				<li>內頁 html 異動：
+					<ol>
+						<li>新增 nav.menu2020</li>
+						<li>breadcrumb</li>
+					</ol>
+					其他內頁異動邏輯，請參照：<a href="TTS/event-grid.php">event-grid</a>、<a href="TTS/event-grid.php">event-calendar</a>&nbsp;這兩頁
+				</li>
+			</ul>	
+		</caption>
+		
 		<tr>
 			<th width="20%">編號</th>
 			<th>版型</th>
@@ -123,8 +149,8 @@
 			<td>
 				<h2>首頁</h2>
 				<ul>
-					<li><a href="TTS/mp.php" target="_blank">mp.php 首頁</a><span class="OK">✓</span></li>
-					<li><a href="TTS/mp-2020.php" target="_blank">mp-2020.php 首頁改版</a></li>
+					<!-- <li><a href="TTS/mp.php" target="_blank">mp.php 首頁</a><span class="OK">✓</span></li> -->
+					<li><a href="TTS/mp-2020.php" target="_blank">mp-2020.php 首頁改版</a><span class="OK">✓</span>（2020/10/08更新）</li>
 				</ul>
 				<h2>註冊單位(1)</h2>
 				<ul>
@@ -135,8 +161,8 @@
 				<h2>展覽內容與檔期呈現模式(2)</h2>
 				<ul>
 					<li><a href="TTS/event-detail.php" target="_blank">event-detail.php 展覽內容頁</a><span class="OK">✓</span></li>
-					<li><a href="TTS/event-grid.php" target="_blank">event-grid.php 展覽檔期表卡片模式</a><span class="OK">✓</span>(12/3更新)</li>
-					<li><a href="TTS/event-calendar.php" target="_blank">event-calendar.php 展覽檔期表行事曆模式</a><span class="OK">✓</span></li>
+					<li><a href="TTS/event-grid.php" target="_blank">event-grid.php 展覽檔期表卡片模式</a><span class="OK">✓</span>（2020/10/08更新）</li>
+					<li><a href="TTS/event-calendar.php" target="_blank">event-calendar.php 展覽檔期表行事曆模式</a><span class="OK">✓</span>（2020/10/08更新）</li>
 					<li><a href="TTS/event-none.php" target="_blank">event-none.php 無展覽</a></li>
 				</ul>
 				<h2>媒體預先登記(3)</h2>
@@ -171,7 +197,7 @@
 					<li><a href="TTS/aboutTTS.php" target="_blank">aboutTTS.php 關於貿協</a><span class="OK">✓</span></li>
 					<li><a href="TTS/list.php" target="_blank">list.php 展覽新聞列表</a><span class="OK">✓</span></li>
 					<li><a href="TTS/detail.php" target="_blank">detail.php 一般詳細內容頁</a><span class="OK">✓</span></li>
-					<li><a href="TTS/video-gallery.php" target="_blank">video-gallery.php 影音圖片列表</a><span class="OK">✓</span>(12/3更新)</li>
+					<li><a href="TTS/video-gallery.php" target="_blank">video-gallery.php 影音圖片列表</a><span class="OK">✓</span>（12/3更新）</li>
 					<li><a href="TTS/search-result.php" target="_blank">search-result.php 查詢結果頁</a><span class="OK">✓</span></li>
 				</ul>
                 <!-- 2019-05 新增 -->

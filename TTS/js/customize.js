@@ -129,4 +129,44 @@ $(function() {
         useHistoryApi: 'true',
         lazy: true
     });
+
+    $('.mp_slider').slick({
+        arrows: true,                       //左右箭頭
+        autoplay: false,                    //自動播放
+        autoplaySpeed: 3000,                //自動播放秒數
+        dots: true,                         //顯示圓點
+        dotsClass:  'slick-dots',           //原點css
+        draggable: true,                    //滑鼠可以拖曳
+        infinite: true,                     //無限輪播
+        pauseOnHover: true,                 //滑鼠移過後暫停自動撥放
+        pauseOnDotsHover: false,            //滑鼠移過圓點後暫停自動撥放
+        rtl: false,                         //改變輪播方向
+        slidesToShow: 3,                    //一次顯示幾張
+        slidesToScroll: 1,                  //一次輪播幾張
+        vertical: false,                    //改成垂直方向
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+                arrows: true
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+      });
 });

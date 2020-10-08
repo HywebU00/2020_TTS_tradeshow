@@ -1,6 +1,39 @@
 /* 行動版選單sidebar*/
 .menu{
     display: none;
+
+    @include screen('tablet') {
+        display: block;
+    }
+}
+
+.menu2020{
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+
+        li{
+            a{
+                color: #fff;
+                font-size: 1.25em;
+                display: block;
+                padding: .5em 2.5em;
+                background: rgba(255, 255, 255, 0);
+                font-weight: 500;
+                transition: all .3s ease;
+
+                &:hover, &:focus{
+                    // background: rgba(255, 255, 255, 0.5);
+                    background: rgba(0, 0, 0, .35);
+                }
+            }
+        }
+    }
 }
 
 .sidebar {
@@ -55,23 +88,27 @@
                 text-decoration: none;
                 @include transition(.3s);
                 &:hover,&:after{
-                    color: $aHover;
+                    // color: $aHover;
+                    background: #5d18bc;
                 }
             }
             ul {
-                padding: 1em;
+                padding: 1em 0;
             }
             li {
                 display: block;
                 float: none;
                 width: 100%;
-                ul {
-                    background: #FFF;
+                ul { background: #FFF; }
+
+                &:last-child{
+                    a{ border-bottom: 1px solid transparent; }
                 }
+
                 >a {
-                    padding: .8em 0;
+                    padding: .8em 1em;
                     font-size: 1.2em;
-                    border-bottom: 1px solid #222;
+                    border-bottom: 1px solid rgba(255, 255, 255, .5);
                 }
                 &.hasChild {
                     >a {
@@ -141,41 +178,111 @@
         text-align: left;
         ul {
             float: none;
-            width: 90%;
-            margin: 1em auto;
-            padding: 0;
+            width: 100%;
+            padding: 1em 5%;
+            box-sizing: border-box;
             overflow: hidden;
             list-style: none;
-            border: 1px solid rgba(255, 255, 255, .5);
-            border-bottom: none;
-            border-right: none;
+            background: #222;
+            // border: 1px solid rgba(255, 255, 255, .5);
+            // border-bottom: none;
+            // border-right: none;
+
             li {
-                float: left;
-                width: 50%;
+                // float: left;
+                // width: 50%;
                 margin: 0;
                 padding: 0;
                 @include box-sizing;
-                &:nth-child(odd):last-child {
-                    width: 100%;
-                }
+                // &:nth-child(odd):last-child {
+                //     width: 100%;
+                // }
                 a {
                     display: block;
                     height: 3em;
                     line-height: 2em;
-                    padding: .5em 1em;
+                    padding: .5em 0 .5em 3.5em;
                     font-size: .938em;
                     color: #FFF;
                     font-weight: bold;
                     text-decoration: none;
-                    border: 1px solid rgba(255, 255, 255, .5);
+                    border: 0;
+                    border-bottom: 1px solid rgba(255, 255, 255, .5);
                     @include box-sizing;
-                    &:nth-child(odd) {
-                        border-left: none;
-                        border-top: none;
+
+                    // &:nth-child(odd) {
+                    //     border-left: none;
+                    //     border-top: none;
+                    // }
+
+                    // &:hover,
+                    // &:focus {
+                    //     background: darken($primaryColor, 20);
+                    // }
+                }
+
+                // loginFuncArea{}
+                &:nth-child(1){
+                    a{
+                        // 登入
+                        &:nth-child(1){
+                            // background: pink;
+                            background: url(../images/icon/icon_2020_login.png) 12px 50% no-repeat;
+                            background-size: 30px 30px;
+                            &:hover, &:focus{
+                                color: rgba(#fff, .75);
+                                background: url(../images/icon/icon_2020_login.png) 12px 50% no-repeat, #5d18bc;
+                                background-size: 30px 30px;
+                            }
+                        }
+                        // 註冊
+                        &:nth-child(2){
+                            // background: deeppink;
+                            background: url(../images/icon/icon_2020_signup.png) 12px 50% no-repeat;
+                            background-size: 30px 30px;
+                            &:hover, &:focus{
+                                color: rgba(#fff, .75);
+                                background: url(../images/icon/icon_2020_signup.png) 12px 50% no-repeat, #5d18bc;
+                                background-size: 30px 30px;
+                            }
+                        }
                     }
-                    &:hover,
-                    &:focus {
-                        background: darken($primaryColor, 20);
+                }
+
+                // langMenu
+                &:nth-child(2){
+                    // 當前語系
+                    >a{
+                        // background: #eee;
+                        background: url(../images/icon/icon_2020_language.png) 12px 50% no-repeat;
+                        background-size: 30px 30px;
+                        &:hover, &:focus{
+                            color: rgba(#fff, .75);
+                            background: url(../images/icon/icon_2020_language.png) 12px 50% no-repeat, #5d18bc;
+                            background-size: 30px 30px;
+                        }
+                        +ul{
+                            margin: 0;
+                            padding: 0 5%;
+                            width: 100%;
+
+                            li{
+                                &:last-child{
+                                    a{ border-bottom: 1px dotted transparent; }
+                                }
+                            }
+
+                            a{
+                                background: none !important;
+                                color: rgba(#eee, .5);
+                                border-bottom: 1px dotted rgba(#696969, .5);
+
+                                &:hover, &:focus{
+                                    color: rgba(#fff, .75);
+                                    background: #5d18bc !important;
+                                }
+                            }
+                        }
                     }
                 }
             }
