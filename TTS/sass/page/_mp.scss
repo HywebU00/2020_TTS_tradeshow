@@ -74,9 +74,13 @@
   @include screen('tablet') {
     &:first-child{
       padding-top: calc(60px - 2em);
-      margin-bottom: 10em;
     }
     .menu2020{ display: none; }
+  }
+  @include screen('mobile') {
+    &:first-child{
+      margin-bottom: 10em;
+    }
   }
 }
 
@@ -1470,6 +1474,18 @@ canvas {
 
   position: relative;
 
+  // 上
+  &:after{
+    content: '';
+    width: 100%;
+    display: block;
+    position: absolute;
+    height: 100px;
+    // background: pink;
+    background: #fff;
+    // transform: skewY(3deg);
+    top: -70px;
+  }
   // 下
   &:before{
       content: '';
@@ -1480,7 +1496,7 @@ canvas {
       height: 120px;
       background: #fff;
       // background: pink;
-      transform: skewY(-4deg);
+      transform: skewY(-3deg);
       bottom: -12%;
   }
 
