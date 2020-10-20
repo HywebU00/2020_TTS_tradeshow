@@ -10697,7 +10697,7 @@ html {
 .section .svgLogo:before {
   content: '';
   position: absolute;
-  left: calc( 50% - 10px);
+  left: calc( 50% - 12px);
   top: -15px;
   width: 20px;
   height: 20px;
