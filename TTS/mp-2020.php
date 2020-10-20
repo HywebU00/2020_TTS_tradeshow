@@ -202,6 +202,8 @@
       <!-- 最新展覽 -->
       <section class="section col-12 wow fadeInDown" data-wow-delay=".4s">
         <h2 class="computex"><a href="#">最新展覽</a></h2>
+        <!-- 傻眼貓咪 -->
+        <div class="svgLogo"></div>
         <div class="container">
           <div class="mp_slider">
             <div class="img-container">
@@ -416,7 +418,7 @@
         </section>
       </section>
       <!--Partners -->
-      <section class="section col-4 partners">
+      <section class="section col-3 partners">
         <h2>友善連結</h2>
         <div class="container">
           <!-- 小尺寸 -->
@@ -494,11 +496,11 @@
               <a href="#"><img src="images/partner3.gif" class="contain" alt=""></a>
             </div>
           </div>
-          <div class="col">
+          <!-- <div class="col">
             <div class="img-container">
               <a href="#"><img src="images/partner2.jpg" alt="" class="contain"></a>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -519,10 +521,10 @@
 <a href="javascript:;" class="scrollToTop" title="回頁首">回頁首</a>
 <?php require_once('include/inc_jq.php'); ?>
 <!-- 注意：SVG logo 換名-->
-<!-- <script type="text/javascript">
+<script type="text/javascript">
   $(function() {
     $('.svgLogo').load('include/svg/cycle.html');
   });
-</script> -->
+</script>
 </body>
 </html>

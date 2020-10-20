@@ -26,18 +26,19 @@
           </div>
           <img src="images/banner/EventBg.jpg" alt="" class="cover">
         </div>
-      </div>
-    </div>
-    <!-- main Start -->
-    <div id="center" class="main innerpage">
-      <div class="container">
         <!-- breadcrumb路徑 -->
         <div class="breadcrumb">
           <ul>
             <li><a href="#">首頁</a></li>
             <li><a href="#">Evnet</a></li>
+            <li>Taiwan International Fisheries & Seafood Show</li>
           </ul>
         </div>
+      </div>
+    </div>
+    <!-- main Start -->
+    <div id="center" class="main innerpage">
+      <div class="container">
         <!--  -->
         <div class="event-calendar">
           <div class="btnDisplay">
@@ -82,11 +83,14 @@
               <div class="box_grp">
                 <div class="box_title">Organized by Industry type：</div>
                 <div class="box_content">
-                  <div class="col">
+                  <div class="col checked">
                     <div class="ex-radio">
                       <input type="radio" id="radio" name="radio_group" />
                       <label for="radio">
-                        <p>All<span class="member">(123)</span></p>
+                        <p>
+                          <span class="item">All</span>
+                          <span class="member">123</span>
+                        </p>
                       </label>
                     </div>
                   </div>
@@ -94,7 +98,10 @@
                     <div class="ex-radio checked">
                       <input type="radio" id="radio" name="radio_group" />
                       <label for="radio">
-                        <p>IT<span class="member">(3)</span></p>
+                        <p>
+                          <span class="item">IT</span>
+                          <span class="member">3</span>
+                        </p>
                       </label>
                     </div>
                   </div>
@@ -102,7 +109,21 @@
                     <div class="ex-radio">
                       <input type="radio" id="radio" name="radio_group" />
                       <label for="radio">
-                        <p>Electronic<span class="member">(13)</span></p>
+                        <p>
+                          <span class="item">Electronic</span>
+                          <span class="member">13</span>
+                        </p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col checked">
+                    <div class="ex-radio">
+                      <input type="radio" id="radio" name="radio_group" />
+                      <label for="radio">
+                        <p>
+                          <span class="item">Electronic Electronic</span>
+                          <span class="member">2</span>
+                        </p>
                       </label>
                     </div>
                   </div>
@@ -110,7 +131,10 @@
                     <div class="ex-radio">
                       <input type="radio" id="radio" name="radio_group" />
                       <label for="radio">
-                        <p>Electronic Electronic<span class="member">(2)</span></p>
+                        <p>
+                          <span class="item">Foods</span>
+                          <span class="member">123</span>
+                        </p>
                       </label>
                     </div>
                   </div>
@@ -118,7 +142,10 @@
                     <div class="ex-radio">
                       <input type="radio" id="radio" name="radio_group" />
                       <label for="radio">
-                        <p>Foods<span class="member">(123)</span></p>
+                        <p>
+                          <span class="item">Green</span>
+                          <span class="member">123</span>
+                        </p>
                       </label>
                     </div>
                   </div>
@@ -126,7 +153,10 @@
                     <div class="ex-radio">
                       <input type="radio" id="radio" name="radio_group" />
                       <label for="radio">
-                        <p>Green<span class="member">(123)</span></p>
+                        <p>
+                          <span class="item">Life</span>
+                          <span class="member">123</span>
+                        </p>
                       </label>
                     </div>
                   </div>
@@ -134,7 +164,10 @@
                     <div class="ex-radio">
                       <input type="radio" id="radio" name="radio_group" />
                       <label for="radio">
-                        <p>Life<span class="member">(123)</span></p>
+                        <p>
+                          <span class="item">Beauty</span>
+                          <span class="member">123</span>
+                        </p>
                       </label>
                     </div>
                   </div>
@@ -142,15 +175,10 @@
                     <div class="ex-radio">
                       <input type="radio" id="radio" name="radio_group" />
                       <label for="radio">
-                        <p>Beauty<span class="member">(123)</span></p>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="ex-radio">
-                      <input type="radio" id="radio" name="radio_group" />
-                      <label for="radio">
-                        <p>Leisure<span class="member">(5)</span></p>
+                        <p>
+                          <span class="item">Leisure</span>
+                          <span class="member">5</span>
+                        </p>
                       </label>
                     </div>
                   </div>

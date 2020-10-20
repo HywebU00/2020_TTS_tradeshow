@@ -36,7 +36,8 @@
 }
 
 .box_content{
-    padding: 0.5em 0; overflow: hidden;
+    padding: 0.5em 0;
+    overflow: hidden;
 }
 
 
@@ -85,28 +86,29 @@
                 font-weight: normal;
                 color: darken($color-gray,20);
                 margin: auto;
-                min-height: 44px;
-                padding: 5px 10px !important;
+                // min-height: 44px;
+                padding: .75em 1em !important;
                 text-align: center;
                 position: relative;
                 cursor: pointer;
                 @include transition(.3s all);
-                border:1px solid $color-gray;
+                border: 1px solid $color-gray;
                 &::before, &::after{ display: none; }
-                /* &::before{
-                    top:14px;
-                    left: 3px;
-                    border: 2px solid $color-gray;
-                    background: white;
-                }
-                &::after{
-                    top:20px;
-                    left: 9px;
-                    background: $color-gray;
-                } */
+                //  &::before{
+                //     top:14px;
+                //     left: 3px;
+                //     border: 2px solid $color-gray;
+                //     background: white;
+                // }
+                // &::after{
+                //     top:20px;
+                //     left: 9px;
+                //     background: $color-gray;
+                // } 
                 i{
                     font-size: 2em;
-                    margin: 6px 6px 0 0;
+                    // margin: 6px 6px 0 0;
+                    margin-right: .5em;  
                     vertical-align: -5px;
                     display: inline-block;
                     line-height: 1;
@@ -149,7 +151,6 @@
                 }
             }
         }
-
         &.checked{
             input[type="checkbox"]:checked:hover,
             input[type="checkbox"]:checked,
@@ -183,27 +184,79 @@
         @include screen('tablet') {
             input[type=radio] + label {
                 padding: 5px 10px 5px 18px;
-                i{ 
-                    font-size: 1.6em;
-                }
+                i{  font-size: 1.6em; }
             }
         }
     }
 
     .btnShow{
-        .col {
-            @include make-xs-column(12); 
-            @include make-sm-column(6); 
-            @include make-md-column(4); 
-            @include make-lg-column(4);
+        // .col {
+        //     @include make-xs-column(12); 
+        //     @include make-sm-column(6); 
+        //     @include make-md-column(4); 
+        //     @include make-lg-column(4);
+        // }
+
+        .box_content{
+            display: flex;
+            flex-flow: row wrap;
+
+            .col {
+                flex: 1 1 auto;
+                flex-basis: calc(100% / 3 - 30px);
+                max-width: calc(100% / 3 - 30px);
+                border: 1px solid #ccc;
+                margin: 0 15px 15px !important;
+                &.checked{
+                    background: #2f549c;
+                    .item, .member{ color: #fff !important; }
+                }
+
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+
+                .ex-radio{
+                    margin: 0 !important;
+                    padding: 0;
+                    label{ border: transparent; }
+                }
+            }
         }
     }
     .btnType{
-        .col {
-            @include make-xs-column(6); 
-            @include make-sm-column(6); 
-            @include make-md-column(3); 
-            @include make-lg-column(2.4);
+        // .col {
+        //     @include make-xs-column(6); 
+        //     @include make-sm-column(6); 
+        //     @include make-md-column(3); 
+        //     @include make-lg-column(2.4);
+        // }
+
+        .box_content{
+            display: flex;
+            flex-flow: row wrap;
+
+            .col {
+                flex: 1 1 auto;
+                flex-basis: calc(100% / 4 - 30px);
+                max-width: calc(100% / 4 - 30px);
+                border: 1px solid #ccc;
+                margin: 0 15px 15px !important;
+                &.checked{
+                    background: #2f549c;
+                    .item, .member{ color: #fff !important; }
+                }
+
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+
+                .ex-radio{
+                    margin: 0 !important;
+                    padding: 0;
+                    label{ border: none; }
+                }
+            }
         }
     }
 
@@ -230,28 +283,52 @@
                 float: none !important;
                 display: block !important;
                 @include gutter();
+
                 input[type=radio]{
                     + label{
                         display: block;
                         position: relative;
                         &:before,&:after{display: none;}
                         p{
-                         position: absolute;
-                         content: "";
-                         font-weight: bold;
-                         display: block;
-                         margin:auto;
-                         top:12px;bottom: 0;
-                         left: 0;right: 0;
-                         @include text-overflow();
-                         color: $color-darkblue;
-                         padding: 0 15px;
-                         span.member{
-                            color: darken($color-gray,20);
-                            font-size: 1em;
-                            margin-left: 6px;
-                            font-weight: normal;
-                        }
+                            // position: absolute;
+                            // content: "";
+                            // font-weight: bold;
+                            // display: block;
+                            // margin:auto;
+                            // top:12px;bottom: 0;
+                            // left: 0;right: 0;
+                            // @include text-overflow();
+                            // padding: 0 15px;
+                            color: $color-darkblue;
+
+                            // 2020-1019 按鈕項目、件數，文字要全展
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            margin: auto;
+                            span{
+                                flex: 1 1 auto;
+                                line-height: 1.4;
+                            }
+                            span.item{
+                                flex-basis: calc(100% - 30% );
+                                max-width: calc(100% - 30% );
+                                border-right: dotted 1px #ddd;
+                                padding-right: .75em;
+                            }
+                            span.member{
+                                flex-basis: 30%;
+                                max-width: 30%;
+
+                                color: darken($color-gray,20);
+                                font-size: 1em;
+                                // padding-left: .75em;
+                                // margin-left: 6px;
+                                font-weight: normal;
+
+
+                            }
                     }
                 }
             }

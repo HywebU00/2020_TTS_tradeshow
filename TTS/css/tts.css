@@ -1420,13 +1420,13 @@ a:hover, a:focus {
   margin: 0px;
   width: 100%;
   box-sizing: border-box;
-  margin-top: -80px;
   margin-bottom: 16px;
+  border-bottom: solid 1px #eaeaea;
 }
 .breadcrumb ul {
   padding: 0;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1100px;
   text-align: left;
 }
 .breadcrumb ul li {
@@ -1438,10 +1438,13 @@ a:hover, a:focus {
   width: 2px;
   height: 10px;
   margin-right: 6px;
-  background: #000;
+  background: #bbb;
 }
 .breadcrumb ul li:first-child:before {
   display: none;
+}
+.breadcrumb ul li:last-child:before {
+  margin-right: .75em;
 }
 .breadcrumb a {
   color: #333;
@@ -7073,7 +7076,7 @@ img.img-responsive {
   position: relative;
   display: block;
   line-height: 5;
-  height: 380px;
+  height: 220px;
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -7110,7 +7113,7 @@ img.img-responsive {
 }
 @media screen and (max-width: 991px) {
   .inner-kv > .container .img-container {
-    height: 250px;
+    height: 180px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -9389,17 +9392,6 @@ html {
   transform: skewY(-3deg);
   bottom: -50px;
 }
-.innerpage:after {
-  content: '';
-  width: 100%;
-  display: block;
-  position: absolute;
-  height: 120px;
-  background: #fff;
-  transform: skewY(3deg);
-  top: -50px;
-  z-index: -1;
-}
 .innerpage h2 {
   color: #2f549c;
   font-size: 1.8em;
@@ -9413,7 +9405,6 @@ html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding-top: 2em;
   padding-bottom: 2em;
   position: relative;
   z-index: 0;
@@ -9634,7 +9625,7 @@ html {
 @media (min-width: 768px) {
   .col-3 .col {
     float: left;
-    width: 50%;
+    width: 33.33333%;
   }
 }
 @media (min-width: 992px) {
@@ -10612,12 +10603,11 @@ html {
 
 /*版型初始設定*/
 .new-bg {
-  padding-top: 3em;
   background: url(../images/bg-mp2020-1.jpg) 50% bottom no-repeat;
   background-size: cover;
 }
 .new-bg:first-child {
-  padding-top: 7em;
+  padding-top: 5em;
 }
 .new-bg h2 {
   color: white;
@@ -10626,7 +10616,7 @@ html {
   position: relative;
 }
 .new-bg .Video h2 {
-  padding: .5em 0 1.2em;
+  color: #222;
 }
 .new-bg .Video:before, .new-bg .Video:after {
   content: '';
@@ -10640,18 +10630,14 @@ html {
   transform: skewY(-3deg);
   bottom: 0;
 }
-.new-bg .Video:after {
-  height: 100px;
-  background: #fff;
-  transform: skewY(2deg);
-  top: -26%;
-}
 .new-bg .Photo {
   position: relative;
-  margin-top: 4em;
+  padding-top: .5em;
+  background: url(../images/bg-mp2020-1.jpg) 50% bottom no-repeat;
+  background-size: cover;
 }
 .new-bg .Photo h2 {
-  padding: .5em 0 1.2em;
+  padding: .5em 0;
 }
 .new-bg .Photo:before {
   content: '';
@@ -10673,12 +10659,20 @@ html {
 }
 @media screen and (max-width: 767px) {
   .new-bg:first-child {
-    margin-bottom: 10em;
+    margin-bottom: 1em;
   }
 }
 
+.new-bg + .section {
+  margin-top: -2em;
+}
+
+.new-bg + .section + .new-bg {
+  background: #fff;
+}
+
 .section {
-  padding: 0em 0 3em;
+  padding: 0 0 1.125em;
   text-align: center;
   position: relative;
 }
@@ -10694,13 +10688,32 @@ html {
   font-size: 2.125em;
   letter-spacing: 3px;
 }
-.section h2.computex:after {
+.section .svgLogo {
+  background: url(../images/bg-mp2020-1.jpg) 50% top no-repeat;
+  background-size: cover;
+  padding: 2em 0 9em;
+  position: relative;
+}
+.section .svgLogo:before {
   content: '';
-  display: block;
-  width: 100%;
-  height: 200px;
-  padding: 1em 0;
-  background: url(../images/logo-computex.png) 50% 50% no-repeat;
+  position: absolute;
+  left: calc( 50% - 20px);
+  top: -15px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.section .svgLogo + .container {
+  margin-top: -8em;
+}
+@media screen and (max-width: 991px) {
+  .section .svgLogo {
+    display: none;
+  }
+  .section .svgLogo + .container {
+    margin-top: 0;
+  }
 }
 .section + .section h2 {
   text-transform: uppercase;
@@ -11581,7 +11594,7 @@ canvas {
 /* what's On 最新消息*/
 .whatsOn {
   position: relative;
-  margin: 5em 0 2em;
+  margin: 5em 0 0;
 }
 .whatsOn:after {
   content: '';
@@ -11590,7 +11603,7 @@ canvas {
   height: 100%;
   background: white;
   position: absolute;
-  bottom: -10em;
+  bottom: -8em;
   transform: skewY(-5deg);
 }
 .whatsOn .container {
@@ -13862,8 +13875,7 @@ canvas {
   font-weight: normal;
   color: #999999;
   margin: auto;
-  min-height: 44px;
-  padding: 5px 10px !important;
+  padding: .75em 1em !important;
   text-align: center;
   position: relative;
   cursor: pointer;
@@ -13872,17 +13884,6 @@ canvas {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid #CCC;
-  /* &::before{
-      top:14px;
-      left: 3px;
-      border: 2px solid $color-gray;
-      background: white;
-  }
-  &::after{
-      top:20px;
-      left: 9px;
-      background: $color-gray;
-  } */
   /*   span:before{*/
   /*     width: 2.5em;*/
   /*     height: 2.5em;*/
@@ -13894,7 +13895,7 @@ canvas {
 }
 .event-calendar .ex-radio input[type=radio] + label i {
   font-size: 2em;
-  margin: 6px 6px 0 0;
+  margin-right: .5em;
   vertical-align: -5px;
   display: inline-block;
   line-height: 1;
@@ -13971,81 +13972,59 @@ canvas {
     font-size: 1.6em;
   }
 }
-.event-calendar .btnShow .col {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+.event-calendar .btnShow .box_content {
+  display: flex;
+  flex-flow: row wrap;
 }
-@media (min-width: 768px) {
-  .event-calendar .btnShow .col {
-    float: left;
-    width: 50%;
-  }
+.event-calendar .btnShow .box_content .col {
+  flex: 1 1 auto;
+  flex-basis: calc(100% / 3 - 30px);
+  max-width: calc(100% / 3 - 30px);
+  border: 1px solid #ccc;
+  margin: 0 15px 15px !important;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
-@media (min-width: 992px) {
-  .event-calendar .btnShow .col {
-    float: left;
-    width: 33.33333%;
-  }
+.event-calendar .btnShow .box_content .col.checked {
+  background: #2f549c;
 }
-@media (min-width: 1400px) {
-  .event-calendar .btnShow .col {
-    float: left;
-    width: 33.33333%;
-  }
+.event-calendar .btnShow .box_content .col.checked .item, .event-calendar .btnShow .box_content .col.checked .member {
+  color: #fff !important;
 }
-.event-calendar .btnType .col {
-  position: relative;
-  float: left;
-  width: 50%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+.event-calendar .btnShow .box_content .col .ex-radio {
+  margin: 0 !important;
+  padding: 0;
 }
-@media (min-width: 768px) {
-  .event-calendar .btnType .col {
-    float: left;
-    width: 50%;
-  }
+.event-calendar .btnShow .box_content .col .ex-radio label {
+  border: transparent;
 }
-@media (min-width: 992px) {
-  .event-calendar .btnType .col {
-    float: left;
-    width: 25%;
-  }
+.event-calendar .btnType .box_content {
+  display: flex;
+  flex-flow: row wrap;
 }
-@media (min-width: 1400px) {
-  .event-calendar .btnType .col {
-    float: left;
-    width: 20%;
-  }
+.event-calendar .btnType .box_content .col {
+  flex: 1 1 auto;
+  flex-basis: calc(100% / 4 - 30px);
+  max-width: calc(100% / 4 - 30px);
+  border: 1px solid #ccc;
+  margin: 0 15px 15px !important;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.event-calendar .btnType .box_content .col.checked {
+  background: #2f549c;
+}
+.event-calendar .btnType .box_content .col.checked .item, .event-calendar .btnType .box_content .col.checked .member {
+  color: #fff !important;
+}
+.event-calendar .btnType .box_content .col .ex-radio {
+  margin: 0 !important;
+  padding: 0;
+}
+.event-calendar .btnType .box_content .col .ex-radio label {
+  border: none;
 }
 .event-calendar .btnType .container,
 .event-calendar .btnShow .container {
@@ -14125,27 +14104,31 @@ canvas {
 }
 .event-calendar .btnType .col .ex-radio input[type=radio] + label p,
 .event-calendar .btnShow .col .ex-radio input[type=radio] + label p {
-  position: absolute;
-  content: "";
-  font-weight: bold;
-  display: block;
-  margin: auto;
-  top: 12px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  /* values are: clip, ellipsis, or a string*/
   color: #2f549c;
-  padding: 0 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.event-calendar .btnType .col .ex-radio input[type=radio] + label p span,
+.event-calendar .btnShow .col .ex-radio input[type=radio] + label p span {
+  flex: 1 1 auto;
+  line-height: 1.4;
+}
+.event-calendar .btnType .col .ex-radio input[type=radio] + label p span.item,
+.event-calendar .btnShow .col .ex-radio input[type=radio] + label p span.item {
+  flex-basis: calc(100% - 30% );
+  max-width: calc(100% - 30% );
+  border-right: dotted 1px #ddd;
+  padding-right: .75em;
 }
 .event-calendar .btnType .col .ex-radio input[type=radio] + label p span.member,
 .event-calendar .btnShow .col .ex-radio input[type=radio] + label p span.member {
+  flex-basis: 30%;
+  max-width: 30%;
   color: #999999;
   font-size: 1em;
-  margin-left: 6px;
   font-weight: normal;
 }
 .event-calendar .btnType .col .ex-radio input[type="radio"]:checked:hover + label p,

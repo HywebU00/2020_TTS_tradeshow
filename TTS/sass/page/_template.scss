@@ -246,17 +246,17 @@ html{
         bottom: -50px;
     }
     // 上
-    &:after{
-        content: '';
-        width: 100%;
-        display: block;
-        position: absolute;
-        height: 120px;
-        background: #fff;
-        transform: skewY(3deg);
-        top: -50px;
-        z-index: -1;
-    }
+    // &:after{
+    //     content: '';
+    //     width: 100%;
+    //     display: block;
+    //     position: absolute;
+    //     height: 120px;
+    //     background: #fff;
+    //     transform: skewY(3deg);
+    //     top: -50px;
+    //     z-index: -1;
+    // }
 
     h2{
         color:$color-darkblue;
@@ -267,7 +267,7 @@ html{
         min-height: 300px !important;
 
         @include gutter(6em);
-        padding-top: 2em;
+        // padding-top: 2em;
         padding-bottom: 2em;
         position: relative;
         z-index: 0;
@@ -349,7 +349,7 @@ html{
     }
     .col {
         @include make-xs-column(12);
-        @include make-sm-column(6); 
+        @include make-sm-column(4); 
         @include make-md-column(3); 
         @include make-lg-column(3);
         @include gutter(); /*gutter 代表左右要留白*/

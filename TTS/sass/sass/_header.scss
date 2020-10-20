@@ -807,7 +807,7 @@
             position: relative;
             display: block;
             line-height: 5;
-            height: 380px;
+            height: 220px;
             @include aspect-ratio(1, 1);
 
             // &:before{
@@ -834,7 +834,7 @@
             }
 
             @include screen('tablet') {
-                height: 250px;
+                height: 180px;
             }
             @include screen('tablet') {
                 &:after{
