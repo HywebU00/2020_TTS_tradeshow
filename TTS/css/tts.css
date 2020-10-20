@@ -1415,12 +1415,12 @@ a:hover, a:focus {
 /*文字設定*/
 /* 元素*/
 .breadcrumb {
-  padding: .5em 1em;
+  padding: .75em 1em;
   font-size: .938em;
   margin: 0px;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 16px;
+  margin-bottom: 1.5em;
   border-bottom: solid 1px #eaeaea;
 }
 .breadcrumb ul {
@@ -13844,6 +13844,12 @@ canvas {
   right: 0px;
   border-right: 1px solid #dbdbdb;
 }
+.event-calendar .btnDisplay .col .ex-radio label {
+  transition: all .2s ease;
+}
+.event-calendar .btnDisplay .col .ex-radio label:hover, .event-calendar .btnDisplay .col .ex-radio label:focus {
+  background: #eee;
+}
 .event-calendar .ex-checkbox, .event-calendar .ex-radio {
   margin: 0;
   font-size: inherit;
@@ -13903,15 +13909,11 @@ canvas {
 .event-calendar .ex-radio input[type=radio] + label p {
   color: #CCC;
 }
-.event-calendar .ex-radio input[type=radio]:hover + label {
-  background: rgba(204, 204, 204, 0.3);
-}
 .event-calendar .ex-radio input[type="radio"]:checked:hover + label,
 .event-calendar .ex-radio input[type="radio"]:checked + label {
   cursor: pointer;
   color: white;
   background: #2f549c;
-  border: 1px solid #2f549c;
 }
 .event-calendar .ex-radio input[type="radio"]:checked:hover + label i[class^="i_"]:before,
 .event-calendar .ex-radio input[type="radio"]:checked + label i[class^="i_"]:before {
@@ -13938,7 +13940,6 @@ canvas {
   cursor: pointer;
   color: white;
   background: #2f549c;
-  border: 1px solid #2f549c;
 }
 .event-calendar .ex-radio.checked input[type="checkbox"]:checked:hover + label i[class^="i_"]:before,
 .event-calendar .ex-radio.checked input[type="checkbox"]:checked + label i[class^="i_"]:before,
@@ -14026,8 +14027,8 @@ canvas {
 .event-calendar .btnType .box_content .col .ex-radio label {
   border: none;
 }
-.event-calendar .btnType .container,
-.event-calendar .btnShow .container {
+.event-calendar .btnShow .container,
+.event-calendar .btnType .container {
   position: relative;
   min-height: 1px;
   padding-left: 0;
@@ -14036,8 +14037,8 @@ canvas {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.event-calendar .btnType .col,
-.event-calendar .btnShow .col {
+.event-calendar .btnShow .col,
+.event-calendar .btnType .col {
   position: relative;
   min-height: 1px;
   padding-left: 0;
@@ -14045,31 +14046,37 @@ canvas {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  transition: all .2s ease;
 }
-.event-calendar .btnType .col:first-child,
-.event-calendar .btnShow .col:first-child {
+.event-calendar .btnShow .col:first-child,
+.event-calendar .btnType .col:first-child {
   margin-left: 0%;
 }
 @media (min-width: 768px) {
-  .event-calendar .btnType .col:first-child,
-  .event-calendar .btnShow .col:first-child {
+  .event-calendar .btnShow .col:first-child,
+  .event-calendar .btnType .col:first-child {
     margin-left: 0%;
   }
 }
 @media (min-width: 992px) {
-  .event-calendar .btnType .col:first-child,
-  .event-calendar .btnShow .col:first-child {
+  .event-calendar .btnShow .col:first-child,
+  .event-calendar .btnType .col:first-child {
     margin-left: 0%;
   }
 }
 @media (min-width: 1400px) {
-  .event-calendar .btnType .col:first-child,
-  .event-calendar .btnShow .col:first-child {
+  .event-calendar .btnShow .col:first-child,
+  .event-calendar .btnType .col:first-child {
     margin-left: 0%;
   }
 }
-.event-calendar .btnType .col .ex-radio,
-.event-calendar .btnShow .col .ex-radio {
+.event-calendar .btnShow .col:hover, .event-calendar .btnShow .col:focus,
+.event-calendar .btnType .col:hover,
+.event-calendar .btnType .col:focus {
+  background: #eee;
+}
+.event-calendar .btnShow .col .ex-radio,
+.event-calendar .btnType .col .ex-radio {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -14086,24 +14093,24 @@ canvas {
   box-sizing: border-box;
 }
 @media (min-width: 1400px) {
-  .event-calendar .btnType .col .ex-radio,
-  .event-calendar .btnShow .col .ex-radio {
+  .event-calendar .btnShow .col .ex-radio,
+  .event-calendar .btnType .col .ex-radio {
     float: left;
     width: 100%;
   }
 }
-.event-calendar .btnType .col .ex-radio input[type=radio] + label,
-.event-calendar .btnShow .col .ex-radio input[type=radio] + label {
+.event-calendar .btnShow .col .ex-radio input[type=radio] + label,
+.event-calendar .btnType .col .ex-radio input[type=radio] + label {
   display: block;
   position: relative;
 }
-.event-calendar .btnType .col .ex-radio input[type=radio] + label:before, .event-calendar .btnType .col .ex-radio input[type=radio] + label:after,
-.event-calendar .btnShow .col .ex-radio input[type=radio] + label:before,
-.event-calendar .btnShow .col .ex-radio input[type=radio] + label:after {
+.event-calendar .btnShow .col .ex-radio input[type=radio] + label:before, .event-calendar .btnShow .col .ex-radio input[type=radio] + label:after,
+.event-calendar .btnType .col .ex-radio input[type=radio] + label:before,
+.event-calendar .btnType .col .ex-radio input[type=radio] + label:after {
   display: none;
 }
-.event-calendar .btnType .col .ex-radio input[type=radio] + label p,
-.event-calendar .btnShow .col .ex-radio input[type=radio] + label p {
+.event-calendar .btnShow .col .ex-radio input[type=radio] + label p,
+.event-calendar .btnType .col .ex-radio input[type=radio] + label p {
   color: #2f549c;
   display: flex;
   flex-flow: row nowrap;
@@ -14111,36 +14118,36 @@ canvas {
   align-items: center;
   margin: auto;
 }
-.event-calendar .btnType .col .ex-radio input[type=radio] + label p span,
-.event-calendar .btnShow .col .ex-radio input[type=radio] + label p span {
+.event-calendar .btnShow .col .ex-radio input[type=radio] + label p span,
+.event-calendar .btnType .col .ex-radio input[type=radio] + label p span {
   flex: 1 1 auto;
   line-height: 1.4;
 }
-.event-calendar .btnType .col .ex-radio input[type=radio] + label p span.item,
-.event-calendar .btnShow .col .ex-radio input[type=radio] + label p span.item {
+.event-calendar .btnShow .col .ex-radio input[type=radio] + label p span.item,
+.event-calendar .btnType .col .ex-radio input[type=radio] + label p span.item {
   flex-basis: calc(100% - 30% );
   max-width: calc(100% - 30% );
   border-right: dotted 1px #ddd;
   padding-right: .75em;
 }
-.event-calendar .btnType .col .ex-radio input[type=radio] + label p span.member,
-.event-calendar .btnShow .col .ex-radio input[type=radio] + label p span.member {
+.event-calendar .btnShow .col .ex-radio input[type=radio] + label p span.member,
+.event-calendar .btnType .col .ex-radio input[type=radio] + label p span.member {
   flex-basis: 30%;
   max-width: 30%;
   color: #999999;
   font-size: 1em;
   font-weight: normal;
 }
-.event-calendar .btnType .col .ex-radio input[type="radio"]:checked:hover + label p,
-.event-calendar .btnType .col .ex-radio input[type="radio"]:checked + label p,
 .event-calendar .btnShow .col .ex-radio input[type="radio"]:checked:hover + label p,
-.event-calendar .btnShow .col .ex-radio input[type="radio"]:checked + label p {
+.event-calendar .btnShow .col .ex-radio input[type="radio"]:checked + label p,
+.event-calendar .btnType .col .ex-radio input[type="radio"]:checked:hover + label p,
+.event-calendar .btnType .col .ex-radio input[type="radio"]:checked + label p {
   color: white;
 }
-.event-calendar .btnType .col .ex-radio input[type="radio"]:checked:hover + label p span.member,
-.event-calendar .btnType .col .ex-radio input[type="radio"]:checked + label p span.member,
 .event-calendar .btnShow .col .ex-radio input[type="radio"]:checked:hover + label p span.member,
-.event-calendar .btnShow .col .ex-radio input[type="radio"]:checked + label p span.member {
+.event-calendar .btnShow .col .ex-radio input[type="radio"]:checked + label p span.member,
+.event-calendar .btnType .col .ex-radio input[type="radio"]:checked:hover + label p span.member,
+.event-calendar .btnType .col .ex-radio input[type="radio"]:checked + label p span.member {
   color: white;
 }
 @media screen and (max-width: 991px) {

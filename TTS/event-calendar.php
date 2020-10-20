@@ -62,7 +62,7 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="ex-radio checked">
+                    <div class="ex-radio">
                       <input type="radio" id="radio" name="radio_group" checked="checked"/>
                       <label for="radio">
                         <p>

@@ -48,7 +48,7 @@
                   <!-- 顯示模式 -->
                   <div class="box_title">Display Mode:</div>
                   <div class="box_content">
-                    <div class="ex-radio  checked">
+                    <div class="ex-radio checked">
                       <input type="radio" id="radio_1" name="radio_group"  checked="checked"/>
                       <label for="radio_1"><i class="i_grid"></i>Grid View：</label>
                     </div>
@@ -94,8 +94,8 @@
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="ex-radio checked">
+                  <div class="col checked">
+                    <div class="ex-radio">
                       <input type="radio" id="radio" name="radio_group" />
                       <label for="radio">
                         <p>
@@ -183,8 +183,6 @@
                     </div>
                   </div>
                 </div>
-
-
               </div>
             </div>
           </div>
