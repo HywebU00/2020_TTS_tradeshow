@@ -4186,7 +4186,7 @@ form button {
   color: #333;
   font-size: 1em;
   border: 0;
-  padding: .5em;
+  padding: .45em 1em;
   background: #fff;
   vertical-align: middle;
   margin-bottom: .3em;
@@ -4312,7 +4312,7 @@ form textarea {
   color: #333;
   font-size: 1em;
   border: 0;
-  padding: .5em;
+  padding: .45em 1em;
   background: #fff;
   vertical-align: middle;
   margin-bottom: .3em;
@@ -16431,6 +16431,16 @@ canvas {
 .Pre-entry a {
   text-decoration: none;
 }
+.Pre-entry label a:after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  margin-left: .4em;
+  background: url(../images/basic/icon_link.svg) 50% 50% no-repeat;
+  background-size: contain;
+  vertical-align: sub;
+  display: inline-block;
+}
 .Pre-entry .form_grp {
   padding: 0em;
   margin: 0em 0em 2em 0;
@@ -16994,7 +17004,6 @@ span.number {
   display: block;
 }
 
-/* badge setting*/
 .badge-preview {
   padding: 3em 0 0 0;
   margin: 0 0 1em 0;
@@ -17202,6 +17211,23 @@ span.number {
 }
 .iframBox .form_content {
   padding: 1em 0;
+}
+
+.face_id .Foto {
+  height: 320px;
+  text-align: center;
+}
+.face_id .Foto img {
+  height: auto;
+  max-height: 100%;
+}
+@media screen and (max-width: 991px) {
+  .face_id .col:last-child .form_content {
+    text-align: center !important;
+  }
+  .face_id .col:last-child .form_content .upload_customize {
+    text-align: left;
+  }
 }
 
 /*pre 預登*/

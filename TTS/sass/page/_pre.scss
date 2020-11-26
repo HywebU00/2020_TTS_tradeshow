@@ -8,6 +8,21 @@
 	a{
 		text-decoration: none;
 	}
+
+	label{
+		a{
+			&:after{
+				content: '';
+				width: 18px;
+				height: 18px;
+				margin-left: .4em;	
+				background: url(../images/basic/icon_link.svg) 50% 50% no-repeat;
+				background-size: contain;
+				vertical-align: sub;
+				display: inline-block;
+			}
+		}
+	}
 	.form_grp {
 		padding: 0em;
 		margin:0em 0em 2em 0;
@@ -297,7 +312,7 @@ span.number{
 	margin-right: 10px;
 }
 
- // Pre-entry
+// Pre-entry
 //  .Pre-entry{
 // 	padding: 2em 2em;
 // 	margin: 0 auto 4em auto;
@@ -508,7 +523,7 @@ span.number{
 // }
  
 
- .formQuest{
+.formQuest{
  	.search {
  		display: block !important;
  		min-width: 100%;
@@ -650,66 +665,68 @@ span.number{
  			&:before{ width: 70%; }
  		}
  	}
- }
- .col-6,
- .col-4,
- .col-3{
- 	&.interestPD{
- 		.container{ 
- 			@include gutter(60px);
- 			padding-bottom: 2em;
- 		}
- 		.col{
- 			color: darken($color-gray,20);
- 			@include gutter();
- 			margin-bottom: 5px !important;
- 			p{
- 				margin:0;
- 				padding:5px 5px;
- 				position: relative;
- 				background: lighten($color-gray,15);
- 				span{
- 					white-space: nowrap;
- 					width: 70%;
- 					display: inline-block;
- 					overflow: hidden;
- 					vertical-align:middle;
- 					text-overflow:ellipsis;
- 				}
- 				.num{
- 					margin:0px 15px 0 5px !important;
- 					color: $color-word;
- 					display: inline-block !important;
- 					font-weight: bold;
- 					input[type="checkbox"]{margin-left: 5px;}
- 				}
- 				.btn-close{
- 					display: none;
- 					position: absolute;
- 					top:5px;right: 5px;
- 					margin-right: 5px;
- 					color: $color-word;
- 					font-size: 1.4em;
- 					&:hover,&:focus{
- 						text-decoration: none;
- 					}
- 				}
- 			}
- 			// &.active,
- 			&:hover,
- 			&:focus{
- 				text-decoration: none;
- 				p{
- 					color: $color-word;
- 					background: darken($color-gray,10);
- 					.btn-close{display: block;}
- 				}
- 			}
- 		}
- 	}
- }
+}
+.col-6,
+.col-4,
+.col-3{
+	&.interestPD{
+		.container{ 
+			@include gutter(60px);
+			padding-bottom: 2em;
+		}
+		.col{
+			color: darken($color-gray,20);
+			@include gutter();
+			margin-bottom: 5px !important;
+			p{
+				margin:0;
+				padding:5px 5px;
+				position: relative;
+				background: lighten($color-gray,15);
+				span{
+					white-space: nowrap;
+					width: 70%;
+					display: inline-block;
+					overflow: hidden;
+					vertical-align:middle;
+					text-overflow:ellipsis;
+				}
+				.num{
+					margin:0px 15px 0 5px !important;
+					color: $color-word;
+					display: inline-block !important;
+					font-weight: bold;
+					input[type="checkbox"]{margin-left: 5px;}
+				}
+				.btn-close{
+					display: none;
+					position: absolute;
+					top:5px;right: 5px;
+					margin-right: 5px;
+					color: $color-word;
+					font-size: 1.4em;
+					&:hover,&:focus{
+						text-decoration: none;
+					}
+				}
+			}
+			// &.active,
+			&:hover,
+			&:focus{
+				text-decoration: none;
+				p{
+					color: $color-word;
+					background: darken($color-gray,10);
+					.btn-close{display: block;}
+				}
+			}
+		}
+	}
+}
 
-/* badge setting*/
+
+
+// badge setting
 .badge-preview{
 	padding: 3em 0 0 0;
 	margin: 0 0 1em 0;
@@ -893,6 +910,30 @@ span.number{
 	}
 	.form_content{
 		padding: 1em 0;
+	}
+}
+
+// 人臉辨識
+.face_id{
+	.Foto{
+		height: 320px;
+		text-align: center;
+
+		img{
+			height: auto;
+			max-height: 100%;
+		}
+	}
+
+	@include screen('tablet') {
+		.col{
+			&:last-child{
+				.form_content{
+					text-align: center;
+					.upload_customize{ text-align: left; }
+				}
+			}
+		}
 	}
 }
 
