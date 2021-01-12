@@ -422,9 +422,18 @@
 // 影片
 .Video{
     .mp_slider{
+        .caption{
+            p{
+                padding: .75em 1.25em;
+                &:after{
+                    display: none;
+                }
+            }
+        }
+
         a{
             transition: all .3s ease-in-out;
-            time{ opacity:1; }
+            time{}
 
             &:before{
                 content: '';
@@ -442,7 +451,7 @@
                 width: 60px;
                 height: 60px;
                 background: url(../images/icon/icon_video_play.png) 50% 50% no-repeat;
-                top: calc(50% - 30px);
+                top: calc(30% - 30px);
                 left: calc(50% - 30px);
                 opacity:0;
                 transition: all .3s ease-in-out;
@@ -450,9 +459,13 @@
 
             &:hover, &:focus{
                 .caption{
-                    bottom: -60px;
+                    bottom: 0;
+
                     p{ background: rgba(0,0,0,0); }
-                    time{ opacity:0; }
+                    time{
+                        background: transparent;
+                        color: #fff;
+                    }
                 }
 
                 &:before{ top: 0; }
