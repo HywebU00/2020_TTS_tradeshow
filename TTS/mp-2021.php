@@ -118,7 +118,7 @@
           </div>
         </section>
         <!-- 焦點消息 -->
-        <section class="section topNews wow fadeInDown" data-wow-delay="">
+        <section class="section topNews wow fadeInDown" data-wow-delay=".2s">
           <h2>焦點消息</h2>
           <div class="container">
             <div class="col">
@@ -162,7 +162,7 @@
               <!-- 01 -->
               <div>
                 <section>
-                  <a href="#">
+                  <a href="https://www.google.com/?hl=zh_tw">
                     <div class="img-container">
                       <img src="images/default.jpg" alt="" class="cover">
                     </div>
@@ -204,7 +204,7 @@
               <!-- 02 -->
               <div>
                 <section>
-                  <a href="#">
+                  <a href="http://design.hyweb.com.tw/GUI/Lize/01/index.html">
                     <div class="img-container">
                       <img src="images/default2.jpg" alt="" class="cover">
                     </div>
@@ -216,7 +216,7 @@
                   </a>
                 </section>
                 <section>
-                  <a href="#">
+                  <a href="http://design.hyweb.com.tw/GUI/Lize/01/index.html">
                     <div class="img-container">
                       <img src="images/default2.jpg" alt="" class="cover">
                     </div>
@@ -228,7 +228,7 @@
                   </a>
                 </section>
                 <section>
-                  <a href="#">
+                  <a href="http://design.hyweb.com.tw/GUI/Lize/01/index.html">
                     <div class="img-container">
                       <img src="images/default2.jpg" alt="" class="cover">
                     </div>

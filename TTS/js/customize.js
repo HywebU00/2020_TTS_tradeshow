@@ -3,10 +3,10 @@ $(function() {
    $('.singleSlider').slick({
         dots: true,
         arrow: false,
-        speed:1000,
+        speed: 600,
         infinite: true,
         autoplay: false,
-        fade: true,
+        fade: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplaySpeed: 3000,

@@ -11721,9 +11721,6 @@ canvas {
 .whatsOn .singleSlider .slick-next:focus {
   opacity: 1;
 }
-.whatsOn .singleSlider .slick-list {
-  overflow: visible;
-}
 .whatsOn .singleSlider .slick-prev {
   left: 0;
   background: url(../vendor/slick/icon_arrow_left_black.png) center center no-repeat;
