@@ -252,6 +252,7 @@ footer {
                     padding: 0;
                     margin: 0;
                     li{
+                        &:last-child{ vertical-align: super; }
                         img{ height: 64px !important; }
                     }
                 }
@@ -263,6 +264,8 @@ footer {
             &:nth-child(2) {
                 @include flex-direction(column);
             }
+
+
             .footer_logo {
                 @include order(2);
                 margin: 1em auto;
