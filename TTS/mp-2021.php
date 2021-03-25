@@ -481,7 +481,7 @@
         </section> -->
       </section>
       <!--Partners -->
-      <section class="section col-3 partners">
+      <section class="section col-5 partners">
         <h2>友善連結</h2>
         <div class="container">
           <!-- 小尺寸 -->
@@ -531,7 +531,7 @@
           </div>
           <div class="col">
             <div class="img-container">
-              <a href="#"><img src="images/partner2.jpg" class="contain" alt=""></a>
+              <a href="#"><img src="images/partner1.gif" alt="" class="contain"></a>
             </div>
           </div>
           <div class="col">
@@ -557,6 +557,16 @@
           <div class="col">
             <div class="img-container">
               <a href="#"><img src="images/partner3.gif" class="contain" alt=""></a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <a href="#"><img src="images/partner2.jpg" alt="" class="contain"></a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <a href="#"><img src="images/partner1.gif" alt="" class="contain"></a>
             </div>
           </div>
           <!-- <div class="col">

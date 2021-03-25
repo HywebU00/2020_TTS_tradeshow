@@ -317,16 +317,34 @@ html{
 /* 五欄*/
 .col-2 {
     .container {
-       @include gutter(0); 
-   }
-   .col {
-    @include make-xs-column(6);
-    @include make-sm-column(3); 
-    @include make-md-column(2); 
-    @include make-lg-column(2);
-        @include gutter(); /*gutter 代表左右要留白*/
+        @include gutter(0);
+    }
+    .col {
+        @include make-xs-column(6);
+        @include make-sm-column(3); 
+        @include make-md-column(2); 
+        @include make-lg-column(2);
+        @include gutter(); //gutter 代表左右要留白
     }
 }
+// 五欄
+.col-5 {
+    .container {
+        @include gutter(0);
+    }
+    .col {
+        width: calc(100% / 5);
+        display: block;
+        float: left;
+    }
+
+    @media screen and (max-width: 991px) {
+        .col {
+            width: calc(100% / 3);
+        }
+    }
+}
+
 
 
 /* 三欄*/

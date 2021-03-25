@@ -9518,7 +9518,6 @@ html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  /*gutter 代表左右要留白*/
 }
 @media (min-width: 768px) {
   .col-2 .col {
@@ -9536,6 +9535,26 @@ html {
   .col-2 .col {
     float: left;
     width: 16.66667%;
+  }
+}
+
+.col-5 .container {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.col-5 .col {
+  width: calc(100% / 5);
+  display: block;
+  float: left;
+}
+@media screen and (max-width: 991px) {
+  .col-5 .col {
+    width: calc(100% / 3);
   }
 }
 
