@@ -10732,7 +10732,6 @@ html {
   }
 }
 .section + .section h2 {
-  text-transform: uppercase;
   overflow: hidden;
   clear: both;
 }
@@ -11114,7 +11113,6 @@ canvas {
   margin: 0.5em 0 1em 1em !important;
   float: left;
   display: inline-block;
-  text-transform: uppercase;
 }
 .MP-gridCard .container {
   background: transparent;
@@ -12682,7 +12680,6 @@ canvas {
 }
 .partners h2 {
   color: #4d4d4d !important;
-  text-transform: uppercase;
   padding: 1.25em 0 1.125em;
   margin: 0;
 }
