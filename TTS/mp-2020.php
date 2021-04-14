@@ -127,30 +127,84 @@
               <div class="singleSlider">
                 <!-- 01 -->
                 <div>
-                  <div class="img-container">
-                    <a href="javascript:void(0);" title="">
-                      <img src="images/default.jpg" alt="" class="cover">
-                    </a>
-                  </div>
-                  <div class="caption">
-                    <!-- 注意：h3和P一併：截字二行字 -->
-                    <time datetime="2018.01.06-09">2020 / 3.17</time>
-                    <h3>義大利旅遊疫情升至第三級警告，入境需居家檢疫14天</h3>
-                    <p><a href="#">中央流行疫情指揮中心今(17)日表示，中國大陸以外的亞洲國家近期疫情擴大，確診病例數已逾1萬例，病例數持續增加中，多國已宣布進入緊急狀態並採取嚴格之邊境管制及檢疫措施；另美國近期疫情亦持續上升。....</a></p>
-                  </div>
+                  <section>
+                    <div class="img-container">
+                      <a href="javascript:void(0);" title="">
+                        <img src="images/default.jpg" alt="" class="cover">
+                      </a>
+                    </div>
+                    <div class="caption">
+                      <!-- 注意：h3和P一併：截字二行字 -->
+                      <time datetime="2018.01.06-09">2020 / 3.17</time>
+                      <h3>1義大利旅遊疫情升至第三級警告，入境需居家檢疫14天</h3>
+                      <p><a href="#">中央流行疫情指揮中心今(17)日表示，中國大陸以外的亞洲國家近期疫情擴大，確診病例數已逾1萬例，病例數持續增加中，多國已宣布進入緊急狀態並採取嚴格之邊境管制及檢疫措施；另美國近期疫情亦持續上升。....</a></p>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="img-container">
+                      <a href="javascript:void(0);" title="">
+                        <img src="images/default.jpg" alt="" class="cover">
+                      </a>
+                    </div>
+                    <div class="caption">
+                      <!-- 注意：h3和P一併：截字二行字 -->
+                      <time datetime="2018.01.06-09">2020 / 3.17</time>
+                      <h3>2義大利旅遊疫情升至第三級警告，入境需居家檢疫14天</h3>
+                      <p><a href="#">中央流行疫情指揮中心今(17)日表示，中國大陸以外的亞洲國家近期疫情擴大，確診病例數已逾1萬例，病例數持續增加中，多國已宣布進入緊急狀態並採取嚴格之邊境管制及檢疫措施；另美國近期疫情亦持續上升。....</a></p>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="img-container">
+                      <a href="javascript:void(0);" title="">
+                        <img src="images/default.jpg" alt="" class="cover">
+                      </a>
+                    </div>
+                    <div class="caption">
+                      <!-- 注意：h3和P一併：截字二行字 -->
+                      <time datetime="2018.01.06-09">2020 / 3.17</time>
+                      <h3>3義大利旅遊疫情升至第三級警告，入境需居家檢疫14天</h3>
+                      <p><a href="#">中央流行疫情指揮中心今(17)日表示，中國大陸以外的亞洲國家近期疫情擴大，確診病例數已逾1萬例，病例數持續增加中，多國已宣布進入緊急狀態並採取嚴格之邊境管制及檢疫措施；另美國近期疫情亦持續上升。....</a></p>
+                    </div>
+                  </section>
                 </div>
                 <!-- 02 -->
                 <div>
-                  <div class="img-container">
-                    <a href=javascript:void(0); title="">
-                      <img src="images/default2.jpg" alt="" class="cover">
-                    </a>
-                  </div>
-                  <div class="caption">
-                    <time datetime="2018.01.06-09">January 05-09, 2018</time>
-                    <h3>字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多</h3>
-                    <p>Fastener Taiwan is the ONLY international B2B fastener show in Taiwan. Serving as a trading...</p>
-                  </div>
+                  <section>
+                    <div class="img-container">
+                      <a href=javascript:void(0); title="">
+                        <img src="images/default2.jpg" alt="" class="cover">
+                      </a>
+                    </div>
+                    <div class="caption">
+                      <time datetime="2018.01.06-09">January 05-09, 2018</time>
+                      <h3>1字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多</h3>
+                      <p>Fastener Taiwan is the ONLY international B2B fastener show in Taiwan. Serving as a trading...</p>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="img-container">
+                      <a href=javascript:void(0); title="">
+                        <img src="images/default2.jpg" alt="" class="cover">
+                      </a>
+                    </div>
+                    <div class="caption">
+                      <time datetime="2018.01.06-09">January 05-09, 2018</time>
+                      <h3>2字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多</h3>
+                      <p>Fastener Taiwan is the ONLY international B2B fastener show in Taiwan. Serving as a trading...</p>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="img-container">
+                      <a href=javascript:void(0); title="">
+                        <img src="images/default2.jpg" alt="" class="cover">
+                      </a>
+                    </div>
+                    <div class="caption">
+                      <time datetime="2018.01.06-09">January 05-09, 2018</time>
+                      <h3>3字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多</h3>
+                      <p>Fastener Taiwan is the ONLY international B2B fastener show in Taiwan. Serving as a trading...</p>
+                    </div>
+                  </section>
                 </div>
                 <!-- 03 -->
                 <div>

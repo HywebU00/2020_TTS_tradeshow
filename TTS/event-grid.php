@@ -6,36 +6,7 @@
     <!-- header Start -->
     <?php require_once('include/inc_innerheader.php'); ?>
     <!-- inner-kv -->
-    <div class="inner-kv">
-      <div class="container">
-        <!-- menu Start -->
-        <nav class="menu2020">
-          <ul>
-            <li><a href="#">關於我們</a></li>
-            <li><a href="#">最新消息</a></li>
-            <li><a href="#">展覽檔期</a></li>
-            <li><a href="#">展覽影音</a></li>
-          </ul>
-        </nav>
-        <!--  -->
-        <h1 class="wow fadeInDown" data-wow-delay="0.2s"><a href="#">Event</a></h1>
-        <div class="img-container">
-          <div class="decoration">
-            <div class="line wow rollIn" data-wow-delay="0.2s"></div>
-            <div class="line wow rollIn" data-wow-delay="0.4s"></div>
-          </div>
-          <img src="images/banner/EventBg.jpg" alt="" class="cover">
-        </div>
-        <!-- breadcrumb路徑 -->
-        <div class="breadcrumb">
-          <ul>
-            <li><a href="#">首頁</a></li>
-            <li><a href="#">Evnet</a></li>
-            <li>Taiwan International Fisheries & Seafood Show</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <?php require_once('include/inc_inner-kv.php'); ?>
     <!-- main Start -->
     <div id="center" class="main innerpage">
       <div class="container">

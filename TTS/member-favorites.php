@@ -3,113 +3,93 @@
 <?php require_once('include/inc_head.php'); ?>
 <body>
   <div class="wrapper">
-   <!-- header Start -->
-   <header class="header fixed">
-    <div class="container">
-      <a class="sidebarCtrl" href="#">
-        <span class="dataText">Menu</span>
-        <span></span><span></span><span></span>
-      </a>
-      <a href="mp.php" class="logo"><img src="images/logo-en.png" alt="網站標題"/></a>
+    <!-- header Start -->
+    <header class="header fixed">
+      <div class="container">
+        <a class="sidebarCtrl" href="#">
+          <span class="dataText">Menu</span>
+          <span></span><span></span><span></span>
+        </a>
+        <a href="mp.php" class="logo"><img src="images/logo-en.png" alt="網站標題"/></a>
 
-      <button type="button" class="userCtrl icon-user-1"></button>
-      <button type="button" class="searchCtrl"></button>
-      <!-- navigation Start -->
-      <nav class="navigation">
-        <ul>
-          <li><a class="user" href="#"><i class="icon-user-1"></i></a><a class='iframe' href="include/inc_signUp.php">LOG OUT</a></li>
-          <li><a href="#">EN</a>
-            <ul>
-              <li><a href="#" title="正體中文">正體中文</a></li>
-              <li class="active"><a href="#" title="English">English</a></li>
-              <li><a href="https://cloud.taiwantradeshows.com.tw/schedule/id.pdf" target="_blank">Indonesia</a></li>
-              <li><a href="https://cloud.taiwantradeshows.com.tw/schedule/th.pdf" target="_blank" title="ภาษาไทย">ภาษาไทย</a></li>
-              <li><a href="https://cloud.taiwantradeshows.com.tw/schedule/vn.pdf" target="_blank" title="Tiếng Việt Nam">Tiếng Việt Nam</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- MemberNav Start -->
-      <div class="MemberNav">
-        <ul>
-          <li class="userName">
-            <span>你好，</span><span>陳懿玲</span>
-          </li>
-          <li>
-            <a href="member-favorites.php" title="">My Favorites</a>
-          </li>
-          <li class="active">
-            <a href="#">Profile Setting</a>
-            <ul>
-             <li><a href="member-nextshow.php">Visitor</a></li>
-             <li ><a href="#">Exhibitor</a></li>
-             <li class="active"><a href="#">Media</a></li>
-           </ul>
-         </li>
-         <li>
-          <a href="member-changePW.php" title="">Change Password</a>
-        </li>
-        <li>
-          <a href="member-history.php" title="">History-Visitor</a>
-        </li>
-        <li>
-          <a href="#" title="">History-Exhiibitor</a>
-        </li>
-        <li>
-          <a href="#" title="">History-Media</a>
-        </li>
-        <li class="signout"><a href="https://www.cw.com.tw/logout" class="">登出</a></li>
-      </ul>
-    </div>
-    <!-- Search Start -->
-    <div class="search">
-      <form action="" class="form_inline">
-        <div class="form_grp">
-          <label for="mustSameAsId">帳號:</label>
-          <input name="username" id="mustSameAsId" type="text" placeholder="Enter the name of Exhibition or Product" accesskey="S">
+        <button type="button" class="userCtrl icon-user-1"></button>
+        <button type="button" class="searchCtrl"></button>
+        <!-- navigation Start -->
+        <nav class="navigation">
+          <ul>
+            <li><a class="user" href="#"><i class="icon-user-1"></i></a><a class='iframe' href="include/inc_signUp.php">LOG OUT</a></li>
+            <li><a href="#">EN</a>
+              <ul>
+                <li><a href="#" title="正體中文">正體中文</a></li>
+                <li class="active"><a href="#" title="English">English</a></li>
+                <li><a href="https://cloud.taiwantradeshows.com.tw/schedule/id.pdf" target="_blank">Indonesia</a></li>
+                <li><a href="https://cloud.taiwantradeshows.com.tw/schedule/th.pdf" target="_blank" title="ภาษาไทย">ภาษาไทย</a></li>
+                <li><a href="https://cloud.taiwantradeshows.com.tw/schedule/vn.pdf" target="_blank" title="Tiếng Việt Nam">Tiếng Việt Nam</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- MemberNav Start -->
+        <div class="MemberNav">
+          <ul>
+            <li class="userName">
+              <span>你好，</span><span>陳懿玲</span>
+            </li>
+            <li>
+              <a href="member-favorites.php" title="">My Favorites</a>
+            </li>
+            <li class="active">
+              <a href="#">Profile Setting</a>
+              <ul>
+                <li><a href="member-nextshow.php">Visitor</a></li>
+                <li ><a href="#">Exhibitor</a></li>
+                <li class="active"><a href="#">Media</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="member-changePW.php" title="">Change Password</a>
+            </li>
+            <li>
+              <a href="member-history.php" title="">History-Visitor</a>
+            </li>
+            <li>
+              <a href="#" title="">History-Exhiibitor</a>
+            </li>
+            <li>
+              <a href="#" title="">History-Media</a>
+            </li>
+            <li class="signout"><a href="https://www.cw.com.tw/logout" class="">登出</a></li>
+          </ul>
         </div>
-        <div class="btn_grp">
-          <!--注意：手機版清除資料icon <a class="btn-close icon-cancel-1"></a> -->
-          <button type="button" class="btn-search">查詢</button>
-        </div>
-      </form>
-    </div>
-    <!-- menu Start -->
-    <nav class="menu">
-      <ul>
-        <li><a href="#">About TTS</a>
-        </li>
-        <li><a href="#">Event</a>
-        </li>
-        <li><a href="#">Gallery</a>
-        </li>
-        <li><a href="#">News</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<!-- header End -->
 
-<!-- inner-kv -->
-<div class="inner-kv">
-  <div class="container">
-    <h1 class="wow fadeInDown" data-wow-delay="0.2s"><a href="#">Event</a></h1>
-    <div class="img-container">
-      <div class="decoration">
-        <div class="line wow rollIn" data-wow-delay="0.2s"></div>
-        <div class="line wow rollIn" data-wow-delay="0.4s"></div>
-      </div><img src="images/banner/memberbg.jpg" alt="" class="cover"></div>
-      <!-- breadcrumb路徑 -->
-      <div class="breadcrumb">
-        <ul>
-          <li><a href="#">首頁</a></li>
-          <li><a href="#">Evnet</a></li>
-          <li>Taiwan International Fisheries & Seafood Show</li>
-        </ul>
+        <!-- Search Start -->
+        <div class="search">
+          <form action="" class="form_inline">
+            <div class="form_grp">
+              <label for="mustSameAsId">帳號:</label>
+              <input name="username" id="mustSameAsId" type="text" placeholder="Enter the name of Exhibition or Product" accesskey="S">
+            </div>
+            <div class="btn_grp">
+              <!--注意：手機版清除資料icon <a class="btn-close icon-cancel-1"></a> -->
+              <button type="button" class="btn-search">查詢</button>
+            </div>
+          </form>
+        </div>
+        <!-- menu Start -->
+        <nav class="menu">
+          <ul>
+            <li><a href="#">About TTS</a></li>
+            <li><a href="#">Event</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </nav>
       </div>
-    </div>
-  </div>
+    </header>
+    <!-- header End -->
+
+    <!-- inner-kv -->
+    <?php require_once('include/inc_inner-kv.php'); ?>
 
   <!-- main Start -->
   <div id="center" class="main innerpage">

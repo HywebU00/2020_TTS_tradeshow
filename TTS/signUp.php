@@ -6,26 +6,9 @@
         <!-- header Start -->
         <?php require_once('include/inc_header.php'); ?>
         <!-- header End -->
+        
         <!-- inner-kv -->
-        <div class="inner-kv">
-            <div class="container">
-                <h1 class="wow fadeInDown" data-wow-delay="0.2s">Sign Up 會員登入預設圖</h1>
-                <div class="img-container">
-                    <div class="decoration">
-                      <div class="line wow rollIn" data-wow-delay="0.2s"></div>
-                      <div class="line wow rollIn" data-wow-delay="0.4s"></div>
-                  </div>
-                  <img src="images/banner/SignUpBg.jpg" alt="" class="cover">
-              </div>
-              <!-- breadcrumb路徑 -->
-              <div class="breadcrumb">
-                  <ul>
-                    <li><a href="#">首頁</a></li>
-                    <li><a href="#">Evnet</a></li>
-                    <li>Taiwan International Fisheries & Seafood Show</li>
-                </ul>
-            </div>
-        </div>
+        <?php require_once('include/inc_inner-kv.php'); ?>
     </div>
 
     <!-- main Start -->

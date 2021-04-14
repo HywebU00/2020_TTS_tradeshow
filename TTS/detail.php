@@ -9,25 +9,7 @@
     <!-- header End -->
 
     <!-- inner-kv -->
-    <div class="inner-kv">
-      <div class="container">
-        <div class="img-container">
-          <h1 class="wow fadeInDown" data-wow-delay="0.2s">H1 一般標準內容頁</h1>
-          <div class="decoration">
-            <div class="line wow rollIn" data-wow-delay="0.2s"></div>
-            <div class="line wow rollIn" data-wow-delay="0.4s"></div>
-          </div>
-          <img src="images/banner/EventBg.jpg" alt="" class="cover">
-        </div>
-        <!-- breadcrumb路徑 -->
-        <div class="breadcrumb">
-          <ul>
-            <li><a href="#">首頁</a></li>
-            <li>News</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <?php require_once('include/inc_inner-kv.php'); ?>
 
 
     <!-- main Start -->

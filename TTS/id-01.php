@@ -25,10 +25,10 @@
                         <div class="line wow rollIn" data-wow-delay="0.2s"></div>
                         <div class="line wow rollIn" data-wow-delay="0.4s"></div>
                     </div>
-                    <img src="images/banner/SignUpBg.jpg" alt="" class="cover"></div>
-                    <!-- breadcrumb路徑 -->
-                    <?php require_once('include/inc_breadcrumb.php'); ?>
+                    <img src="images/banner/SignUpBg.jpg" alt="" class="cover">
                 </div>
+                <!-- breadcrumb路徑 -->
+                <?php require_once('include/inc_breadcrumb.php'); ?>
             </div>
         </div>
 

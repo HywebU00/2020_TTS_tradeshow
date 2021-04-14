@@ -7,20 +7,9 @@
         <!-- header Start -->
         <?php require_once('include/inc_header.php'); ?>
         <!-- header End -->
+        
         <!-- inner-kv -->
-        <div class="inner-kv variable">
-            <div class="container">
-                <h1 class="wow fadeInDown" data-wow-delay="0.2s">Sign Up</h1>
-                <div class="img-container">
-                    <div class="decoration">
-                        <div class="line wow rollIn" data-wow-delay="0.2s"></div>
-                        <div class="line wow rollIn" data-wow-delay="0.4s"></div>
-                    </div><img src="images/banner/SignUpBg.jpg" alt="" class="cover">
-                </div>
-                <!-- breadcrumb路徑 -->
-                <?php require_once('include/inc_breadcrumb.php'); ?>
-            </div>
-        </div>
+        <?php require_once('include/inc_inner-kv.php'); ?>
 
         <!-- main Start -->
         <div id="center" class="main innerpage">
