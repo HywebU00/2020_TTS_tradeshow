@@ -1,6 +1,7 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-   $('.singleSlider').slick({
+
+    $('.singleSlider').slick({
         dots: true,
         arrow: false,
         speed: 600,
@@ -14,7 +15,7 @@ $(function() {
         pauseOnFocus: true,
         focusOnSelect: true
     });
-   $('.m_singleSlider').slick({
+    $('.m_singleSlider').slick({
         dots: false,
         arrow: true,
         // speed: 500,
@@ -29,7 +30,7 @@ $(function() {
         focusOnSelect: true
     });
 
-   $('.m_adSlider').slick({
+    $('.m_adSlider').slick({
         dots: false,
         infinite: true,
         speed: 500,
@@ -52,7 +53,7 @@ $(function() {
             }
         }]
     });
-   $('.adSlider-small').slick({
+    $('.adSlider-small').slick({
         dots: false,
         infinite: true,
         speed: 500,
@@ -87,7 +88,7 @@ $(function() {
         }]
     });
 
-	//燈箱slick+lightBox組合
+    //燈箱slick+lightBox組合
     $('.cp_slider').slick({
         dots: false,
         infinite: true,
@@ -168,5 +169,5 @@ $(function() {
                 arrows: true
             }
         }]
-      });
+    });
 });

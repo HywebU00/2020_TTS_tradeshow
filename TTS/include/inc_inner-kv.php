@@ -12,10 +12,6 @@
         <!--  -->
         <h1 class="wow fadeInDown" data-wow-delay="0.2s">H1 一般標準內容頁</h1>
         <div class="img-container">
-            <div class="decoration">
-                <div class="line wow rollIn" data-wow-delay="0.2s"></div>
-                <div class="line wow rollIn" data-wow-delay="0.4s"></div>
-            </div>
             <img src="images/banner/memberbg.jpg" alt="" class="cover">
         </div>
         <!-- breadcrumb路徑 -->

@@ -100,7 +100,7 @@
 </script>
 
 <!-- innerpage background animation canvas -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	let resizeReset = function() {
 		w = canvasBody.width = window.innerWidth;
 		h = canvasBody.height = window.innerHeight;
@@ -212,4 +212,4 @@
 	rgb = opts.lineColor.match(/\d+/g);
 	resizeReset();
 	setup();
-</script>
+</script> -->

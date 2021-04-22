@@ -712,49 +712,49 @@
             @include screen('tablet') { display: none; }
         }
 
-        .decoration {
-            z-index: 2;
-            overflow: hidden;
-            opacity: .5;
-            .line {
-                &:nth-child(1) {
-                    top: 25px;
-                    left: -125px;
-                    background: url('../images/line-left.png');
-                }
-                &:nth-child(2) {
-                    top: 160px;
-                    left: 200px;
-                    background: url('../images/line-right.png');
-                }
-                @include screen('tablet') {
-                    // @include opacity(1);
+        // .decoration {
+        //     z-index: 2;
+        //     overflow: hidden;
+        //     opacity: .5;
+        //     .line {
+        //         &:nth-child(1) {
+        //             top: 25px;
+        //             left: -125px;
+        //             background: url('../images/line-left.png');
+        //         }
+        //         &:nth-child(2) {
+        //             top: 160px;
+        //             left: 200px;
+        //             background: url('../images/line-right.png');
+        //         }
+        //         @include screen('tablet') {
+        //             // @include opacity(1);
 
-                    &:nth-child(1) {
-                        top: 0;
-                        left: -155px;
-                    }
-                    &:nth-child(2) {
-                        top: 120px;
-                        left: 120px;
-                    }
-                }
-                @include screen('tablet') {
-                    // @include opacity(1);
+        //             &:nth-child(1) {
+        //                 top: 0;
+        //                 left: -155px;
+        //             }
+        //             &:nth-child(2) {
+        //                 top: 120px;
+        //                 left: 120px;
+        //             }
+        //         }
+        //         @include screen('tablet') {
+        //             // @include opacity(1);
 
-                    &:nth-child(1) {
-                        left: -160px;
-                    }
-                    &:nth-child(2) {
-                        top: 130px;
-                        left: 35px;
-                    }
-                }
-            }
+        //             &:nth-child(1) {
+        //                 left: -160px;
+        //             }
+        //             &:nth-child(2) {
+        //                 top: 130px;
+        //                 left: 35px;
+        //             }
+        //         }
+        //     }
 
-            // 2020年樣式修改，先隱藏
-            display: none;
-        }
+        //     // 2020年樣式修改，先隱藏
+        //     display: none;
+        // }
         .btn_sort {
             position: absolute;
             bottom: 3em;
@@ -848,6 +848,114 @@
     //     margin-top: 60px;
     // }
 }
+
+// 2021/04 展覽放圖
+.inner-kv-banner{
+    // height: 360px;
+    // background: #ddd;
+
+    position: relative;
+    display: block;
+    margin-top: 60px;
+    >.container {
+        max-width: 100%;
+        margin: 0 auto;
+        z-index: 0;
+        text-align: center;
+        @include gutter(0);
+
+        .menu2020{
+            padding: 1em 0;
+            background: url(../images/bg-mp2020-1.jpg) 50% 10% no-repeat;
+            border-bottom: solid 1px #cecece;
+            @include screen('tablet') { display: none; }
+        }
+
+        .btn_sort {
+            position: absolute;
+            bottom: 3em;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            display: block;
+        }
+        // h1 {
+        //     position: absolute;
+        //     top: 45%;
+        //     width: 50%;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        //     font-weight: 500;
+        //     font-size: 3em;
+        //     line-height: 1;
+        //     margin: auto;
+        //     text-align: center;
+        //     display: inline-block;
+        //     color: white;
+        //     z-index: 1;
+        //     @include text-shadow(0px 2px 5px RGBA(0, 0, 0, .8));
+        //     &:after{
+        //         position: absolute;
+        //         z-index: 1;
+        //         content:"";
+        //         top: 0;
+        //         bottom: 0;
+        //         left: 0;
+        //         right: 0;
+        //         display: block;
+        //         line-height: 5.5;
+        //     }
+        //     a {
+        //         color: white !important;
+        //         display: inline-block;
+        //         position: relative;
+        //         z-index: 2;
+        //         line-height: 1.2;
+        //         width: auto;
+        //         height: auto;
+        //         &:hover,&:focus{
+        //             box-shadow:none;
+        //         }
+        //     }
+        // }
+        .img-container {
+            position: relative;
+            display: block;
+            line-height: 5;
+            height: 420px;
+            background: #000;
+            // @include aspect-ratio(4, 3);
+
+            &:after{
+                content: "";
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // z-index: 2;
+                @include filter-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0), vertical);
+                $experimental-support-for-svg: true;
+                @include background-image(linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%));
+            }
+
+            @include screen('tablet') {
+                height: 240px;
+            }
+            // @include screen('tablet') {
+            //     &:after{
+            //         @include background-image(linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%));
+            //     }
+            // }
+        }
+        .breadcrumb{
+            background: #fff;
+            margin-bottom: 0;
+        }
+    }
+}
+
 
 /*search*/
 .search {

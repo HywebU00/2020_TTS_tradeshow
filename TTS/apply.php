@@ -221,141 +221,141 @@
                     </div>
                     <!-- 10 -->
                     <!-- Type-1 -->
-                  <div class="form_grp">
-                    <div class="form_title"><span class="number">6.</span>要抓什麼挖歌的上傳</div>
-                    <div class="form_content form_inline">
-                      <button type="button">上傳檔案</button>
-                      <input type="file" style="display: none;">
-                      <!-- 客製上傳 -->
-                      <!-- <div id="file-QS000025" class="upload_customize">
-                        <div id="fileBlock_1560484037960-0" class="inner">
-                          <div class="file_name">
-                            <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
-                            <div id="removeBlock_1560484037960-0" class="delete">
-                              <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                    <div class="form_grp">
+                      <div class="form_title"><span class="number">6.</span>要抓什麼挖歌的上傳</div>
+                      <div class="form_content form_inline">
+                        <button type="button">上傳檔案</button>
+                        <input type="file" style="display: none;">
+                        <!-- 客製上傳 -->
+                        <!-- <div id="file-QS000025" class="upload_customize">
+                          <div id="fileBlock_1560484037960-0" class="inner">
+                            <div class="file_name">
+                              <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
+                              <div id="removeBlock_1560484037960-0" class="delete">
+                                <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                              </div>
                             </div>
-                          </div>
-                          <div class="file_name">
-                            <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
-                            <div id="removeBlock_1560484037960-0" class="delete">
-                              <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                            <div class="file_name">
+                              <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
+                              <div id="removeBlock_1560484037960-0" class="delete">
+                                <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                              </div>
                             </div>
-                          </div>
-                          <div id="progressBlock_1560484037960-0" class="progress_bar">
-                            <div id="progressRatio_1560484037960-0" class="bar">&nbsp;</div>
-                          </div>
-                          <div id="error_1_1560484037960-0" class="status">上傳失敗</div>
-                          <div id="error_2_1560484037960-0" class="status">檔案類型不正確</div>
-                          <div id="error_3_1560484037960-0" class="status">檔案超過大小限制</div>
-                          <div id="error_4_1560484037960-0" class="status">只能上傳 1 個檔案</div>
-                          <div id="error_5_1560484037960-0" class="status">檔案個數超過</div>
-                        </div>
-                      </div> -->
-                      <!-- 客製上傳 END-->
-                    </div>
-                  </div>
-                  <!-- Type-2 -->
-                  <div class="form_grp">
-                    <div class="form_title"><span class="number">6.</span>要抓什麼挖歌的上傳</div>
-                    <div class="form_content form_inline">
-                      <button type="button">上傳檔案</button>
-                      <input type="file" style="display: none;">
-                      <!-- 客製上傳 -->
-                      <div id="file-QS000025" class="upload_customize">
-                        <div id="fileBlock_1560484037960-0" class="inner">
-                          <!-- 多筆上傳 -->
-                          <div class="file_name">
-                            <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
-                            <div id="removeBlock_1560484037960-0" class="delete">
-                              <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                            <div id="progressBlock_1560484037960-0" class="progress_bar">
+                              <div id="progressRatio_1560484037960-0" class="bar">&nbsp;</div>
                             </div>
+                            <div id="error_1_1560484037960-0" class="status">上傳失敗</div>
+                            <div id="error_2_1560484037960-0" class="status">檔案類型不正確</div>
+                            <div id="error_3_1560484037960-0" class="status">檔案超過大小限制</div>
+                            <div id="error_4_1560484037960-0" class="status">只能上傳 1 個檔案</div>
+                            <div id="error_5_1560484037960-0" class="status">檔案個數超過</div>
                           </div>
-                          <div class="file_name">
-                            <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
-                            <div id="removeBlock_1560484037960-0" class="delete">
-                              <a href="#" id="removeBtn_1560484037960-0">刪除</a>
-                            </div>
-                          </div>
-                          <!-- 進度條 -->
-                          <div id="progressBlock_1560484037960-0" class="progress_bar">
-                            <div id="progressRatio_1560484037960-0" class="bar">&nbsp;</div>
-                          </div>
-                          <!-- 狀態 -->
-                          <div id="error_1_1560484037960-0" class="status">上傳失敗</div>
-                          <div id="error_2_1560484037960-0" class="status">檔案類型不正確</div>
-                          <div id="error_3_1560484037960-0" class="status">檔案超過大小限制</div>
-                          <div id="error_4_1560484037960-0" class="status">只能上傳 1 個檔案</div>
-                          <div id="error_5_1560484037960-0" class="status">檔案個數超過</div>
-                        </div>
+                        </div> -->
+                        <!-- 客製上傳 END-->
                       </div>
-                      <!-- 客製上傳 END-->
                     </div>
-                  </div>
-                  <!-- Type-3 -->
-                  <div class="form_grp">
-                    <div class="form_title"><span class="number">6.<span class="necessary">*</span></span>要抓什麼挖歌的上傳</div>
-                    <div class="form_content form_inline form-control-danger">
-                      <button type="button">上傳檔案</button>
-                      <input type="file" style="display: none;">
-                      <!-- 客製上傳 -->
-                      <div id="file-QS000025" class="upload_customize">
-                        <div id="fileBlock_1560484037960-0" class="inner">
-                          <div class="file_name">
-                            <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
-                            <div id="removeBlock_1560484037960-0" class="delete">
-                              <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                    <!-- Type-2 -->
+                    <div class="form_grp">
+                      <div class="form_title"><span class="number">6.</span>要抓什麼挖歌的上傳</div>
+                      <div class="form_content form_inline">
+                        <button type="button">上傳檔案</button>
+                        <input type="file" style="display: none;">
+                        <!-- 客製上傳 -->
+                        <div id="file-QS000025" class="upload_customize">
+                          <div id="fileBlock_1560484037960-0" class="inner">
+                            <!-- 多筆上傳 -->
+                            <div class="file_name">
+                              <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
+                              <div id="removeBlock_1560484037960-0" class="delete">
+                                <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                              </div>
                             </div>
-                          </div>
-                          <div class="file_name">
-                            <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
-                            <div id="removeBlock_1560484037960-0" class="delete">
-                              <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                            <div class="file_name">
+                              <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
+                              <div id="removeBlock_1560484037960-0" class="delete">
+                                <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                              </div>
                             </div>
+                            <!-- 進度條 -->
+                            <div id="progressBlock_1560484037960-0" class="progress_bar">
+                              <div id="progressRatio_1560484037960-0" class="bar">&nbsp;</div>
+                            </div>
+                            <!-- 狀態 -->
+                            <div id="error_1_1560484037960-0" class="status">上傳失敗</div>
+                            <div id="error_2_1560484037960-0" class="status">檔案類型不正確</div>
+                            <div id="error_3_1560484037960-0" class="status">檔案超過大小限制</div>
+                            <div id="error_4_1560484037960-0" class="status">只能上傳 1 個檔案</div>
+                            <div id="error_5_1560484037960-0" class="status">檔案個數超過</div>
                           </div>
-                          <div id="progressBlock_1560484037960-0" class="progress_bar">
-                            <div id="progressRatio_1560484037960-0" class="bar">&nbsp;</div>
-                          </div>
-                          <div id="error_1_1560484037960-0" class="status">上傳失敗</div>
-                          <div id="error_2_1560484037960-0" class="status">檔案類型不正確</div>
-                          <div id="error_3_1560484037960-0" class="status">檔案超過大小限制</div>
-                          <div id="error_4_1560484037960-0" class="status">只能上傳 1 個檔案</div>
-                          <div id="error_5_1560484037960-0" class="status">檔案個數超過</div>
                         </div>
+                        <!-- 客製上傳 END-->
                       </div>
-                      <!-- 客製上傳 END-->
                     </div>
-                    <!-- <div class="form-control-feedback text-sm">請填寫必填欄位</div> -->
-                  </div>
-                  <!-- Type-4 -->
-                  <div class="form_grp has-danger">
-                    <div class="form_title"><span class="number">6.<span class="necessary">*</span></span>要抓什麼挖歌的上傳</div>
-                    <!-- <label for="mustSameAsId" class="form_title"></label> -->
-                    <div class="form_content form_inline form-control-danger">
-                      <button type="button">上傳檔案</button>
-                      <input type="file" style="display: none;">
-                      <!-- 客製上傳 -->
-                      <!-- <div id="file-QS000025" class="upload_customize">
-                        <div id="fileBlock_1560484037960-0" class="inner">
-                          <div class="file_name">
-                            <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
-                            <div id="removeBlock_1560484037960-0" class="delete">
-                              <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                    <!-- Type-3 -->
+                    <div class="form_grp">
+                      <div class="form_title"><span class="number">6.<span class="necessary">*</span></span>要抓什麼挖歌的上傳</div>
+                      <div class="form_content form_inline form-control-danger">
+                        <button type="button">上傳檔案</button>
+                        <input type="file" style="display: none;">
+                        <!-- 客製上傳 -->
+                        <div id="file-QS000025" class="upload_customize">
+                          <div id="fileBlock_1560484037960-0" class="inner">
+                            <div class="file_name">
+                              <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
+                              <div id="removeBlock_1560484037960-0" class="delete">
+                                <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                              </div>
                             </div>
+                            <div class="file_name">
+                              <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
+                              <div id="removeBlock_1560484037960-0" class="delete">
+                                <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                              </div>
+                            </div>
+                            <div id="progressBlock_1560484037960-0" class="progress_bar">
+                              <div id="progressRatio_1560484037960-0" class="bar">&nbsp;</div>
+                            </div>
+                            <div id="error_1_1560484037960-0" class="status">上傳失敗</div>
+                            <div id="error_2_1560484037960-0" class="status">檔案類型不正確</div>
+                            <div id="error_3_1560484037960-0" class="status">檔案超過大小限制</div>
+                            <div id="error_4_1560484037960-0" class="status">只能上傳 1 個檔案</div>
+                            <div id="error_5_1560484037960-0" class="status">檔案個數超過</div>
                           </div>
-                          <div id="progressBlock_1560484037960-0" class="progress_bar">
-                            <div id="progressRatio_1560484037960-0" class="bar">&nbsp;</div>
-                          </div>
-                          <div id="error_1_1560484037960-0" class="status">上傳失敗</div>
-                          <div id="error_2_1560484037960-0" class="status">檔案類型不正確</div>
-                          <div id="error_3_1560484037960-0" class="status">檔案超過大小限制</div>
-                          <div id="error_4_1560484037960-0" class="status">只能上傳 1 個檔案</div>
-                          <div id="error_5_1560484037960-0" class="status">檔案個數超過</div>
                         </div>
-                      </div> -->
-                      <!-- 客製上傳 END-->
+                        <!-- 客製上傳 END-->
+                      </div>
+                      <!-- <div class="form-control-feedback text-sm">請填寫必填欄位</div> -->
                     </div>
-                    <div class="form-control-feedback text-sm">請務必上傳資料</div>
-                  </div>
+                    <!-- Type-4 -->
+                    <div class="form_grp has-danger">
+                      <div class="form_title"><span class="number">6.<span class="necessary">*</span></span>要抓什麼挖歌的上傳</div>
+                      <!-- <label for="mustSameAsId" class="form_title"></label> -->
+                      <div class="form_content form_inline form-control-danger">
+                        <button type="button">上傳檔案</button>
+                        <input type="file" style="display: none;">
+                        <!-- 客製上傳 -->
+                        <!-- <div id="file-QS000025" class="upload_customize">
+                          <div id="fileBlock_1560484037960-0" class="inner">
+                            <div class="file_name">
+                              <span id="fileName_1560484037960-0">TTSUAT-194-1.jpg</span>&nbsp;<font color="#777777">(17 KB)</font>
+                              <div id="removeBlock_1560484037960-0" class="delete">
+                                <a href="#" id="removeBtn_1560484037960-0">刪除</a>
+                              </div>
+                            </div>
+                            <div id="progressBlock_1560484037960-0" class="progress_bar">
+                              <div id="progressRatio_1560484037960-0" class="bar">&nbsp;</div>
+                            </div>
+                            <div id="error_1_1560484037960-0" class="status">上傳失敗</div>
+                            <div id="error_2_1560484037960-0" class="status">檔案類型不正確</div>
+                            <div id="error_3_1560484037960-0" class="status">檔案超過大小限制</div>
+                            <div id="error_4_1560484037960-0" class="status">只能上傳 1 個檔案</div>
+                            <div id="error_5_1560484037960-0" class="status">檔案個數超過</div>
+                          </div>
+                        </div> -->
+                        <!-- 客製上傳 END-->
+                      </div>
+                      <div class="form-control-feedback text-sm">請務必上傳資料</div>
+                    </div>
                 </div>
 
                 <h2>業務聯絡人資料</h2>
@@ -938,7 +938,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <div class="btn_grp">
                     <button type="submit" class="login-button">Next</button>
