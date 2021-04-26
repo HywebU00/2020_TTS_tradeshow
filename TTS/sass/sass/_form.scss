@@ -671,6 +671,21 @@ form {
             }
         }
     }
+    @include screen('mobile') {
+        flex-flow: row wrap;
+        width: 100%;
+        .col{
+            flex: 1 1 100%;
+
+            &.code{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &:last-child{ margin-top: 16px; }
+        }
+    }
 }
 // 
 

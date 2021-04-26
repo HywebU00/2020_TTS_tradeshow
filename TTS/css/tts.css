@@ -4476,6 +4476,24 @@ form .captcha .col.code a {
 form .captcha .col .has-danger input {
   box-shadow: 0 0 0 1px #ba0012 inset;
 }
+@media screen and (max-width: 767px) {
+  form .captcha {
+    flex-flow: row wrap;
+    width: 100%;
+  }
+  form .captcha .col {
+    flex: 1 1 100%;
+  }
+  form .captcha .col.code {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  form .captcha .col:last-child {
+    margin-top: 16px;
+  }
+}
 form label,
 form legend {
   margin: .5em 0;
