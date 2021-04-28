@@ -577,7 +577,7 @@
                                         <div class="col">
                                             <div class="form_grp">
                                                 <div class="form_content">
-                                                    <input type="text">
+                                                    <input type="text" value="123">
                                                     <span class="title">input標題</span>
                                                 </div>
                                             </div>
@@ -641,6 +641,54 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form_grp">
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <div class="col-4">
+                                    <div class="container">
+                                        <div class="col">
+                                            <div class="form_grp">
+                                                <div class="form_content">
+                                                    <span class="title">select</span>
+                                                    <select name="" id="input" required="required">
+                                                        <option value="" selected="">請選擇項目</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                        <option value="">項目4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form_grp has-danger">
+                                                <div class="form_content">
+                                                    <input type="text" value="123">
+                                                    <span class="title">input標題</span>
+                                                    <!-- notice -->
+                                                    <div id="" class="form-control-feedback text-sm">請填寫必填欄位</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form_grp">
+                                                <div class="form_content">
+                                                    <span class="title">select</span>
+                                                    <select name="" id="input" required="required">
+                                                        <option value="" selected="">請選擇項目</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                        <option value="">項目4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- error -->
 
                     <hr>
@@ -656,6 +704,62 @@
                                             <div class="form_content">
                                                 <input type="text">
                                                 <span class="title">區碼</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form_grp">
+                                            <div class="form_content">
+                                                <input type="text">
+                                                <span class="title">電話號碼</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div id="" class="form-control-feedback text-sm">請填寫必填欄位</div> -->
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_content">
+                            <div class="phoneCol type-input">
+                                <div class="container">
+                                    <div class="col">
+                                        <div class="form_grp">
+                                            <div class="form_content">
+                                                <input type="text" value="123">
+                                                <span class="title">區碼</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form_grp">
+                                            <div class="form_content">
+                                                <input type="text" value="123">
+                                                <span class="title">電話號碼</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div id="" class="form-control-feedback text-sm">請填寫必填欄位</div> -->
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_content">
+                            <div class="phoneCol type-select">
+                                <div class="container">
+                                    <div class="col">
+                                        <div class="form_grp">
+                                            <div class="form_content">
+                                                <span class="title">select</span>
+                                                <select name="" id="input" required="required">
+                                                    <option value="" selected="">請選擇項目</option>
+                                                    <option value="">項目1</option>
+                                                    <option value="">項目2</option>
+                                                    <option value="">項目3</option>
+                                                    <option value="">項目4</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -693,7 +797,7 @@
                                     <div class="col">
                                         <div class="form_grp">
                                             <div class="form_content">
-                                                <input type="text">
+                                                <input type="text" value="123">
                                                 <span class="title">電話號碼</span>
                                             </div>
                                         </div>
@@ -766,6 +870,68 @@
                             <!-- <div id="" class="form-control-feedback text-sm">請填寫必填欄位</div> -->
                         </div>
                     </div>
+                    <div class="form_grp">
+                        <div class="form_content">
+                            <div class="phoneCol type-input">
+                                <div class="container">
+                                    <div class="col">
+                                        <div class="form_grp has-danger">
+                                            <div class="form_content">
+                                                <input type="text" value="123">
+                                                <span class="title">區碼</span>
+                                                <div id="" class="form-control-feedback text-sm">請填寫必填欄位</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form_grp has-danger">
+                                            <div class="form_content">
+                                                <input type="text" value="123">
+                                                <span class="title">電話號碼</span>
+                                                <!-- notice -->
+                                                <div id="" class="form-control-feedback text-sm">請填寫必填欄位</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_content">
+                            <div class="phoneCol type-select">
+                                <div class="container">
+                                    <div class="col">
+                                        <div class="form_grp has-danger">
+                                            <div class="form_content">
+                                                <span class="title">select</span>
+                                                <select name="" id="input" required="required">
+                                                    <option value="" selected="">請選擇項目</option>
+                                                    <option value="">項目1</option>
+                                                    <option value="">項目2</option>
+                                                    <option value="">項目3</option>
+                                                    <option value="">項目4</option>
+                                                </select>
+                                                <!-- notice -->
+                                                <div id="" class="form-control-feedback text-sm">請填寫必填欄位</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form_grp has-danger">
+                                            <div class="form_content">
+                                                <input type="text" value="123">
+                                                <span class="title">input標題</span>
+                                                <!-- notice -->
+                                                <div id="" class="form-control-feedback text-sm">請填寫必填欄位</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div id="" class="form-control-feedback text-sm">請填寫必填欄位</div> -->
+                        </div>
+                    </div>
 
                     <!-- 地址 -->
                     <h3>地址</h3>
@@ -805,6 +971,50 @@
                                         <div class="form_grp">
                                             <div class="form_content">
                                                 <input type="text">
+                                                <span class="title">區碼</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_content">
+                            <div class="address type-select">
+                                <div class="container">
+                                    <div class="col country">
+                                        <div class="form_grp">
+                                            <div class="form_content">
+                                                <span class="title">select</span>
+                                                <select name="" id="input" required="required">
+                                                    <option value="" selected="">請選擇項目</option>
+                                                    <option value="">項目1</option>
+                                                    <option value="">項目2</option>
+                                                    <option value="">項目3</option>
+                                                    <option value="">項目4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col zone">
+                                        <div class="form_grp">
+                                            <div class="form_content">
+                                                <span class="title">select</span>
+                                                <select name="" id="input" required="required">
+                                                    <option value="" selected="">請選擇項目</option>
+                                                    <option value="">項目1</option>
+                                                    <option value="">項目2</option>
+                                                    <option value="">項目3</option>
+                                                    <option value="">項目4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form_grp">
+                                            <div class="form_content">
+                                                <input type="text" value="123">
                                                 <span class="title">區碼</span>
                                             </div>
                                         </div>

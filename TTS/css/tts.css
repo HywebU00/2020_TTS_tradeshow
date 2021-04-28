@@ -4220,6 +4220,9 @@ form .form-type2 .form_content .phoneCol.type-input .col input + span.title, for
 form .form-type2 .form_content .phoneCol.type-input .col input:focus + span.title, form .form-type2 .form_content .address.type-input .col input:focus + span.title {
   top: 10px;
 }
+form .form-type2 .form_content .phoneCol.type-input .col input[value] + span.title, form .form-type2 .form_content .phoneCol.type-input .col input[placeholder] + span.title, form .form-type2 .form_content .address.type-input .col input[value] + span.title, form .form-type2 .form_content .address.type-input .col input[placeholder] + span.title {
+  top: 10px;
+}
 form .form-type2 .form_content .phoneCol.type-select .col:before, form .form-type2 .form_content .address.type-select .col:before {
   right: -4px;
   top: 56px;
@@ -4237,6 +4240,9 @@ form .form-type2 .form_content .phoneCol.type-select .col input + span.title, fo
   left: 16px;
 }
 form .form-type2 .form_content .phoneCol.type-select .col input:focus + span.title, form .form-type2 .form_content .address.type-select .col input:focus + span.title {
+  top: 37px;
+}
+form .form-type2 .form_content .phoneCol.type-select .col input[value] + span.title, form .form-type2 .form_content .phoneCol.type-select .col input[placeholder] + span.title, form .form-type2 .form_content .address.type-select .col input[value] + span.title, form .form-type2 .form_content .address.type-select .col input[placeholder] + span.title {
   top: 37px;
 }
 @media screen and (max-width: 767px) {

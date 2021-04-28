@@ -360,6 +360,12 @@ form {
                         + span.title{ top: 20px; left: 16px; }
                         &:focus{ +span.title{ top: 10px; } }
                     }
+
+                    // value、placeholder塞入時， title的位置調整
+                    input[value], input[placeholder]{
+                        +span.title{ top: 10px; }
+                    }
+                    // value、placeholder塞入時， title的位置調整  ----------- END
                 }
             }
             // 區碼 select
@@ -377,6 +383,12 @@ form {
                         + span.title{ top: 47px; left: 16px; }
                         &:focus{ +span.title{ top: 37px; } }
                     }
+
+                    // value、placeholder塞入時， title的位置調整
+                    input[value], input[placeholder]{
+                        +span.title{ top: 37px; }
+                    }
+                    // value、placeholder塞入時， title的位置調整  ----------- END
                 }
                 @include screen('mobile') {
                     .col{
