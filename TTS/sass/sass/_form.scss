@@ -465,6 +465,7 @@ form {
         }
         textarea{}
 
+        // value、placeholder塞入時， title的位置調整  ----------- 
         input[value], input[placeholder]{
             +span.title{
                 color: #aaa;
@@ -474,6 +475,7 @@ form {
             }
         }
         input[placeholder]+span.title{ color: #222; }
+        // value、placeholder塞入時， title的位置調整  ----------- END
     }
 
     // 異常狀態

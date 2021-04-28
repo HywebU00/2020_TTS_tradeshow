@@ -278,6 +278,13 @@
 						}
 					}
 
+					// value、placeholder塞入時， title的位置調整
+					input[value], input[placeholder]{
+			            +span.title{ top: 37px; }
+			        }
+			        // value、placeholder塞入時， title的位置調整  ----------- END
+
+
 					// input 移除 margin-top，
 					// 加在 input 父層 .form_content
 					&.input-only{
@@ -286,7 +293,14 @@
 							+span.title{ top: 20px; }
 							&:focus{ +span.title{ top: 10px; } }
 						}
+						// value、placeholder塞入時， title的位置調整
+						input[value], input[placeholder]{
+				            +span.title{ top: 10px; }
+				        }
+				        // value、placeholder塞入時， title的位置調整  ----------- END
 					}
+
+					
 
 					@include screen('mobile') {
 						.col{

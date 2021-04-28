@@ -75,7 +75,7 @@
                                         <div class="col">
                                             <div class="form_grp">
                                                 <div class="form_content">
-                                                    <input type="text">
+                                                    <input type="text" value="123123123">
                                                     <span class="title">姓名</span>
                                                 </div>
                                             </div>
@@ -193,7 +193,7 @@
                     </div>
                     <div class="form_grp">
                         <div class="form_content">
-                            <input type="text">
+                            <input type="text" value="123123123">
                             <span class="title">職稱</span>
                         </div>
                     </div>

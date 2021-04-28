@@ -17990,6 +17990,9 @@ canvas {
 .Pre-entry.form-type2 .form_grp .form_content .col-6 .col input:focus + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4 .col input:focus + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-3 .col input:focus + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4-8 .col input:focus + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-8-4 .col input:focus + span.title {
   top: 37px;
 }
+.Pre-entry.form-type2 .form_grp .form_content .col-6 input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-6 input[placeholder] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4 input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4 input[placeholder] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-3 input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-3 input[placeholder] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4-8 input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4-8 input[placeholder] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-8-4 input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-8-4 input[placeholder] + span.title {
+  top: 37px;
+}
 .Pre-entry.form-type2 .form_grp .form_content .col-6.input-only input, .Pre-entry.form-type2 .form_grp .form_content .col-4.input-only input, .Pre-entry.form-type2 .form_grp .form_content .col-3.input-only input, .Pre-entry.form-type2 .form_grp .form_content .col-4-8.input-only input, .Pre-entry.form-type2 .form_grp .form_content .col-8-4.input-only input {
   margin-top: 0;
 }
@@ -17997,6 +18000,9 @@ canvas {
   top: 20px;
 }
 .Pre-entry.form-type2 .form_grp .form_content .col-6.input-only input:focus + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4.input-only input:focus + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-3.input-only input:focus + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4-8.input-only input:focus + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-8-4.input-only input:focus + span.title {
+  top: 10px;
+}
+.Pre-entry.form-type2 .form_grp .form_content .col-6.input-only input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-6.input-only input[placeholder] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4.input-only input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4.input-only input[placeholder] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-3.input-only input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-3.input-only input[placeholder] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4-8.input-only input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-4-8.input-only input[placeholder] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-8-4.input-only input[value] + span.title, .Pre-entry.form-type2 .form_grp .form_content .col-8-4.input-only input[placeholder] + span.title {
   top: 10px;
 }
 @media screen and (max-width: 767px) {

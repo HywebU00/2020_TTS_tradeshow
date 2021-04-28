@@ -247,12 +247,70 @@
                     <div class="form_grp">
                         <div class="form_content">
                             <div class="form_grp">
+                                <div class="col-6 input-only">
+                                    <div class="container">
+                                        <div class="col">
+                                            <div class="form_grp">
+                                                <div class="form_content">
+                                                    <input type="text">
+                                                    <span class="title">input標題</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form_grp">
+                                                <div class="form_content">
+                                                    <input type="text" value="123">
+                                                    <span class="title">input標題</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_content">
+                            <div class="form_grp">
                                 <div class="col-6">
                                     <div class="container">
                                         <div class="col">
                                             <div class="form_grp">
                                                 <div class="form_content">
                                                     <input type="text">
+                                                    <span class="title">input標題</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form_grp">
+                                                <div class="form_content">
+                                                    <span class="title">select</span>
+                                                    <select name="" id="input" required="required">
+                                                        <option value="" selected="">請選擇項目</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                        <option value="">項目4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <div class="col-6">
+                                    <div class="container">
+                                        <div class="col">
+                                            <div class="form_grp">
+                                                <div class="form_content">
+                                                    <input type="text" value="123">
                                                     <span class="title">input標題</span>
                                                 </div>
                                             </div>
