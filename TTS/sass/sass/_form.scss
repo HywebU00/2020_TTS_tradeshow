@@ -701,6 +701,22 @@ form {
         }
     }
 }
+button[disabled]{
+    background: #d1d1d1;
+    color: #222;
+    border: solid 1px #d1d1d1;
+    cursor: not-allowed;
+    // cursor: not-allowed;
+    // pointer-events: all !important;
+
+    &:hover, &:focus{
+        background: #d1d1d1;
+        color: #222;
+        border: solid 1px #d1d1d1;
+        cursor: not-allowed;
+        pointer-events: all !important;
+    }
+}
 // 
 
 /*---------------------------------------------下拉選單--------//*/

@@ -4500,6 +4500,19 @@ form .captcha .col .has-danger input {
     margin-top: 16px;
   }
 }
+form button[disabled] {
+  background: #d1d1d1;
+  color: #222;
+  border: solid 1px #d1d1d1;
+  cursor: not-allowed;
+}
+form button[disabled]:hover, form button[disabled]:focus {
+  background: #d1d1d1;
+  color: #222;
+  border: solid 1px #d1d1d1;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
 form label,
 form legend {
   margin: .5em 0;

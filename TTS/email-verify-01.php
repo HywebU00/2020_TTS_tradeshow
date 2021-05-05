@@ -43,7 +43,10 @@
                             <!-- <div id="name-danger" class="form-control-feedback text-sm">請填寫必填欄位</div> -->
                         </div>
                     </div>
-                    <div class="remark">驗證碼有效時間<b>14：34</b><button type="submit" class="">重送驗證碼</button></div>
+                    <div class="remark">驗證碼有效時間<b>14：34</b>
+                        <button type="submit" class="">重送驗證碼</button>
+                        <button type="submit" disabled="">重送驗證碼</button>
+                    </div>
                 </div>
                 <!-- btn -->
                 <div class="btn_grp">
