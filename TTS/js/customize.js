@@ -175,7 +175,7 @@ $(function() {
     /*-----------------------------------*/
     //////////// Accordion設定 ////////////
     /*-----------------------------------*/
-    $('.accordion').each(function() {
+    $('.accordion-QA').each(function() {
         $(this).find('.accordion-content').hide();
         var _accordionItem = $(this).children('ul').children('li').children('a');
         _accordionItem.each(function() {

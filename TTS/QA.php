@@ -15,7 +15,7 @@
         <div class="container">
             <h2>會員註冊問題</h2>
             <!-- QA -->
-            <div class="accordion">
+            <div class="accordion-QA">
                 <ul>
                     <li>
                         <a href="#" title="">如何註冊會員</a>

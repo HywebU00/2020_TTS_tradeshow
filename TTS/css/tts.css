@@ -10204,15 +10204,15 @@ html {
   background: #4a2a9a;
 }
 
-.accordion ul {
+.accordion-QA ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.accordion ul li {
+.accordion-QA ul li {
   margin: 4px 0;
 }
-.accordion ul li > a {
+.accordion-QA ul li > a {
   display: block;
   padding: 8px 16px 8px 42px;
   border-bottom: solid 2px #e5e5e5;
@@ -10222,31 +10222,31 @@ html {
   line-height: 1.4;
   transition: all .3s ease;
 }
-.accordion ul li > a.active, .accordion ul li > a:hover, .accordion ul li > a:focus {
+.accordion-QA ul li > a.active, .accordion-QA ul li > a:hover, .accordion-QA ul li > a:focus {
   color: #004ba7;
   border-bottom: solid 2px #004ba7;
   background: url(../images/basic/icon_arrow_right5.svg) 10px 50% no-repeat;
   background-size: 20px 20px;
 }
-.accordion ul li .accordion-content {
+.accordion-QA ul li .accordion-content {
   padding: 1em 1.5em;
   background: #f6f6f6;
 }
-.accordion ul li .accordion-content a {
+.accordion-QA ul li .accordion-content a {
   display: inline-block;
   padding: 0;
   border-bottom: 0;
   color: #1284c8;
   background: none;
 }
-.accordion ul li .accordion-content a:hover, .accordion ul li .accordion-content a:focus {
+.accordion-QA ul li .accordion-content a:hover, .accordion-QA ul li .accordion-content a:focus {
   text-decoration: underline;
 }
-.accordion ul li .accordion-content ol, .accordion ul li .accordion-content ul, .accordion ul li .accordion-content p {
+.accordion-QA ul li .accordion-content ol, .accordion-QA ul li .accordion-content ul, .accordion-QA ul li .accordion-content p {
   margin: 10px 0;
   line-height: 1.6;
 }
-.accordion ul li .accordion-content ul {
+.accordion-QA ul li .accordion-content ul {
   list-style: disc;
   padding-left: 2em;
 }
