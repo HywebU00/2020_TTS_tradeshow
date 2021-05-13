@@ -4326,6 +4326,15 @@ form .form-type2 .form_content input:focus + span.title {
   font-size: 86%;
   font-weight: 400;
 }
+form .form-type2 .form_content input[readonly] {
+  background: #f5f5f5;
+}
+form .form-type2 .form_content input[readonly]:hover, form .form-type2 .form_content input[readonly]:focus {
+  cursor: not-allowed;
+}
+form .form-type2 .form_content input[readonly][value] {
+  color: #9A9A9B;
+}
 form .form-type2 .form_content select {
   line-height: inherit;
   height: 3.8em;
@@ -9920,12 +9929,18 @@ html {
 }
 .recommend .inner .col {
   flex: 1 1 auto;
-  flex-basis: calc(100% / 2 - 10px);
-  border-bottom: solid 1px #ddd;
+  flex-basis: calc(100% / 2 - 10px - 1em);
   padding: 1em 0 1em;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin: .5em;
+  border-radius: 4px;
+  transition: all .3s ease;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+.recommend .inner .col:hover, .recommend .inner .col:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .recommend .inner .col .foto {
   flex: 0 0 180px;
@@ -9949,7 +9964,7 @@ html {
 .recommend .inner .col .info {
   flex: 1 1 auto;
   flex-basis: calc(100% - 180px);
-  padding: 0 1em;
+  padding: 0 1.5em 0 .5em;
   box-sizing: border-box;
 }
 .recommend .inner .col .info h3 {
@@ -9963,7 +9978,7 @@ html {
 .recommend .inner .col .info .link a {
   background: #f4f4f4;
   color: #222;
-  display: inline-block;
+  display: block;
   border-radius: 40px;
   padding: .35em 1em;
   margin: .15em 0;

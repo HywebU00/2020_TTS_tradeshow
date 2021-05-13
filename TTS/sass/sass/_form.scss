@@ -468,6 +468,14 @@ form {
                     font-weight: 400;
                 }
             }
+
+            &[readonly]{
+                background: #f5f5f5;
+                &:hover, &:focus{
+                    cursor: not-allowed;
+                }
+                &[value]{ color: #9A9A9B; }
+            }
         }
 
         select{

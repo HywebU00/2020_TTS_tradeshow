@@ -34,6 +34,16 @@
                                     <!-- <div class="notice_warning"> 此電子郵件尚未註冊。請選擇其他電子郵件地址。或是您想<a href="#">立即註冊</a></div> -->
                                 </div>
                             </div>
+                            <div class="form_grp">
+                                <div class="form_content need-check">
+                                    <input type="text" value="server@gmail.com" readonly="">
+                                    <span class="title necessary">電子信箱</span>
+                                    <button type="submit" class="btn-check">email檢查</button>
+                                    <!-- notic -->
+                                    <div class="notice_normal">輸入您當初註冊的電子郵件地址</div>
+                                    <!-- <div class="notice_warning"> 此電子郵件尚未註冊。請選擇其他電子郵件地址。或是您想<a href="#">立即註冊</a></div> -->
+                                </div>
+                            </div>
                             <div class="form_grp has-danger">
                                 <div class="form_content need-check">
                                     <input type="text" value="server@gmail.com">

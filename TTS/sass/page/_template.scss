@@ -202,9 +202,17 @@ $step-color: #304faa;
         @include flex-set;
         .col{
             flex: 1 1 auto;
-            flex-basis: calc(100% / 2 - 10px);
-            border-bottom: solid 1px #ddd;
+            flex-basis: calc(100% / 2 - 10px - 1em);
+            // border-bottom: solid 1px #ddd;
             padding: 1em 0 1em;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            margin: .5em;
+            border-radius: 4px;
+            transition: all .3s ease;
+
+            &:hover, &:focus{
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
 
             @include flex-set;
             .foto{
@@ -230,7 +238,7 @@ $step-color: #304faa;
             .info{
                 flex: 1 1 auto;
                 flex-basis: calc(100% - 180px);
-                padding: 0 1em;
+                padding: 0 1.5em 0 .5em;
                 box-sizing: border-box;
                 h3{
                     line-height: 1.4;
@@ -242,7 +250,7 @@ $step-color: #304faa;
                     a{
                         background: #f4f4f4; 
                         color: #222;
-                        display: inline-block;
+                        display: block;
                         border-radius: 40px;
                         padding: .35em 1em;
                         margin: .15em 0;
