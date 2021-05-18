@@ -9930,6 +9930,7 @@ html {
 .recommend .inner .col {
   flex: 1 1 auto;
   flex-basis: calc(100% / 2 - 10px - 1em);
+  max-width: calc(100% / 2 - 10px - 1em);
   padding: 1em 0 1em;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin: .5em;
@@ -9993,6 +9994,7 @@ html {
 @media screen and (max-width: 991px) {
   .recommend .inner .col {
     flex-basis: calc(100% - 10px);
+    max-width: calc(100% - 10px);
   }
 }
 
