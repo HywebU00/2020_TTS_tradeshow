@@ -9931,7 +9931,8 @@ html {
   flex: 1 1 auto;
   flex-basis: calc(100% / 2 - 10px - 1em);
   max-width: calc(100% / 2 - 10px - 1em);
-  padding: 1em 0 1em;
+  padding: 1em .75em;
+  box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin: .5em;
   border-radius: 4px;
@@ -9948,7 +9949,6 @@ html {
   max-width: 180px;
   height: 180px;
   text-align: center;
-  margin-bottom: 10px;
 }
 .recommend .inner .col .foto img {
   height: 100%;
@@ -9965,7 +9965,7 @@ html {
 .recommend .inner .col .info {
   flex: 1 1 auto;
   flex-basis: calc(100% - 180px);
-  padding: 0 1.5em 0 .5em;
+  padding: 0 .5em 0 1.25em;
   box-sizing: border-box;
 }
 .recommend .inner .col .info h3 {

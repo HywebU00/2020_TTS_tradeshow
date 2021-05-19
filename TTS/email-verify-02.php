@@ -112,6 +112,30 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 7 -->
+                    <div class="col">
+                        <div class="foto"><a href="#"><img src="https://storage.googleapis.com/uatw.taiwantradeshow.com.tw/ttsShow/202105/38804688.jpg" alt="" class="contain"></a></div>
+                        <div class="info">
+                            <h3>台北國際禮品文具暨文創展</h3>
+                            <div class="link">
+                                <a href="#">預登 / Pre-register</a>
+                                <a href="#">參展 / Apply</a>
+                                <a href="#">媒體預登 / Pre-register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="col">
+                        <div class="foto"><a href="#"><img src="https://storage.googleapis.com/uatw.taiwantradeshow.com.tw/ttsShow/202105/19894728.jpg" alt="" class="contain"></a></div>
+                        <div class="info">
+                            <h3>台北國際禮品文具暨文創展</h3>
+                            <div class="link">
+                                <a href="#">預登 / Pre-register</a>
+                                <a href="#">參展 / Apply</a>
+                                <a href="#">媒體預登 / Pre-register</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
