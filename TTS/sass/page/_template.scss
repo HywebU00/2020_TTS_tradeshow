@@ -359,19 +359,19 @@ $step-color: #304faa;
                     position: absolute;
                     right: -30px;
                 }
-                &:after{
-                    content: 'or';
-                    display: block;
-                    background: #fff;
-                    width: 30px;
-                    height: 30px;
-                    line-height: 30px;
-                    text-align: center;
-                    position: absolute;
-                    right: -46px;
-                    top: 50%;
-                    margin-top: -15px;
-                }
+                // &:after{
+                //     content: 'or';
+                //     display: block;
+                //     background: #fff;
+                //     width: 30px;
+                //     height: 30px;
+                //     line-height: 30px;
+                //     text-align: center;
+                //     position: absolute;
+                //     right: -46px;
+                //     top: 50%;
+                //     margin-top: -15px;
+                // }
             }
 
             h4{ margin: 5px 0; }
@@ -380,7 +380,12 @@ $step-color: #304faa;
             hr{ border-top: 1px dotted #d4d4d4; }
             .btn_grp{ margin: 0 0 10px !important; }
 
-            .QA{}
+            .QA{
+                ul li a{
+                    color: #004d8d;
+                    &:hover, &:focus{ color: #7d2caa; }
+                }
+            }
             .contact{
                 background: #f5f5f5;
                 padding: 1em;
