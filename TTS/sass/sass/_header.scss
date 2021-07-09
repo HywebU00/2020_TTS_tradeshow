@@ -922,10 +922,14 @@
         .img-container {
             position: relative;
             display: block;
-            line-height: 5;
-            height: 420px;
+            line-height: 0;
+            max-height: 420px;
+            overflow: hidden;
             background: #000;
-            // @include aspect-ratio(4, 3);
+
+            // @include aspect-ratio(9, 2);
+
+            // img{ max-height: 420px;}
 
             &:after{
                 content: "";
@@ -941,7 +945,7 @@
             }
 
             @include screen('tablet') {
-                height: 240px;
+                max-height: 320px;
             }
             // @include screen('tablet') {
             //     &:after{

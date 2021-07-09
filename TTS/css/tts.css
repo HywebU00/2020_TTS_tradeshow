@@ -7596,8 +7596,9 @@ img.img-responsive {
 .inner-kv-banner > .container .img-container {
   position: relative;
   display: block;
-  line-height: 5;
-  height: 420px;
+  line-height: 0;
+  max-height: 420px;
+  overflow: hidden;
   background: #000;
 }
 .inner-kv-banner > .container .img-container:after {
@@ -7618,7 +7619,7 @@ img.img-responsive {
 }
 @media screen and (max-width: 991px) {
   .inner-kv-banner > .container .img-container {
-    height: 240px;
+    max-height: 320px;
   }
 }
 .inner-kv-banner > .container .breadcrumb {
